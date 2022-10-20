@@ -1,0 +1,15 @@
+{
+  "name": "@posthog/apps",
+  "version": "0.0.0",
+  "description": "Mono-repo for all PostHog apps",
+  "homepage": "https://posthog.com/apps",
+  "repository": "git@github.com:PostHog/apps.git",
+  "bugs": {
+    "url": "https://github.com/posthog/apps/issues"
+  },
+  "author": "PostHog Inc.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16 <19"
+  }
+}
