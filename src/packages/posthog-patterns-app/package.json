@@ -1,5 +1,6 @@
 {
   "name": "posthog-patterns-app",
+  "version": "0.0.1",
   "private": false,
   "description": "Export PostHog events to Patterns.",
   "devDependencies": {

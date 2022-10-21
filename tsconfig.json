@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2017",
+
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+
+    "allowJs": true,
+    "checkJs": true,
+
+    "declaration": false,
+    "sourceMap": false,
+
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noUncheckedIndexedAccess": true,
+
+    "skipLibCheck": true
+  }
+}

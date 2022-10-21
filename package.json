@@ -16,9 +16,10 @@
   "engines": {
     "node": ">=16 <19"
   },
-  "devDependencies": {
-    "adm-zip": "^0.5.9"
-  },
   "private": true,
-  "workspaces": ["./src/packages/*"]
+  "workspaces": ["./src/packages/*"],
+  "devDependencies": {
+    "adm-zip": "^0.5.9",
+    "typescript": "^4.8.4"
+  }
 }
