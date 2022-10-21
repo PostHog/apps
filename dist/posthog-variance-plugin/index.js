@@ -1983,11 +1983,10 @@ async function onEvent(event, { config }) {
         console.debug(`Unsupported event: ${event.event}`);
         return;
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const output = {
         libary: {
-            name: "posthog-variance-plugin",
-            version: "1.0.0",
+            name: NAME,
+            version: VERSION,
         },
         messageId: event.uuid,
         timestamp: event.timestamp,

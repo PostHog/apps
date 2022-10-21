@@ -1,4 +1,4 @@
-async function setupPlugin({ config, global }) {
+export async function setupPlugin({ config, global }) {
     let bitbucketBase64AuthToken
 
     if (config.bitbucketUsername && config.bitbucketToken) {
@@ -49,8 +49,7 @@ async function setupPlugin({ config, global }) {
     }
 }
 
-
-async function runEveryMinute({ config, global, cache }) {
+export async function runEveryMinute({ config, global, cache }) {
     const lastRun = await cache.get('lastRun')
     if (
         lastRun &&
