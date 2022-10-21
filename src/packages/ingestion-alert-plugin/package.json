@@ -1,0 +1,17 @@
+{
+    "name": "posthog-ingestion-alert-plugin",
+    "private": true,
+    "version": "1.0.0",
+    "keywords": [
+        "posthog",
+        "plugin"
+    ],
+    "author": "PostHog <hey@posthog.com>",
+    "license": "MIT",
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "devDependencies": {
+        "@posthog/plugin-scaffold": "0.10.0"
+    }
+}

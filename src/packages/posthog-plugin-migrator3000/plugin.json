@@ -1,0 +1,50 @@
+{
+    "name": "Migrator 3000 (Beta)",
+    "url": "https://github.com/PostHog/posthog-plugin-migrator3000",
+    "description": "Migrate your PostHog events to a new instance.",
+    "main": "index.ts",
+    "config": [
+        {
+            "key": "host",
+            "hint": "E.g. posthog.yourcompany.com",
+            "name": "Host",
+            "type": "string",
+            "required": true
+        },
+        {
+            "key": "projectApiKey",
+            "hint": "Grab it from e.g. https://posthog.yourcompany.com/project/settings",
+            "name": "Project API Key",
+            "type": "string",
+            "required": true
+        },
+        {
+          "key": "startDate",
+          "hint": "Use format YYYY-MM-DD e.g. 2021-10-26 = 26th October 2021. Not specifying a value will export all events.",
+          "name": "Date to start exporting events from",
+          "type": "string",
+          "required": false
+        },
+        {
+          "key": "debug",
+          "hint": "Turn this on to get additional logging from the plugin",
+          "name": "DEBUG",
+          "type": "choice",
+          "choices": ["ON", "OFF"],
+          "default": "OFF",
+          "required": false
+        },
+        {
+          "key": "posthogVersion",
+          "hint": "The PostHog version this instance is on. Format: x.y.z. Select 'Latest' when using this in PostHog Cloud.",
+          "name": "PostHog version",
+          "type": "choice",
+          "choices": ["1.29.0", "1.30.0", "1.30.0+", "Latest"],
+          "default": "Latest",
+          "required": false
+        }
+    ],
+    "publicJobs": {
+      "[ADVANCED] Force restart": {}
+    }
+}

@@ -1,0 +1,87 @@
+# Google BigQuery Plugin
+
+Send events to a BigQuery database on ingestion.
+
+## Installation
+
+1. Visit 'Plugins' in PostHog
+1. Find this plugin from the repository or install `https://github.com/PostHog/bigquery-plugin`
+1. Configure the plugin
+   1. Upload your Google Cloud key `.json` file. (See below for permissions and how to retrieve this.)
+   1. Enter your Dataset ID
+   1. Enter your Table ID 
+1. Watch events roll into BigQuery
+
+## BigQuery permissions and service account setup
+
+To set the right permissions up for the BigQuery plugin, you'll need:
+1. A service account.
+2. A dataset which has permissions allowing the service account to access it.
+
+Here's how to set these up so that the PostHog plugin has access only to the table it needs:
+
+1. [Create a service account](https://cloud.google.com/bigquery/docs/reference/libraries#setting_up_authentication). Keep hold of the JSON file at the end of these steps for setting up the plugin, and remember the name too.
+
+2. Create a role which has only the specific permissions the PostHog BigQuery plugin requires (listed below), or use the built in `BigQuery DataOwner` permission. If you create a custom role, you will need:
+   * bigquery.datasets.get
+   * bigquery.tables.create
+   * bigquery.tables.get
+   * bigquery.tables.list
+   * bigquery.tables.updateData
+
+3. Create a dataset within a BigQuery project (ours is called `posthog`, but any name will do).
+
+4. Follow the instructions [on granting access to a dataset in BigQuery](https://cloud.google.com/bigquery/docs/dataset-access-controls#granting_access_to_a_dataset) to ensure your new service account has been granted either the role you created or the "BigQuery Data Owner" permission. 
+
+   <img width="1417" alt="SQL_workspace_–_BigQuery_–_Data_Warehouse_Exp_–_Google_Cloud_Platform" src="https://user-images.githubusercontent.com/1108173/130323561-444cbbf6-a994-455e-97b6-8db6df69e274.png">
+
+   Use the Share Dataset button to share your dataset with your new service account and either the `BigQuery DataOwner` role, or your custom role created above. In the below, we've used a custom role `PostHog Ingest`.
+
+   <img width="480" alt="SQL_workspace_–_BigQuery_–_Data_Warehouse_Exp_–_Google_Cloud_Platform" src="https://user-images.githubusercontent.com/1108173/130323602-50f13200-6fde-4ee9-b507-1bce75fc75b2.png">
+
+That's it! Once you've done the steps above, your data should start flowing from PostHog to BigQuery.
+
+## Troubleshooting
+
+### Duplicate events
+
+There's a very rare case when duplicate events appear in BigQuery. This happens due to network errors, where the export seems to have failed, yet it actually reaches BigQuery.
+
+While this shouldn't happen, if you find duplicate events in BigQuery, follow these [Google Cloud docs](https://cloud.google.com/bigquery/streaming-data-into-bigquery#manually_removing_duplicates) to manually remove the them.
+
+Here is an example query based on the [Google Cloud docs](https://cloud.google.com/bigquery/streaming-data-into-bigquery#manually_removing_duplicates) that would remove duplicates: 
+
+```sql
+
+WITH
+
+-- first add a row number, one for each uuid
+raw_data AS
+(
+SELECT 
+  *,
+  ROW_NUMBER() OVER (PARTITION BY uuid) as ROW_NUMBER
+from
+  `<project_id>.<dataset>.<table>`
+WHERE
+  DATE(timestamp) = '<YYYY-MM-DD>'
+),
+
+-- now just filter for one row per uuid
+raw_data_deduplicated AS 
+(
+SELECT
+  * EXCEPT(ROW_NUMBER)
+FROM
+  raw_data   
+WHERE
+  ROW_NUMBER = 1
+)
+
+SELECT 
+  * 
+FROM
+  raw_data_deduplicated
+;
+
+```

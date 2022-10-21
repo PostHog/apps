@@ -1,0 +1,68 @@
+{
+    "name": "posthog databricks plugin",
+    "url": "https://github.com/samcaspus/posthog-databricks-plugin",
+    "description": "The PostHog Databrics plugin allows you to track your users' interactions with your website using the Databrics platform.",
+    "main": "index.js",
+    "posthogVersion": ">= 1.25.0",
+    "config": [
+        {
+            "markdown": "This plugin will enable users with databricks data ingestion capabilities to track their interactions"
+        },
+        {
+            "key": "DomainName",
+            "name": "Domain Name",
+            "type": "string",
+            "default": "",
+            "description": "Domain name of your databrics cloud instance",
+            "required": true
+        },
+        {
+            "key": "ApiKey",
+            "name": "API Key",
+            "type": "string",
+            "default": "",
+            "description": "API key of your databrics cloud instance",
+            "required": true
+        },
+        {
+            "key": "fileName",
+            "name": "File Name",
+            "type": "string",
+            "default": "/tmp/posthog.csv",
+            "description": "Default filename for the csv file",
+            "required": true
+        },
+        {
+            "key": "pythonSupportFileUpload",
+            "name": "Python Support File Upload",
+            "type": "string",
+            "default": "/tmp/posthog_upload.py",
+            "description": "Default filename for python job file",
+            "required": true
+        },
+        {
+            "key": "clusterId",
+            "name": "Cluster Id",
+            "type": "string",
+            "default": "",
+            "description": "Get cluster details from the databricks portal",
+            "required": true
+        },
+        {
+            "key": "dbName",
+            "name": "Database Name",
+            "type": "string",
+            "default": "",
+            "description": "Database name to store the data",
+            "required": true
+        },
+        {
+            "key": "eventsToIgnore",
+            "name": "Events to Ignore",
+            "type": "string",
+            "default": "",
+            "description": "Events to ignore",
+            "required": false
+        }
+    ]
+}
