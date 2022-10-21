@@ -26,7 +26,19 @@ apps.forEach(async (app) => {
       const zip = new Zip(Buffer.from(body));
 
       zip.forEach((entry) => {
-        zip.extractEntryTo(entry, `./src/packages/${repo}`, false, false);
+        if (!entry.isDirectory) {
+          const fileName = entry.entryName;
+          const newFileName = fileName.substring(fileName.indexOf("/") + 1);
+
+          zip.extractEntryTo(
+            entry,
+            `./src/packages/${repo}`,
+            true,
+            false,
+            true,
+            newFileName
+          );
+        }
       });
 
       console.log(`Copied code from ${owner}/${repo}`);
