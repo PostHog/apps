@@ -67,6 +67,10 @@ export default packages.map(({ name }) => {
       copy({
         targets: [
           { src: `./src/packages/${name}/plugin.json`, dest: `./dist/${name}` },
+          {
+            src: `./src/packages/${name}/package.json`,
+            dest: `./dist/${name}`,
+          },
         ],
       }),
     ],
