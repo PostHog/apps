@@ -1,7 +1,5 @@
 import fetch from "node-fetch";
 import Zip from "adm-zip";
-import zlib from "zlib";
-import { writeFileSync } from "fs";
 
 const res = await fetch(
   "https://raw.githubusercontent.com/PostHog/integrations-repository/main/plugins.json"
@@ -16,9 +14,6 @@ apps.forEach(async (app) => {
     ) || [];
 
   if (owner && repo) {
-    /*console.log(
-      `https://www.github.com/${owner}/${repo}/archive/refs/heads/main.zip`
-    );*/
     try {
       const file = await fetch(
         `https://www.github.com/${owner}/${repo}/archive/refs/heads/main.zip`,
@@ -28,18 +23,13 @@ apps.forEach(async (app) => {
       );
 
       const body = await file.arrayBuffer();
-
-      // writeFileSync(repo + ".zip", Buffer(body));
-
       const zip = new Zip(Buffer.from(body));
-      /*zip.forEach((entry) => {
-        console.log(entry.name);
-      });*/
+
       zip.forEach((entry) => {
-        zip.extractEntryTo(entry, `./src/packages/${repo}`, false, true);
+        zip.extractEntryTo(entry, `./src/packages/${repo}`, false, false);
       });
-      // console.log(zip.toBuffer().length);
-      console.log(`${owner}/${repo}`);
+
+      console.log(`Copied code from ${owner}/${repo}`);
     } catch (error) {
       console.error(error);
     }
