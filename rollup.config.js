@@ -8,17 +8,15 @@ import typescript from "@rollup/plugin-typescript";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 
-// const packages = glob.sync("./src/packages/*", )
-
 const packages = fs
   .readdirSync("./src/packages", { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory());
 
 export default packages.map(({ name }) => {
-  console.log(name);
   /*const plugin = JSON.parse(
     fs.readFileSync(`./src/packages/${name}/plugin.json`).toString("utf-8")
   );*/
+
   const srcExists = fs.existsSync(`./src/packages/${name}/src`);
   const isTypescript = fs.existsSync(
     srcExists
@@ -58,7 +56,6 @@ export default packages.map(({ name }) => {
         modulePaths: [`./src/packages/${name}`],
       }),
       typescript({
-        // exclude: ["*.test*", "**/*.test*"],
         tsconfig: path.join(__dirname, "tsconfig.json"),
         compilerOptions: {
           baseUrl: `./src/packages/${name}`,
