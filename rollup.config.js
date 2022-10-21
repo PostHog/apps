@@ -7,6 +7,7 @@ import manifest from "./manifest.json";
 import typescript from "@rollup/plugin-typescript";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
+import copy from "rollup-plugin-copy";
 
 const packages = fs
   .readdirSync("./src/packages", { withFileTypes: true })
@@ -62,6 +63,11 @@ export default packages.map(({ name }) => {
         },
         include: [`./src/packages/${name}/**`],
         exclude: [`node_modules`, "*.test*", "**/*.test", "dist", "*.config*"],
+      }),
+      copy({
+        targets: [
+          { src: `./src/packages/${name}/plugin.json`, dest: `./dist/${name}` },
+        ],
       }),
     ],
   };
