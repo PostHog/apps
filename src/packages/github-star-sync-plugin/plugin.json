@@ -1,0 +1,44 @@
+{
+    "name": "Github Star Sync",
+    "description": "Sync Github Stars to PostHog",
+    "url": "https://github.com/PostHog/github-star-sync-plugin",
+    "main": "index.js",
+    "config": [
+        {
+            "key": "user",
+            "name": "Github Username",
+            "type": "string",
+            "required": true
+        },
+        {
+            "key": "repo",
+            "name": "Github Repository",
+            "type": "string",
+            "required": true
+        },
+        {
+            "key": "token",
+            "name": "Github API Token",
+            "hint": "Create a new GitHub [personal access token](https://github.com/settings/tokens/new) with the `repo` scope. Then copy it here. This field is optional, though helps with Github API rate limits.",
+            "type": "string",
+            "required": false,
+            "secret": true
+        },
+        {
+            "key": "eventName",
+            "name": "Event name",
+            "type": "string",
+            "required": false,
+            "default": "GitHub Star"
+        },
+        {
+            "key": "resetStorage",
+            "name": "Reset",
+            "type": "choice",
+            "choices": ["No", "Yes"],
+            "hint": "**Advanced**",
+            "required": false,
+            "default": "No"
+        }
+    ]
+}

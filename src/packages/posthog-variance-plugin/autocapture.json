@@ -1,0 +1,255 @@
+{
+  "id": "0180f261-a6b0-0000-4bab-502b1807725d",
+  "timestamp": "2022-05-23T19:25:24.597000+00:00",
+  "event": "$autocapture",
+  "distinct_id": "YiZpN3z6sbgGuZ93bWpAqsfyaQDj1la4us2p3mT41uj",
+  "properties": {
+    "$active_feature_flags": [],
+    "$browser": "Chrome",
+    "$browser_version": 101,
+    "$ce_version": 1,
+    "$current_url": "http://localhost:8000/project/apps",
+    "$device_id": "180d9a2c070861-0c82a7dd77400b-34736704-16a7f0-180d9a2c0711cbb",
+    "$device_type": "Desktop",
+    "$event_type": "click",
+    "$geoip_city_name": "Sydney",
+    "$geoip_continent_code": "OC",
+    "$geoip_continent_name": "Oceania",
+    "$geoip_country_code": "AU",
+    "$geoip_country_name": "Australia",
+    "$geoip_latitude": -33.8715,
+    "$geoip_longitude": 151.2006,
+    "$geoip_postal_code": "1148",
+    "$geoip_subdivision_1_code": "NSW",
+    "$geoip_subdivision_1_name": "New South Wales",
+    "$geoip_time_zone": "Australia/Sydney",
+    "$group_0": "0180d9a2-bdc7-0000-33c9-e4c7337dc44f",
+    "$group_1": "0180d9a2-b90a-0000-34d4-e261a7db0061",
+    "$group_2": "http://localhost:8000",
+    "$groups": {
+      "project": "0180d9a2-bdc7-0000-33c9-e4c7337dc44f",
+      "organization": "0180d9a2-b90a-0000-34d4-e261a7db0061",
+      "instance": "http://localhost:8000"
+    },
+    "$host": "localhost:8000",
+    "$initial_referrer": "http://localhost:8000/authorize_and_redirect/?redirect=http%3A%2F%2Flocalhost%3A8000%2Fproject%2Fsettings",
+    "$initial_referring_domain": "localhost:8000",
+    "$insert_id": "2mnxyaebkeikk5bs",
+    "$ip": "127.0.0.1",
+    "$lib": "web",
+    "$lib_version": "1.21.1",
+    "$os": "Mac OS X",
+    "$pathname": "/project/apps",
+    "$plugins_deferred": [],
+    "$plugins_failed": [],
+    "$plugins_succeeded": ["GeoIP (1)"],
+    "$referrer": "http://localhost:8000/authorize_and_redirect/?redirect=http%3A%2F%2Flocalhost%3A8000%2Fproject%2Fsettings",
+    "$referring_domain": "localhost:8000",
+    "$screen_height": 982,
+    "$screen_width": 1512,
+    "$session_id": "180f237576f1bb5-0a204179732d3d-34736704-16a7f0-180f23757701d9a",
+    "$set_once": {
+      "$initial_os": "Mac OS X",
+      "$initial_browser": "Chrome",
+      "$initial_device_type": "Desktop",
+      "$initial_current_url": "http://localhost:8000/project/apps",
+      "$initial_pathname": "/project/apps",
+      "$initial_browser_version": 101,
+      "$initial_referrer": "http://localhost:8000/authorize_and_redirect/?redirect=http%3A%2F%2Flocalhost%3A8000%2Fproject%2Fsettings",
+      "$initial_referring_domain": "localhost:8000"
+    },
+    "$time": 1653333924.586,
+    "$user_id": "YiZpN3z6sbgGuZ93bWpAqsfyaQDj1la4us2p3mT41uj",
+    "$viewport_height": 833,
+    "$viewport_width": 1512,
+    "$window_id": "180f25ddb99166c-0faeb312e6db2e-34736704-16a7f0-180f25ddb9a199b",
+    "distinct_id": "YiZpN3z6sbgGuZ93bWpAqsfyaQDj1la4us2p3mT41uj",
+    "email_service_available": false,
+    "is_demo_project": false,
+    "posthog_version": "1.35.0",
+    "realm": "hosted-clickhouse",
+    "token": "phc_r06aTsEyFENJMKoqoJCoPxCtRCQGZFw1njECfKiup7K"
+  },
+  "elements": [
+    {
+      "event": null,
+      "text": "Live Events",
+      "tag_name": "span",
+      "attr_class": null,
+      "href": "/events",
+      "attr_id": null,
+      "nth_child": 1,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__href": "/events",
+        "attr__style": "flex-grow: 1;"
+      },
+      "order": 0
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "div",
+      "attr_class": ["LemonRow__content"],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 2,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "LemonRow__content"
+      },
+      "order": 1
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "div",
+      "attr_class": ["LemonRow__main-area"],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 1,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "LemonRow__main-area"
+      },
+      "order": 2
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "button",
+      "attr_class": [
+        "LemonButton",
+        "LemonButton--stealth",
+        "LemonRow",
+        "LemonRow--full-width"
+      ],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 1,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "LemonRow LemonButton LemonButton--stealth LemonRow--full-width",
+        "attr__data-attr": "menu-item-events",
+        "attr__type": "button"
+      },
+      "order": 3
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "a",
+      "attr_class": null,
+      "href": "/events",
+      "attr_id": null,
+      "nth_child": 10,
+      "nth_of_type": 4,
+      "attributes": {
+        "attr__href": "/events",
+        "attr__style": "display: contents;"
+      },
+      "order": 4
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "div",
+      "attr_class": ["Pages"],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 1,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "Pages"
+      },
+      "order": 5
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "div",
+      "attr_class": ["SideBar__content"],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 1,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "SideBar__content"
+      },
+      "order": 6
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "div",
+      "attr_class": ["SideBar__slider"],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 1,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "SideBar__slider"
+      },
+      "order": 7
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "div",
+      "attr_class": ["SideBar", "SideBar__layout"],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 3,
+      "nth_of_type": 2,
+      "attributes": {
+        "attr__class": "SideBar SideBar__layout"
+      },
+      "order": 8
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "section",
+      "attr_class": ["ant-layout"],
+      "href": null,
+      "attr_id": null,
+      "nth_child": 1,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "ant-layout",
+        "attr__style": "min-height: 100vh;"
+      },
+      "order": 9
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "div",
+      "attr_class": null,
+      "href": null,
+      "attr_id": "root",
+      "nth_child": 3,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__id": "root"
+      },
+      "order": 10
+    },
+    {
+      "event": null,
+      "text": null,
+      "tag_name": "body",
+      "attr_class": [],
+      "href": null,
+      "attr_id": null,
+      "nth_child": null,
+      "nth_of_type": 1,
+      "attributes": {
+        "attr__class": "\"attr__style=",
+        "\"nth-child": "4"
+      },
+      "order": 11
+    }
+  ],
+  "elements_chain": "span:attr__href=\"/events\"attr__style=\"flex-grow: 1;\"href=\"/events\"nth-child=\"1\"nth-of-type=\"1\"text=\"Live Events\";div.LemonRow__content:attr__class=\"LemonRow__content\"nth-child=\"2\"nth-of-type=\"1\";div.LemonRow__main-area:attr__class=\"LemonRow__main-area\"nth-child=\"1\"nth-of-type=\"1\";button.LemonButton.LemonButton--stealth.LemonRow.LemonRow--full-width:attr__class=\"LemonRow LemonButton LemonButton--stealth LemonRow--full-width\"attr__data-attr=\"menu-item-events\"attr__type=\"button\"nth-child=\"1\"nth-of-type=\"1\";a:attr__href=\"/events\"attr__style=\"display: contents;\"href=\"/events\"nth-child=\"10\"nth-of-type=\"4\";div.Pages:attr__class=\"Pages\"nth-child=\"1\"nth-of-type=\"1\";div.SideBar__content:attr__class=\"SideBar__content\"nth-child=\"1\"nth-of-type=\"1\";div.SideBar__slider:attr__class=\"SideBar__slider\"nth-child=\"1\"nth-of-type=\"1\";div.SideBar.SideBar__layout:attr__class=\"SideBar SideBar__layout\"nth-child=\"3\"nth-of-type=\"2\";section.ant-layout:attr__class=\"ant-layout\"attr__style=\"min-height: 100vh;\"nth-child=\"1\"nth-of-type=\"1\";div:attr__id=\"root\"attr_id=\"root\"nth-child=\"3\"nth-of-type=\"1\";body.:attr__class=\"\"attr__style=\"\"nth-child=\"4\"nth-of-type=\"1\""
+}

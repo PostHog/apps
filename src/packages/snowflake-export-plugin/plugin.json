@@ -1,0 +1,172 @@
+{
+    "name": "Snowflake Export",
+    "url": "https://github.com/posthog/snowflake-export-plugin",
+    "description": "Export PostHog events into Snowflake",
+    "main": "index.ts",
+    "posthogVersion": ">=1.25.0",
+    "config": [
+        {
+            "key": "account",
+            "name": "Snowflake account",
+            "type": "string",
+            "hint": "In the format of \"ab12345\" or \"ab12345.region.cloud\"",
+            "required": true
+        },
+        {
+            "key": "username",
+            "name": "Snowflake username",
+            "type": "string",
+            "required": true
+        },
+        {
+            "key": "password",
+            "name": "Snowflake password",
+            "type": "string",
+            "required": false,
+            "secret": true
+        },
+        {
+            "key": "database",
+            "name": "Snowflake database name",
+            "type": "string",
+            "required": true
+        },
+        {
+            "key": "dbschema",
+            "name": "Snowflake database schema",
+            "type": "string",
+            "default": "PUBLIC",
+            "required": true
+        },
+        {
+            "key": "table",
+            "name": "Snowflake table name",
+            "type": "string",
+            "required": true,
+            "hint": "Will be created if doesn't already exist."
+        },
+        {
+            "key": "warehouse",
+            "name": "Virtual warehouse to use for copying files",
+            "required": true,
+            "type": "string"
+        },
+        {
+            "key": "role",
+            "name": "Specify a role to access Snowflake with",
+            "type": "string",
+            "hint": "Optional, overrides the default role for the user."
+        },
+        {
+            "key": "copyCadenceMinutes",
+            "name": "How often (in minutes) data should be copied into Snowflake",
+            "type": "string",
+            "default": "10"
+        },
+        {
+            "key": "stageToUse",
+            "name": "Stage type",
+            "type": "choice",
+            "required": true,
+            "choices": ["S3", "GCS"]
+        },
+        {
+            "key": "stage",
+            "name": "Name to use for external stage",
+            "type": "string",
+            "required": true,
+            "hint": "Will be created if doesn't already exist."
+        },
+        {
+            "key": "bucketName",
+            "name": "Bucket name",
+            "hint": "This should be strictly the **name** of your bucket without a path! You can specify a path to store files in below",
+            "type": "string",
+            "required": true
+        },
+        {
+            "key": "bucketPath",
+            "name": "Optional path under which the staged events should be stored in your bucket",
+            "hint": "E.g. `posthog/exports/`",
+            "type": "string",
+            "default": ""
+        },
+        {
+            "key": "purgeFromStage",
+            "name": "Purge events from stage after copying?",
+            "type": "choice",
+            "choices": ["No", "Yes"],          
+            "default": "No"
+        },
+        {
+            "key": "awsAccessKeyId",
+            "name": "AWS access key ID",
+            "type": "string",
+            "visible_if": [["stageToUse", "S3"]],
+            "required_if": [["stageToUse", "S3"]]
+        },
+        {
+            "key": "awsSecretAccessKey",
+            "name": "AWS secret access key",
+            "type": "string",
+            "secret": true,
+            "visible_if": [["stageToUse", "S3"]],
+            "required_if": [["stageToUse", "S3"]]
+        },
+        {
+            "key": "awsRegion",
+            "name": "S3 bucket region",
+            "type": "string",
+            "hint": "We recommend using the same region as your Snowflake instance.",
+            "visible_if": [["stageToUse", "S3"]],
+            "required_if": [["stageToUse", "S3"]]
+        },
+        {
+            "key": "storageIntegrationName",
+            "name": "GCS storage integration name",
+            "type": "string",
+            "hint": "Follow [these instructions](https://docs.snowflake.com/en/user-guide/data-load-gcs-config.html) to get this.",
+            "visible_if": [["stageToUse", "GCS"]],
+            "required_if": [["stageToUse", "GCS"]]
+        },
+        {
+            "key": "gcsCredentials",
+            "name": "GCS credentials file",
+            "type": "attachment",
+            "hint": "This should be a JSON file. Instructions on how to get this file can be found in [this Google Cloud Tutorial](https://cloud.google.com/bigquery/docs/reference/libraries#setting_up_authentication).",
+            "visible_if": [["stageToUse", "GCS"]],
+            "required_if": [["stageToUse", "GCS"]]
+        },
+        {
+            "key": "eventsToIgnore",
+            "name": "Events to ignore",
+            "type": "string",
+            "default": "$snapshot, $feature_flag_called",
+            "hint": "Comma separated list of events to ignore"
+        },
+        {
+            "key": "retryCopyIntoOperations",
+            "name": "[ADVANCED] Retry failed COPY INTO operations?",
+            "type": "choice",
+            "choices": ["Yes", "No"],
+            "default": "Yes",
+            "hint": "**Do not change this option unless you really know what you're doing!**"
+        },
+        {
+            "key": "debug",
+            "name": "DEBUG",
+            "type": "choice",
+            "choices": ["ON", "OFF"],
+            "default": "OFF",
+            "hint": "Advanced"
+        },
+        {
+            "key": "forceCopy",
+            "name": "Set `FORCE = true` when copying from the bucket?",
+            "type": "choice",
+            "choices": ["Yes", "No"],
+            "default": "No",
+            "hint": "Advanced"
+        }
+    ]
+}

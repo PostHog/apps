@@ -1,0 +1,24 @@
+{
+  "name": "@posthog/apps",
+  "version": "0.0.0",
+  "description": "Mono-repo for all PostHog apps",
+  "homepage": "https://posthog.com/apps",
+  "repository": "git@github.com:PostHog/apps.git",
+  "scripts": {
+    "copy-apps": "node ./scripts/copy-apps.js"
+  },
+  "bugs": {
+    "url": "https://github.com/posthog/apps/issues"
+  },
+  "author": "PostHog Inc.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16 <19"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.5.9"
+  },
+  "private": true,
+  "workspaces": ["./src/packages/*"]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Variance",
+  "url": "https://www.variance.com/docs/posthog",
+  "description": "Send event data to Variance",
+  "main": "dist/index.js",
+  "posthogVersion": ">= 1.25.0",
+  "config": [
+    {
+      "markdown": "Visit [app.variance.com](https://app.variance.com/integrations) to add your PostHog integration then enter the values below. For more information, visit our [Docs](https://www.variance.com/docs/posthog)."
+    },
+    {
+      "key": "webhookUrl",
+      "name": "Webhook URL",
+      "type": "string",
+      "required": true
+    },
+    {
+      "key": "authHeader",
+      "name": "Authorization header",
+      "type": "string",
+      "secret": true,
+      "required": true
+    }
+  ]
+}
