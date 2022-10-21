@@ -34,7 +34,7 @@ apps.forEach(async (app) => {
             entry,
             `./src/packages/${repo}`,
             true,
-            true,
+            false,
             true,
             newFileName
           );
