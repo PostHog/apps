@@ -1,5 +1,5 @@
 {
-    "name": "@posthog/s3-export-plugin",
+    "name": "@posthog/bigquery-plugin",
     "private": true,
     "version": "0.0.1",
     "description": "Export PostHog events to Amazon S3 on ingestion.",
