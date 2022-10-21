@@ -30,8 +30,6 @@ apps.forEach(async (app) => {
           const fileName = entry.entryName;
           const newFileName = fileName.substring(fileName.indexOf("/") + 1);
 
-          console.log(newFileName);
-
           zip.extractEntryTo(
             entry,
             `./src/packages/${repo}`,
