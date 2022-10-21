@@ -1,0 +1,16 @@
+{
+    "name": "Twitter Followers",
+    "url": "https://github.com/PostHog/twitter-followers-plugin",
+    "description": "Get Twitter follower numbers in PostHog daily.",
+    "main": "index.js",
+    "config": [
+        {
+            "key": "twitterHandle",
+            "hint": "Without the @",
+            "name": "Twitter Handle",
+            "type": "string",
+            "default": "",
+            "required": false
+        }
+    ]
+}

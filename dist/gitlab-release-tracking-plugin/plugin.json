@@ -1,0 +1,43 @@
+{
+    "name": "GitLab Release Tracker",
+    "url": "https://github.com/PostHog/gitlab-release-tracking-plugin",
+    "description": "Track GitLab releases in PostHog.",
+    "main": "index.js",
+    "config": [
+        {
+            "key": "posthogHost",
+            "hint": "Optional - defaults to https://app.posthog.com",
+            "name": "URL of your PostHog instance",
+            "type": "string",
+            "default": "https://app.posthog.com",
+            "required": false
+        },
+        {
+            "key": "gitlabHost",
+            "hint": "Optional - defaults to https://gitlab.com",
+            "name": "URL of your GitLab instance",
+            "type": "string",
+            "default": "https://gitlab.com",
+            "required": false
+        },
+        {
+            "key": "gitlabProjectId",
+            "hint": "",
+            "name": "Unique ID of your GitLab Project",
+            "type": "string",
+            "default": "",
+            "required": true
+        },
+        {
+            "key": "gitlabToken",
+            "hint": "Required for private repos only",
+            "name": "GitLab Personal Token",
+            "type": "string",
+            "default": "",
+            "required": false,
+            "secret": true
+        }
+    ]
+}
+
+

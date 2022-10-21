@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2018",
+
+    "module": "es2020",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "outDir": "dist",
+    "resolveJsonModule": true,
+
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "removeComments": true,
+
+    "declaration": false,
+    "sourceMap": false,
+
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noUncheckedIndexedAccess": true,
+
+    "skipLibCheck": true
+  }
+}

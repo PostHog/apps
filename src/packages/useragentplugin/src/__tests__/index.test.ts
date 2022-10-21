@@ -6,7 +6,7 @@ import {
     StorageExtension,
     UtilsExtension,
 } from '@posthog/plugin-scaffold'
-import { processEvent } from '../plugin'
+import { processEvent } from '../index'
 
 describe('useragent-plugin', () => {
     test('should not process event when disabled', async () => {

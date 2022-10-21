@@ -1,8 +1,6 @@
 {
+    "extends": "../../../tsconfig.json",
     "compilerOptions": {
-        "target": "ES2018",
-        "lib": ["ES2019"],
-        "module": "ES2015",
         "moduleResolution": "Node",
         "strict": true,
         "forceConsistentCasingInFileNames": true,
@@ -11,5 +9,5 @@
         "esModuleInterop": true,
         "noEmit": true
     },
-    "exclude": ["**.test.ts"]
+    "include": ["./index.ts"]
 }
