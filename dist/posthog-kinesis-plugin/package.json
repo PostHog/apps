@@ -1,6 +1,5 @@
 {
     "name": "posthog-kinesis-plugin",
-    "private": false,
     "version": "0.0.1",
     "description": "Import events to Posthog from a Kinesis Stream.",
     "author": "Emanuele Capparelli (k@emkpp.com)",

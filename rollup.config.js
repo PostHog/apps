@@ -1,9 +1,7 @@
 // rollup.config.js
 
 import fs from "fs";
-import path from "path";
 
-import manifest from "./manifest.json";
 import typescript from "@rollup/plugin-typescript";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -57,12 +55,22 @@ export default packages.map(({ name }) => {
         modulePaths: [`./src/packages/${name}`],
       }),
       typescript({
-        tsconfig: path.join(__dirname, "tsconfig.json"),
+        tsconfig: "./tsconfig.json",
         compilerOptions: {
           baseUrl: `./src/packages/${name}`,
         },
-        include: [`./src/packages/${name}/**`],
-        exclude: [`node_modules`, "*.test*", "**/*.test", "dist", "*.config*"],
+        include: [
+          `./src/packages/${name}/**/*.js`,
+          `./src/packages/${name}/**/*.ts`,
+        ],
+        exclude: [
+          `node_modules/`,
+          "*.test*",
+          "**/*.test*",
+          "dist/",
+          "*.config*",
+        ],
+        outputToFilesystem: false,
       }),
       copy({
         targets: [
