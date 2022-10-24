@@ -1,5 +1,5 @@
 {
-    "name": "customerio-plugin",
+    "name": "@posthog/customerio-plugin",
     "version": "0.0.1",
     "description": "Send event data and emails into Customer.io.",
     "main": "index.ts",

@@ -1,5 +1,5 @@
 {
-    "name": "posthog-variance-plugin",
+    "name": "@posthog/variance-plugin",
     "description": "Send PostHog events to Variance",
     "version": "0.0.1",
     "type": "module",

@@ -1,5 +1,5 @@
 {
-    "name": "posthog-twilio-plugin",
+    "name": "@posthog/twilio-plugin",
     "version": "0.0.1",
     "description": "Send SMS from Twilio",
     "main": "index.js",

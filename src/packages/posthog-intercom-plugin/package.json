@@ -1,5 +1,5 @@
 {
-    "name": "posthog-intercom-plugin",
+    "name": "@posthog/intercom-plugin",
     "version": "0.0.1",
     "description": "Export PostHog events to Intercom.",
     "author": "Emanuele Capparelli (k@emkpp.com)",

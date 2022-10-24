@@ -1,6 +1,5 @@
 {
-    "name": "posthog-redshift-import-plugin",
-    "private": true,
+    "name": "@posthog/redshift-import-plugin",
     "version": "0.0.1",
     "description": "Import PostHog events from Amazon Redshift.",
     "devDependencies": {

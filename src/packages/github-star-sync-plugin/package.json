@@ -1,5 +1,5 @@
 {
-    "name": "posthog-gitub-star-sync-plugin",
+    "name": "@posthog/gitub-star-sync-plugin",
     "version": "0.0.1",
     "description": "Sync Github Stars to PostHog",
     "repository": {

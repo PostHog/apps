@@ -1,5 +1,5 @@
 {
-    "name": "posthog-app-advanced-geoip",
+    "name": "@posthog/advanced-geoip-app",
     "version": "0.0.1",
     "description": "Advanced GeoIP filtering app for PostHog",
     "main": "index.ts",

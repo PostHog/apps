@@ -1,6 +1,5 @@
 {
-    "name": "posthog-gcs-plugin",
-    "private": true,
+    "name": "@posthog/gcs-plugin",
     "version": "0.0.1",
     "description": "Export PostHog events to GCS on ingestion.",
     "devDependencies": {

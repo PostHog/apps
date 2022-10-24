@@ -1,5 +1,5 @@
 {
-    "name": "gitlab-release-tracking-plugin",
+    "name": "@posthog/gitlab-release-tracking-plugin",
     "version": "0.0.1",
     "description": "Track GitLab releases in PostHog.",
     "main": "index.js",
