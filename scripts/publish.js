@@ -1,20 +1,11 @@
 import fs from 'fs'
+import { execSync } from 'child_process'
 
-import npm from 'npm'
+const packages = fs.readdirSync('./dist', { withFileTypes: true }).filter((dirent) => dirent.isDirectory())
 
-const packages = fs.readdirSync('./dist/packages', { withFileTypes: true }).filter((dirent) => dirent.isDirectory())
-
-for await (let { name } of packages) {
+for (let { name } of packages) {
     try {
-        await new Promise((resolve, reject) => {
-            npm.commands.publish([`./dist/${name}`, '--access public', '--dry-run'], (err, result) => {
-                if (err) {
-                    reject(err)
-                } else {
-                    resolve(result)
-                }
-            })
-        })
+        execSync('npm publish --access public --dry-run', { cwd: `./dist/${name}` })
     } catch (error) {
         console.error(`Encountered error while publishing ${name}: ${error}`)
     }
