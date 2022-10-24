@@ -10,8 +10,10 @@ function processEvent(event) {
         event.properties['hour'] = eventDate.getHours();
         event.properties['minute'] = eventDate.getMinutes();
     }
-    return event;
+
+    return event
 }
+
 var timestampParserPlugin = {
     processEvent
 };

@@ -1983,6 +1983,7 @@ async function onEvent(event, { config }) {
         console.debug(`Unsupported event: ${event.event}`);
         return;
     }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const output = {
         libary: {
             name: NAME,

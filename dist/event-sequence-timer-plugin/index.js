@@ -15,7 +15,7 @@ const setupPlugin = ({ config, global }) => {
         global.eventsToTrack = eventsToTrack;
         global.firstStepEvents = firstStepEvents;
     }
-    catch (_a) {
+    catch {
         throw new Error('Unable to parse your config. Please make sure you are using the commas and parentheses correctly.');
     }
 };
@@ -30,8 +30,7 @@ function extractEventsToTrack(eventsToTrack) {
     });
 }
 const processEvent = async (event, { config, global, storage }) => {
-    var _a, _b;
-    const timestamp = new Date(event.timestamp || ((_a = event.properties) === null || _a === void 0 ? void 0 : _a.timestamp) || event.now || event.sent_at || ((_b = event.properties) === null || _b === void 0 ? void 0 : _b['$time'])).getTime();
+    const timestamp = new Date(event.timestamp || event.properties?.timestamp || event.now || event.sent_at || event.properties?.['$time']).getTime();
     if (timestamp) {
         if (global.firstStepEvents.has(event.event)) {
             const existingTimestamp = await storage.get(`${event.event}_${event.distinct_id}`, null);

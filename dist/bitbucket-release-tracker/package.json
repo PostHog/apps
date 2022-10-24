@@ -1,7 +1,7 @@
 {
     "name": "@posthog/bitbucket-release-tracker",
     "version": "0.0.1",
-    "description": "Track Bitbucker releases in PostHog.",
+    "description": "Track Bitbucket releases in PostHog.",
     "main": "index.js",
     "repository": {
         "type": "git",

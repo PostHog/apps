@@ -1,4 +1,4 @@
-const ONE_DAY = 60 * 60 * 24;
+const ONE_DAY = 60 * 60 * 24; // 24h in seconds
 const defaultLocationSetProps = {
     $geoip_city_name: null,
     $geoip_country_name: null,
@@ -31,7 +31,7 @@ const plugin = {
         if (ip && !((_b = event.properties) === null || _b === void 0 ? void 0 : _b.$geoip_disable)) {
             ip = String(ip);
             if (ip === '127.0.0.1') {
-                ip = '13.106.122.3';
+                ip = '13.106.122.3'; // Spoofing an Australian IP address for local development
             }
             const response = await geoip.locate(ip);
             if (response) {
@@ -68,7 +68,10 @@ const plugin = {
                 const lastIpSetEntry = await cache.get(event.distinct_id, null);
                 if (typeof lastIpSetEntry === 'string') {
                     const [lastIpSet, timestamp] = lastIpSetEntry.split('|');
+                    // New IP but this event is late and another event that happened after
+                    // but was received earlier has already updated the props
                     const isEventSettingPropertiesLate = event.timestamp && timestamp && new Date(event.timestamp) < new Date(timestamp);
+                    // Person props update is not needed if the event's IP is the same as last set for the person
                     if (lastIpSet === ip || isEventSettingPropertiesLate) {
                         setPersonProps = false;
                     }

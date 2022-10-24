@@ -4,6 +4,7 @@ const plugin = {
     exportEvents: async (events, { config }) => {
         const batch = [];
         for (const event of events) {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { team_id, now, offset, sent_at, $token, project_id, api_key, ...sendableEvent } = { ...event, token: config.project_api_key };
             const replication = parseInt(config.replication) || 1;
             for (let i = 0; i < replication; i++) {

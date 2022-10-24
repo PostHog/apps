@@ -34,7 +34,7 @@ function setupPlugin({ global, attachments }) {
         }
         global.filters = filters;
     }
-    catch (_a) {
+    catch {
         throw new Error("Could not parse filters attachment");
     }
 }

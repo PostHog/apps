@@ -27,6 +27,7 @@ function transformEventToRow(fullEvent) {
     const timestamp = fullEvent.timestamp || (properties === null || properties === void 0 ? void 0 : properties.timestamp) || now || sent_at;
     let ingestedProperties = properties;
     let elements = [];
+    // only move prop to elements for the $autocapture action
     if (event === '$autocapture' && (properties === null || properties === void 0 ? void 0 : properties['$elements'])) {
         const { $elements, ...props } = properties;
         ingestedProperties = props;
@@ -252,6 +253,7 @@ class Snowflake {
         }
         const csvString = generateCsvString(events);
         const fileName = `${global.parsedBucketPath}${generateCsvFileName()}`;
+        // some minor hackiness to upload without access to the filesystem
         const dataStream = new PassThrough();
         const gcFile = this.gcsConnector.file(fileName);
         dataStream.push(csvString);
@@ -380,6 +382,7 @@ const snowflakePlugin = {
     async teardownPlugin(meta) {
         const { global } = meta;
         try {
+            // prevent some issues with plugin reloads
             await copyIntoSnowflake(meta, true);
         }
         catch (_a) { }
@@ -410,6 +413,7 @@ const snowflakePlugin = {
         }
     },
     async runEveryMinute(meta) {
+        // Run copyIntoSnowflake more often to spread out load better
         await meta.jobs.copyIntoSnowflakeJob({}).runIn(20, 'seconds');
         await meta.jobs.copyIntoSnowflakeJob({}).runIn(40, 'seconds');
         await copyIntoSnowflake(meta);
@@ -444,6 +448,7 @@ async function copyIntoSnowflake({ cache, storage, global, jobs, config }, force
             try {
                 await global.snowflake.copyIntoTableFromStage(chunkStagedForCopy, global.purgeEventsFromStage, global.forceCopy, global.debug);
                 console.log('COPY INTO ran successfully');
+                // if we succeed, go to the next chunk, else we'll enqueue a retry below
                 continue;
             }
             catch (_a) {

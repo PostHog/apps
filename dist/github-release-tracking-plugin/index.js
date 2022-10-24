@@ -24,7 +24,7 @@ async function runEveryMinute({ config, global, cache }) {
             personalApiKey: config.posthogPersonalApiKey
         });
         const annotationsJson = await annotationsRes.json();
-        if (!Array.isArray(annotationsJson === null || annotationsJson === void 0 ? void 0 : annotationsJson.results)) {
+        if (!Array.isArray(annotationsJson?.results)) {
             throw new Error(`Could not load annotations. Response: ${JSON.stringify(annotationsJson)}`);
         }
         const annotationNames = annotationsJson.results.map((annotation) => annotation.content);

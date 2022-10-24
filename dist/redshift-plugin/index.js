@@ -12,6 +12,7 @@ const setupPlugin = async (meta) => {
     if (!config.clusterHost.endsWith('redshift.amazonaws.com')) {
         throw new Error('Cluster host must be a valid AWS Redshift host');
     }
+    // Max Redshift insert is 16 MB: https://docs.aws.amazon.com/redshift/latest/dg/c_redshift-sql.html
     Math.max(1, Math.min(parseInt(config.uploadMegabytes) || 1, 10));
     Math.max(1, Math.min(parseInt(config.uploadSeconds) || 1, 600));
     global.sanitizedTableName = sanitizeSqlIdentifier(config.tableName);
@@ -44,6 +45,7 @@ const parseEvent = (event) => {
     const ip = (properties === null || properties === void 0 ? void 0 : properties['$ip']) || event.ip;
     let ingestedProperties = properties;
     let elements = [];
+    // only move prop to elements for the $autocapture action
     if (eventName === '$autocapture' && properties && '$elements' in properties) {
         const { $elements, ...props } = properties;
         ingestedProperties = props;
@@ -72,6 +74,7 @@ const insertBatchIntoRedshift = async (events, { global, config }) => {
     }
     for (let i = 0; i < events.length; ++i) {
         const { uuid, eventName, properties, elements, set, set_once, distinct_id, team_id, ip, site_url, timestamp } = events[i];
+        // Creates format: ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11), ($12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
         valuesString += ' (';
         for (let j = 1; j <= 11; ++j) {
             valuesString += `$${11 * i + j}${j === 11 ? '' : ', '}`;

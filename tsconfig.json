@@ -1,12 +1,9 @@
 {
     "compilerOptions": {
-        "incremental": true,
         "target": "esnext",
 
         "module": "esnext",
         "moduleResolution": "node",
-        "baseUrl": "./",
-        "outDir": "dist",
         "resolveJsonModule": true,
 
         "allowJs": true,
@@ -15,6 +12,7 @@
         "removeComments": true,
 
         "declaration": false,
+        "declarationMap": false,
         "sourceMap": false,
 
         "isolatedModules": true,

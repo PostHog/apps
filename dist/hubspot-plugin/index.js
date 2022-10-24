@@ -77,7 +77,6 @@ async function runEveryMinute({ global, storage }) {
     }
 }
 async function getHubspotContacts(global, storage) {
-    var _a;
     const properties = ['email', 'hubspotscore'];
     let requestUrl = await storage.get(NEXT_CONTACT_BATCH_KEY);
     if (!requestUrl) {
@@ -94,7 +93,7 @@ async function getHubspotContacts(global, storage) {
     const authResponse = await fetchWithRetry(requestUrl);
     const res = await authResponse.json();
     if (!statusOk(authResponse) || res.status === 'error') {
-        const errorMessage = (_a = res.message) !== null && _a !== void 0 ? _a : '';
+        const errorMessage = res.message ?? '';
         console.error(`Unable to get contacts from Hubspot. Status Code: ${authResponse.status}. Error message: ${errorMessage}`);
     }
     if (res && res['results']) {
@@ -137,7 +136,6 @@ async function updateHubspotScore(email, hubspotScore, global) {
     return updated;
 }
 async function onEvent(event, { config, global }) {
-    var _a, _b;
     const triggeringEvents = (config.triggeringEvents || '').split(',');
     if (triggeringEvents.indexOf(event.event) >= 0) {
         const email = getEmailFromEvent(event);
@@ -147,14 +145,13 @@ async function onEvent(event, { config, global }) {
                 return;
             }
             await createHubspotContact(email, {
-                ...((_a = event['$set']) !== null && _a !== void 0 ? _a : {}),
-                ...((_b = event['properties']) !== null && _b !== void 0 ? _b : {})
+                ...(event['$set'] ?? {}),
+                ...(event['properties'] ?? {})
             }, global.hubspotAuth, config.additionalPropertyMappings, event['timestamp']);
         }
     }
 }
 async function createHubspotContact(email, properties, authQs, additionalPropertyMappings, eventSendTime) {
-    var _a, _b;
     let hubspotFilteredProps = {};
     for (const [key, val] of Object.entries(properties)) {
         if (hubspotPropsMap[key]) {
@@ -184,7 +181,7 @@ async function createHubspotContact(email, properties, authQs, additionalPropert
     }, 'POST');
     const addContactResponseJson = await addContactResponse.json();
     if (!statusOk(addContactResponse) || addContactResponseJson.status === 'error') {
-        const errorMessage = (_a = addContactResponseJson.message) !== null && _a !== void 0 ? _a : '';
+        const errorMessage = addContactResponseJson.message ?? '';
         console.log(`Unable to add contact ${email} to Hubspot. Status Code: ${addContactResponse.status}. Error message: ${errorMessage}`);
         if (addContactResponse.status === 409) {
             const existingIdRegex = /Existing ID: ([0-9]+)/;
@@ -198,7 +195,7 @@ async function createHubspotContact(email, properties, authQs, additionalPropert
             }, 'PATCH');
             const updateResponseJson = await updateContactResponse.json();
             if (!statusOk(updateContactResponse)) {
-                const errorMessage = (_b = updateResponseJson.message) !== null && _b !== void 0 ? _b : '';
+                const errorMessage = updateResponseJson.message ?? '';
                 console.log(`Unable to update contact ${email} to Hubspot. Status Code: ${updateContactResponse.status}. Error message: ${errorMessage}`);
             }
             else {
@@ -215,7 +212,7 @@ async function fetchWithRetry(url, options = {}, method = 'GET', isRetry = false
         const res = await fetch(url, { method: method, ...options });
         return res;
     }
-    catch (_a) {
+    catch {
         if (isRetry) {
             throw new Error(`${method} request to ${url} failed.`);
         }

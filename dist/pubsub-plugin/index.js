@@ -16,9 +16,11 @@ const setupPlugin = async (meta) => {
             credentials,
         });
         global.pubSubTopic = global.pubSubClient.topic(config.topicId);
+        // topic exists
         await global.pubSubTopic.getMetadata();
     }
     catch (error) {
+        // some other error? abort!
         if (!error.message.includes("NOT_FOUND")) {
             throw new Error(error);
         }
@@ -27,6 +29,7 @@ const setupPlugin = async (meta) => {
             await global.pubSubTopic.create();
         }
         catch (error) {
+            // a different worker already created the table
             if (!error.message.includes('ALREADY_EXISTS')) {
                 throw error;
             }
@@ -44,6 +47,7 @@ async function exportEvents(events, { global, config }) {
             const timestamp = fullEvent.timestamp || (properties === null || properties === void 0 ? void 0 : properties.timestamp) || now || sent_at;
             let ingestedProperties = properties;
             let elements = [];
+            // only move prop to elements for the $autocapture action
             if (event === '$autocapture' && (properties === null || properties === void 0 ? void 0 : properties['$elements'])) {
                 const { $elements, ...props } = properties;
                 ingestedProperties = props;

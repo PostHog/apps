@@ -1,66 +1,89 @@
 async function setupPlugin({ config, global, cache }) {
     console.info(`Setting up the plugin`);
     let baseUrl = `https://${config.hostName}.zendesk.com/`;
+
     global.token = Buffer.from(`${config.userEmail}/token:${config.zendeskApiKey}`).toString('base64');
+
     global.baseTicketUrl = baseUrl + 'api/v2/tickets.json?sort_order=desc&sort_by=id';
+
     global.fetchUserUrl = baseUrl + 'api/v2/users';
+
     global.options = {
         headers: {
             Authorization: `Basic ${global.token}`,
             'Content-Type': 'application/json',
         },
     };
+
     const authenticationResponse = await fetchWithRetry(global.baseTicketUrl, global.options);
+
     if (!statusOk(authenticationResponse)) {
-        throw new Error(`Unable to access ZenDesk API's for ${config.hostName}`);
-    }
-    else {
+        throw new Error(`Unable to access ZenDesk API's for ${config.hostName}`)
+    } else {
         console.info(`Initial setup with ZenDesk for ${config.hostName} successful`);
     }
+
     global.triggeringEvents = (config.triggeringEvents || '').split(',').map((v) => v.trim());
+
     global.emailDomainsToIgnore = (config.ignoredEmails || '').split(',').map((v) => v.trim());
 }
+
 const jobs = {
     pushUserDataToZendesk: async (request, { storage, global, cache }) => {
         const userId = await storage.get(request.email, null);
+
         if (userId) {
             const url = global.fetchUserUrl;
+
             global.options.body = JSON.stringify({
                 user: {
                     user_fields: { [request.event.event]: `${request.event.sent_at}` },
                 },
             });
+
             await fetchWithRetry(`${url}/${userId}`, global.options, 'PUT');
         }
     },
 };
 async function fetchUserIdentity(requesterId, global, storage) {
     const userResult = await fetchWithRetry(`${global.fetchUserUrl}/${requesterId}`, global.options);
+
     const user = await userResult.json();
+
+    //   posthog.capture(user.user.email, { $set_once: { zendeskId: user.user.id } });
     await storage.set(user.user.email, user.user.id);
-    return user.user.email;
+    return user.user.email
 }
+
 async function fetchAllTickets(global, storage, cache) {
     let allTickets = [null];
     let index = 1;
     while (allTickets.length > 0) {
         const finalUrl = `${global.baseTicketUrl}&page=${index}`;
+
         const allTicketData = await fetchWithRetry(finalUrl, global.options);
         index += 1;
+
         allTickets = await allTicketData.json();
         allTickets = allTickets.tickets;
+
         if (allTickets.length === 0) {
-            break;
+            break
         }
+
+        ///saves storage space
+
         for (let ticket of allTickets) {
             const customerRecordExists = await storage.get(ticket.id, null);
+
             if (!customerRecordExists) {
                 await storage.set(ticket.id, true);
+            } else {
+                break
             }
-            else {
-                break;
-            }
+
             const emailId = await fetchUserIdentity(ticket.requester_id, global, storage);
+
             const ticketObjectToSave = {
                 ticketId: ticket.id,
                 created_at: ticket.created_at,
@@ -81,6 +104,7 @@ async function fetchAllTickets(global, storage, cache) {
                 ticket_form_id: ticket.ticket_form_id,
                 brand_id: ticket.brand_id,
             };
+
             posthog.capture('zendesk_ticket', {
                 distinct_id: emailId,
                 $set: { zendeskId: ticketObjectToSave.requester_id },
@@ -89,13 +113,15 @@ async function fetchAllTickets(global, storage, cache) {
         }
     }
 }
+
 async function onEvent(event, { jobs, config, global, storage }) {
     if (global.triggeringEvents.includes(event.event)) {
         const email = getEmailFromEvent(event);
         if (email) {
             if (global.emailDomainsToIgnore.includes(email.split('@')[1])) {
-                return;
+                return
             }
+
             const request = {
                 email: email,
                 event: event,
@@ -104,39 +130,43 @@ async function onEvent(event, { jobs, config, global, storage }) {
         }
     }
 }
+
 function getEmailFromEvent(event) {
     if (isEmail(event.distinct_id)) {
-        return event.distinct_id;
-    }
-    else if (event['$set'] && Object.keys(event['$set']).includes('email')) {
+        return event.distinct_id
+    } else if (event['$set'] && Object.keys(event['$set']).includes('email')) {
         if (isEmail(event['$set']['email'])) {
-            return event['$set']['email'];
+            return event['$set']['email']
         }
-    }
-    else if (event['properties'] && Object.keys(event['properties']).includes('email')) {
+    } else if (event['properties'] && Object.keys(event['properties']).includes('email')) {
         if (isEmail(event['properties']['email'])) {
-            return event['properties']['email'];
+            return event['properties']['email']
         }
     }
-    return null;
+
+    return null
 }
+
 async function runEveryMinute({ global, storage, cache }) {
     await fetchAllTickets(global, storage);
 }
+
 function isEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase())
 }
+
 function statusOk(res) {
-    return String(res.status)[0] === '2';
+    return String(res.status)[0] === '2'
 }
+
 async function fetchWithRetry(url, options = {}, method = 'GET') {
     try {
         const res = await fetch(url, { method: method, ...options });
-        return res;
-    }
-    catch (e) {
-        throw new RetryError(e.toString());
+        return res
+    } catch (e) {
+        throw new RetryError(e.toString())
     }
 }
 

@@ -1,6 +1,5 @@
 {
     "name": "@posthog/downsampling-plugin",
-    "private": true,
     "version": "0.0.1",
     "description": "Downsample PostHog events",
     "dependencies": {

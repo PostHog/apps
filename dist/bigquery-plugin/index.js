@@ -39,7 +39,7 @@ const setupPlugin = async (meta) => {
         });
         global.bigQueryTable = global.bigQueryClient.dataset(config.datasetId).table(config.tableId);
         const cachedMetadata = await meta.cache.get('cachedMetadata', null);
-        if ((cachedMetadata === null || cachedMetadata === void 0 ? void 0 : cachedMetadata.datasetId) === config.datasetId && (cachedMetadata === null || cachedMetadata === void 0 ? void 0 : cachedMetadata.tableId) === config.tableId && (cachedMetadata === null || cachedMetadata === void 0 ? void 0 : cachedMetadata.existingFields) === BIG_QUERY_TABLE_FIELDS.length) {
+        if (cachedMetadata?.datasetId === config.datasetId && cachedMetadata?.tableId === config.tableId && cachedMetadata?.existingFields === BIG_QUERY_TABLE_FIELDS.length) {
             return;
         }
         let metadata;
@@ -88,7 +88,7 @@ async function updateBigQueryTableSchema(meta, metadata) {
             }
             catch (error) {
                 console.error("Failed to set Metadata", error);
-                const fieldsToStillAdd = BIG_QUERY_TABLE_FIELDS.filter(({ name }) => { var _a, _b; return !((_b = (_a = result.schema) === null || _a === void 0 ? void 0 : _a.fields) === null || _b === void 0 ? void 0 : _b.find((f) => f.name === name)); });
+                const fieldsToStillAdd = BIG_QUERY_TABLE_FIELDS.filter(({ name }) => !result.schema?.fields?.find((f) => f.name === name));
                 if (fieldsToStillAdd.length > 0) {
                     console.error(`Tried adding fields ${JSON.stringify(fieldsToAdd)}, but ${JSON.stringify(fieldsToStillAdd)} still to add. Can not start plugin.`);
                     throw error;
@@ -143,7 +143,7 @@ const exportEvents = async (events, { global, config }) => {
                 continue;
             }
             const { event: eventName, properties, $set, $set_once, distinct_id, team_id, uuid, timestamp, elements, ..._discard } = event;
-            const ip = (properties === null || properties === void 0 ? void 0 : properties['$ip']) || event.ip;
+            const ip = properties?.['$ip'] || event.ip;
             let ingestedProperties = properties;
             const shouldExportElementsForEvent = eventName === '$autocapture' || config.exportElementsOnAnyEvent === 'Yes';
             const elementsToExport = shouldExportElementsForEvent ? elements : [];

@@ -20,6 +20,7 @@ export default packages.map(({ name }) => {
     return {
         input: [`./src/packages/${name}/${srcExists ? 'src/' : ''}${isTypescript ? 'index.ts' : 'index.js'}`],
         output: {
+            sourcemap: false,
             file: `./dist/${name}/index.js`,
             format: 'es',
         },
@@ -44,15 +45,25 @@ export default packages.map(({ name }) => {
             resolve({
                 modulePaths: [`./src/packages/${name}`],
             }),
-            typescript({
-                tsconfig: './tsconfig.json',
-                compilerOptions: {
-                    baseUrl: `./src/packages/${name}`,
-                },
-                include: [`./src/packages/${name}/**/*.js`, `./src/packages/${name}/**/*.ts`],
-                exclude: [`node_modules/`, '*.test*', '**/*.test*', 'dist/', '*.config*'],
-                outputToFilesystem: false,
-            }),
+            isTypescript
+                ? typescript({
+                      tsconfig: `./src/packages/${name}/tsconfig.json`,
+                      compilerOptions: {
+                          baseUrl: `./src/packages/${name}`,
+                      },
+                      include: [`./src/packages/${name}/**/*.js`, `./src/packages/${name}/**/*.ts`],
+                      exclude: [
+                          `node_modules/`,
+                          '*.test*',
+                          '**/*.test*',
+                          'dist/',
+                          '*.config.*',
+                          'jest.config.js',
+                          '*/__tests__/',
+                      ],
+                      outputToFilesystem: false,
+                  })
+                : undefined,
             copy({
                 targets: [
                     { src: `./src/packages/${name}/plugin.json`, dest: `./dist/${name}` },

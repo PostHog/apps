@@ -1,98 +1,130 @@
-const ONE_DAY = 60 * 60 * 24;
-const defaultLocationSetProps = {
-    $geoip_city_name: null,
-    $geoip_country_name: null,
-    $geoip_country_code: null,
-    $geoip_continent_name: null,
-    $geoip_continent_code: null,
-    $geoip_postal_code: null,
-    $geoip_latitude: null,
-    $geoip_longitude: null,
-    $geoip_time_zone: null,
+import fetch from 'node-fetch';
+
+const TEN_MINUTES = 10 * 60 * 1000;
+const ELEMENT_TRANSFORMATIONS = {
+    text: '$el_text',
+    attr_class: 'attr__class',
+    attr_id: 'attr__id',
+    href: 'attr__href'
 };
-const defaultLocationSetOnceProps = {
-    $initial_geoip_city_name: null,
-    $initial_geoip_country_name: null,
-    $initial_geoip_country_code: null,
-    $initial_geoip_continent_name: null,
-    $initial_geoip_continent_code: null,
-    $initial_geoip_postal_code: null,
-    $initial_geoip_latitude: null,
-    $initial_geoip_longitude: null,
-    $initial_geoip_time_zone: null,
+const parseAndSendEvents = async (events, { config, global }) => {
+    const batch = [];
+    for (const event of events) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { team_id, now, offset, sent_at, $token, project_id, api_key, ...sendableEvent } = {
+            ...event,
+            token: config.projectApiKey,
+        };
+        if (sendableEvent.properties && sendableEvent.properties.$elements) {
+            const newElements = [];
+            for (const element of sendableEvent.properties.$elements) {
+                for (const [key, val] of Object.entries(element)) {
+                    if (key in ELEMENT_TRANSFORMATIONS) {
+                        element[ELEMENT_TRANSFORMATIONS[key]] = val;
+                        delete element[key];
+                    }
+                }
+                newElements.push({ ...element.attributes, ...element });
+                delete element['attributes'];
+            }
+            sendableEvent.properties.$elements = newElements;
+        }
+        sendableEvent.timestamp = event.timestamp || new Date(Date.now()).toISOString();
+        batch.push(sendableEvent);
+    }
+    if (batch.length > 0) {
+        const res = await fetch(`https://${config.host}/e`, {
+            method: 'POST',
+            body: JSON.stringify(batch),
+            headers: { 'Content-Type': 'application/json' },
+        });
+        if (global.debug) {
+            const textRes = await res.text();
+            console.log('RESPONSE:', textRes);
+        }
+        console.log(`Flushing ${batch.length} event${batch.length > 1 ? 's' : ''} to ${config.host}`);
+    }
+    else if (global.debug) {
+        console.log('Skipping empty batch of events');
+    }
 };
 const plugin = {
-    processEvent: async (event, { geoip, cache }) => {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
-        if (!geoip) {
-            throw new Error('This PostHog version does not have GeoIP capabilities! Upgrade to PostHog 1.24.0 or later');
-        }
-        let ip = ((_a = event.properties) === null || _a === void 0 ? void 0 : _a.$ip) || event.ip;
-        if (ip && !((_b = event.properties) === null || _b === void 0 ? void 0 : _b.$geoip_disable)) {
-            ip = String(ip);
-            if (ip === '127.0.0.1') {
-                ip = '13.106.122.3';
+    jobs: {
+        '[ADVANCED] Force restart': async (_, { storage, jobs }) => {
+            await storage.del('is_export_running');
+            const cursor = await storage.get('timestamp_cursor', null);
+            if (cursor) {
+                const dateFrom = new Date(Number(cursor)).toISOString();
+                console.log(`Restarting export from ${dateFrom}`);
+                await jobs['Export historical events']({
+                    dateFrom,
+                    dateTo: new Date().toISOString(),
+                }).runNow();
             }
-            const response = await geoip.locate(ip);
-            if (response) {
-                const location = {};
-                if (response.city) {
-                    location['city_name'] = (_c = response.city.names) === null || _c === void 0 ? void 0 : _c.en;
-                }
-                if (response.country) {
-                    location['country_name'] = (_d = response.country.names) === null || _d === void 0 ? void 0 : _d.en;
-                    location['country_code'] = response.country.isoCode;
-                }
-                if (response.continent) {
-                    location['continent_name'] = (_e = response.continent.names) === null || _e === void 0 ? void 0 : _e.en;
-                    location['continent_code'] = response.continent.code;
-                }
-                if (response.postal) {
-                    location['postal_code'] = response.postal.code;
-                }
-                if (response.location) {
-                    location['latitude'] = (_f = response.location) === null || _f === void 0 ? void 0 : _f.latitude;
-                    location['longitude'] = (_g = response.location) === null || _g === void 0 ? void 0 : _g.longitude;
-                    location['time_zone'] = (_h = response.location) === null || _h === void 0 ? void 0 : _h.timeZone;
-                }
-                if (response.subdivisions) {
-                    for (const [index, subdivision] of response.subdivisions.entries()) {
-                        location[`subdivision_${index + 1}_code`] = subdivision.isoCode;
-                        location[`subdivision_${index + 1}_name`] = (_j = subdivision.names) === null || _j === void 0 ? void 0 : _j.en;
-                    }
-                }
-                if (!event.properties) {
-                    event.properties = {};
-                }
-                let setPersonProps = true;
-                const lastIpSetEntry = await cache.get(event.distinct_id, null);
-                if (typeof lastIpSetEntry === 'string') {
-                    const [lastIpSet, timestamp] = lastIpSetEntry.split('|');
-                    const isEventSettingPropertiesLate = event.timestamp && timestamp && new Date(event.timestamp) < new Date(timestamp);
-                    if (lastIpSet === ip || isEventSettingPropertiesLate) {
-                        setPersonProps = false;
-                    }
-                }
-                if (setPersonProps) {
-                    event.$set = { ...defaultLocationSetProps, ...((_k = event.$set) !== null && _k !== void 0 ? _k : {}) };
-                    event.$set_once = {
-                        ...defaultLocationSetOnceProps,
-                        ...((_l = event.$set_once) !== null && _l !== void 0 ? _l : {}),
-                    };
-                }
-                for (const [key, value] of Object.entries(location)) {
-                    event.properties[`$geoip_${key}`] = value;
-                    if (setPersonProps) {
-                        event.$set[`$geoip_${key}`] = value;
-                        event.$set_once[`$initial_geoip_${key}`] = value;
-                    }
-                }
-                if (setPersonProps) {
-                    await cache.set(event.distinct_id, `${ip}|${event.timestamp || ''}`, ONE_DAY);
-                }
+            else {
+                throw new Error('Unable to restart correctly');
+            }
+        },
+        parseAndSendEvents: async (payload, meta) => {
+            await parseAndSendEvents(payload.events, meta);
+        }
+    },
+    runEveryMinute: async ({ global, jobs, storage, cache }) => {
+        const currentDate = new Date();
+        const lastRun = await cache.get('last_run', null);
+        if (!lastRun || currentDate.getTime() - Number(lastRun) > TEN_MINUTES) {
+            // this "magic" key is added via the historical export upgrade
+            const isExportRunning = await storage.get('is_export_running', false);
+            if (isExportRunning) {
+                return;
+            }
+            const previousMaxDate = await storage.get('max_date', global.startDate);
+            await jobs['Export historical events']({
+                dateFrom: previousMaxDate,
+                dateTo: currentDate.toISOString(),
+            }).runNow();
+            console.log(`Now starting export of events from ${previousMaxDate} to ${currentDate.toISOString()}`);
+            await storage.set('max_date', currentDate.toISOString());
+            await cache.set('last_run', currentDate.getTime());
+        }
+    },
+    setupPlugin: async ({ config, global }) => {
+        try {
+            global.startDate = config.startDate ? new Date(config.startDate).toISOString() : null;
+        }
+        catch (e) {
+            console.log(`Failed to parse start date. Make sure to use the format YYYY-MM-DD`);
+            throw e;
+        }
+        global.debug = config.debug === 'ON';
+        if (config.posthogVersion === "Latest" || config.posthogVersion === "1.30.0+") {
+            global.versionMajor = 1;
+            global.versionMinor = 31;
+            return;
+        }
+        try {
+            const parsedVersion = config.posthogVersion.split('.').map(digit => Number(digit));
+            global.versionMajor = parsedVersion[0];
+            global.versionMinor = parsedVersion[1];
+        }
+        catch (e) {
+            throw new Error('Invalid PostHog version');
+        }
+    },
+    exportEvents: async (events, { global, jobs }) => {
+        if (events.length === 0) {
+            return;
+        }
+        // dont export live events, only historical ones
+        if (global.versionMajor > 1 || (global.versionMajor === 1 && global.versionMinor > 29)) {
+            if (!events[0].properties || !events[0].properties['$$is_historical_export_event']) {
+                return;
             }
         }
-        return event;
+        else if (events[0].uuid) {
+            return;
+        }
+        await jobs.parseAndSendEvents({ events }).runNow();
     },
 };
 module.exports = plugin;

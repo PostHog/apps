@@ -5,7 +5,7 @@
     "homepage": "https://posthog.com/apps",
     "repository": "git@github.com:PostHog/apps.git",
     "scripts": {
-        "build": "rollup -c",
+        "build": "yarn clean && NODE_OPTIONS=--max-old-space-size=8192 rollup -c",
         "copy-apps": "node ./scripts/copy-apps.js",
         "publish-all": "node ./scripts/publish.js",
         "clean": "rm -rf dist/"
@@ -20,9 +20,7 @@
         "node": ">=16 <19"
     },
     "private": true,
-    "workspaces": [
-        "./src/packages/*"
-    ],
+    "workspaces": ["./src/packages/*"],
     "devDependencies": {
         "@rollup/plugin-commonjs": "^23.0.2",
         "@rollup/plugin-node-resolve": "^15.0.1",

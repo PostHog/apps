@@ -1,3 +1,5 @@
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.processEvent = void 0;
 function normalizeUrl(url) {
     try {
         const parsedUrl = new URL(url.toLocaleLowerCase());
@@ -18,5 +20,4 @@ function processEvent(event, meta) {
     }
     return event;
 }
-
-export { processEvent };
+exports.processEvent = processEvent;

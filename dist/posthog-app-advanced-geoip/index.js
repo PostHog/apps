@@ -39,6 +39,7 @@ const plugin = {
         const parsedLibs = (_a = config.discardLibs) === null || _a === void 0 ? void 0 : _a.split(',').map((val) => val.toLowerCase().trim());
         console.info(`Begin processing ${event.uuid || event.event}.`);
         if (parsedLibs && ((_b = event.properties) === null || _b === void 0 ? void 0 : _b.$lib) && parsedLibs.includes((_c = event.properties) === null || _c === void 0 ? void 0 : _c.$lib)) {
+            // Event comes from a `$lib` that should be ignored
             console.info(`Discarding GeoIP properties from ${event.uuid || event.event} as event comes from ignored $lib: ${(_d = event.properties) === null || _d === void 0 ? void 0 : _d.$lib}.`);
             if (event.$set) {
                 event.$set = { ...event.$set, ...defaultLocationSetProps };

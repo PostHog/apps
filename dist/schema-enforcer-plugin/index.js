@@ -17,7 +17,7 @@ const areValuesValid = (jsonSchema) => {
         }
         return true;
     }
-    catch (_a) {
+    catch {
         return false;
     }
 };
@@ -43,7 +43,7 @@ function setupPlugin({ attachments, global }) {
     try {
         global.schemaFile = JSON.parse(attachments.eventSchemaFile.contents.toString());
     }
-    catch (_a) {
+    catch {
         throw new Error('Invalid JSON! Make sure your file has valid JSON.');
     }
     isValidSchemaFile(global.schemaFile);

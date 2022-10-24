@@ -8,11 +8,12 @@ const makeLogger = (debugLoggingOn) => {
         debug: debugLoggingOn
             ? console.debug
             : () => {
+                /* no-op debug logging */
             },
     };
 };
 const CACHE_TOKEN = 'SF_AUTH_TOKEN';
-const CACHE_TTL = 60 * 60 * 5;
+const CACHE_TTL = 60 * 60 * 5; // in seconds
 function verifyConfig({ config }) {
     if (!config.salesforceHost) {
         throw new Error('host not provided!');
@@ -128,6 +129,8 @@ async function statusOk(res, logger) {
 }
 function getProperties(event, { config }) {
     var _a;
+    // Spreading so the TypeScript compiler understands that in the
+    // reducer there's no way the properties will be undefined
     const { properties } = event;
     if (!properties) {
         return {};
