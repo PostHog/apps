@@ -1,11 +1,8 @@
 {
     "name": "posthog-heartbeat-plugin",
     "private": true,
-    "version": "1.0.0",
-    "keywords": [
-        "posthog",
-        "plugin"
-    ],
+    "version": "0.0.1",
+    "keywords": ["posthog", "plugin"],
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
     "scripts": {

@@ -18,7 +18,7 @@
     "homepage": "https://github.com/andrewm4894/posthog-netdata-event-processing#readme",
     "config": {},
     "devDependencies": {
-        "jest": "^26.6.3",
-        "posthog-plugins": "^0.2.2"
+        "@posthog/plugin-scaffold": "^0.2.2",
+        "jest": "^26.6.3"
     }
 }

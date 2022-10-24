@@ -6,8 +6,7 @@
     "devDependencies": {
         "@posthog/plugin-contrib": "^0.0.3",
         "@posthog/plugin-scaffold": "0.12.5",
-        "pg": "^8.0.0",
-        "@types/pg": "^7.14.11"
-
+        "@types/pg": "^7.14.11",
+        "pg": "^8.0.0"
     }
 }

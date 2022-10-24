@@ -6,7 +6,7 @@ const {
     getMeta,
     resetMeta,
     clone,
-} = require('posthog-plugins/test/utils.js')
+} = require('@posthog/plugin-scaffold/test/utils.js')
 const { setupPlugin, processEvent } = require('../index')
 const rates = require('./rates.json')
 

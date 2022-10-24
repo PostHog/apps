@@ -1,6 +1,6 @@
 {
     "name": "posthog-gitub-star-sync-plugin",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "description": "Sync Github Stars to PostHog",
     "repository": {
         "type": "git",
@@ -16,7 +16,7 @@
         "test": "jest"
     },
     "devDependencies": {
-        "jest": "^26.6.3",
-        "@posthog/plugin-scaffold": "^0.2.9"
+        "@posthog/plugin-scaffold": "^0.2.9",
+        "jest": "^26.6.3"
     }
 }

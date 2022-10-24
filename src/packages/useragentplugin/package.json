@@ -1,25 +1,14 @@
 {
     "name": "useragent-plugin",
-    "version": "1.1.0",
+    "version": "0.0.1",
     "description": "Automatically attach detailed browser details to the event when $useragent property exists",
     "main": "dist/index.js",
-    "files": [
-        "plugin.json",
-        "dist/index.js",
-        "README.md",
-        "LICENSE.md"
-    ],
+    "files": ["plugin.json", "dist/index.js", "README.md", "LICENSE.md"],
     "scripts": {
         "test": "jest",
         "build": "rm -rf dist && esbuild src/plugin.ts --bundle --platform=node --target=node10.4 --outfile=dist/index.js"
     },
-    "keywords": [
-        "posthog",
-        "plugin",
-        "browser",
-        "event ingestion",
-        "user agent"
-    ],
+    "keywords": ["posthog", "plugin", "browser", "event ingestion", "user agent"],
     "author": "Weyert de Boer",
     "repository": "https://github.com/weyert/useragentplugin",
     "license": "MIT",

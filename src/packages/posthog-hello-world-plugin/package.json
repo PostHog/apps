@@ -1,11 +1,8 @@
 {
     "name": "posthog-hello-world-plugin",
     "private": true,
-    "version": "1.0.0",
-    "keywords": [
-        "posthog",
-        "plugin"
-    ],
+    "version": "0.0.1",
+    "keywords": ["posthog", "plugin"],
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
     "jest": {
@@ -16,7 +13,7 @@
     },
     "devDependencies": {
         "@posthog/plugin-scaffold": "0.10.0",
-        "jest": "^27.0.4",
-        "eslint": "^8.9.0"
+        "eslint": "^8.9.0",
+        "jest": "^27.0.4"
     }
 }

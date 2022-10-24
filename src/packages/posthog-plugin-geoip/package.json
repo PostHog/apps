@@ -1,14 +1,8 @@
 {
     "name": "posthog-plugin-geoip",
-    "version": "1.1.0",
+    "version": "0.0.1",
     "description": "Enrich PostHog events and persons with IP location data",
-    "keywords": [
-        "posthog",
-        "plugin",
-        "maxmind",
-        "geoip",
-        "geolite"
-    ],
+    "keywords": ["posthog", "plugin", "maxmind", "geoip", "geolite"],
     "main": "dist/index.js",
     "repository": "github:PostHog/posthog-plugin-geoip",
     "bugs": {
@@ -25,7 +19,6 @@
         "prepublishOnly": "yarn test",
         "typecheck": "tsc"
     },
-    "dependencies": {},
     "devDependencies": {
         "@maxmind/geoip2-node": "^2.3.1",
         "@posthog/plugin-scaffold": "github:PostHog/plugin-scaffold",
