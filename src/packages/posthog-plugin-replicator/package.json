@@ -23,7 +23,6 @@
         "prepublishOnly": "yarn test",
         "typecheck": "tsc"
     },
-    "dependencies": {},
     "devDependencies": {
         "@posthog/plugin-contrib": "^0.0.3",
         "@posthog/plugin-scaffold": "~0.12.9",

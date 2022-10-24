@@ -25,7 +25,6 @@
         "prepublishOnly": "yarn test",
         "typecheck": "tsc"
     },
-    "dependencies": {},
     "devDependencies": {
         "@maxmind/geoip2-node": "^2.3.1",
         "@posthog/plugin-scaffold": "github:PostHog/plugin-scaffold",
