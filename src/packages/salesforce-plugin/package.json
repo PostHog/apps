@@ -1,8 +1,10 @@
 {
-    "name": "@vinovest/posthog-salesforce",
-    "displayName": "Hello World",
+    "name": "@posthog/salesforce-plugin",
     "version": "0.0.1",
-    "keywords": ["posthog", "plugin"],
+    "keywords": [
+        "posthog",
+        "plugin"
+    ],
     "main": "dist/index.js",
     "repository": "github:Vinovest/posthog-salesforce",
     "bugs": {

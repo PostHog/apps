@@ -1,5 +1,5 @@
 {
-    "name": "taxonomy-plugin",
+    "name": "@posthog/taxonomy-plugin",
     "version": "0.0.1",
     "description": "Standardize your event names into a single pattern.",
     "main": "index.js",

@@ -1,5 +1,5 @@
 {
-    "name": "hubspot-plugin",
+    "name": "@posthog/hubspot-plugin",
     "version": "0.0.1",
     "description": "Send contact data to Hubspot on PostHog identify events.",
     "main": "index.ts",

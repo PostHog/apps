@@ -1,5 +1,5 @@
 {
-    "name": "posthog-orbit-love-plugin",
+    "name": "@posthog/orbit-love-plugin",
     "version": "0.0.1",
     "packageManager": "yarn@3.2.4"
 }

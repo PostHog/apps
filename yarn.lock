@@ -3007,6 +3007,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@posthog/advanced-geoip-app@workspace:src/packages/posthog-app-advanced-geoip":
+  version: 0.0.0-use.local
+  resolution: "@posthog/advanced-geoip-app@workspace:src/packages/posthog-app-advanced-geoip"
+  dependencies:
+    "@posthog/plugin-scaffold": ^1.2.0
+    "@types/jest": ^26.0.19
+    "@typescript-eslint/eslint-plugin": ^4.12.0
+    "@typescript-eslint/parser": ^4.12.0
+    eslint: ^7.21.0
+    eslint-config-prettier: ^8.1.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    husky: ~4.3.6
+    jest: ^26.6.3
+    lint-staged: ~10.5.3
+    prettier: ^2.2.1
+    ts-jest: ^26.4.4
+    typescript: ^4.1.3
+  languageName: unknown
+  linkType: soft
+
 "@posthog/apps@workspace:.":
   version: 0.0.0-use.local
   resolution: "@posthog/apps@workspace:."
@@ -3019,6 +3042,37 @@ __metadata:
     rollup: ^3.2.3
     rollup-plugin-copy: ^3.4.0
     typescript: ^4.8.4
+  languageName: unknown
+  linkType: soft
+
+"@posthog/automatic-cohorts-plugin@workspace:src/packages/posthog-automatic-cohorts-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/automatic-cohorts-plugin@workspace:src/packages/posthog-automatic-cohorts-plugin"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.5
+    "@posthog/plugin-scaffold": ^1.3.4
+    "@types/jest": ^26.0.22
+    "@types/node": ^14.14.41
+    "@types/node-fetch": ^2.5.10
+    jest: ^26.6.3
+    node-fetch: ^2.6.1
+    ts-jest: ^26.5.5
+    typescript: ^4.2.4
+  languageName: unknown
+  linkType: soft
+
+"@posthog/avo-plugin@workspace:src/packages/posthog-avo-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/avo-plugin@workspace:src/packages/posthog-avo-plugin"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.3
+    "@posthog/plugin-scaffold": ^0.12.10
+    "@types/generic-pool": ^3.1.9
+    "@types/node": ^17.0.24
+    "@types/node-fetch": ^2.6.1
+    aws-sdk: ^2.885.0
+    generic-pool: ^3.7.8
+    node-fetch: ^3.2.3
   languageName: unknown
   linkType: soft
 
@@ -3039,6 +3093,52 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@posthog/bitbucket-release-tracker@workspace:src/packages/bitbucket-release-tracker":
+  version: 0.0.0-use.local
+  resolution: "@posthog/bitbucket-release-tracker@workspace:src/packages/bitbucket-release-tracker"
+  dependencies:
+    husky: ^4.3.0
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/currency-normalization-plugin@workspace:src/packages/currency-normalization-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/currency-normalization-plugin@workspace:src/packages/currency-normalization-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^1.3.4
+    jest: ^26.6.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/customerio-plugin@workspace:src/packages/customerio-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/customerio-plugin@workspace:src/packages/customerio-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^1.0.4
+    "@types/jest": ^29.0.0
+    "@types/node": ^17.0.41
+    "@types/node-fetch": ^2.6.1
+    husky: ^4.3.0
+    jest: ^29.0.2
+    lint-staged: ^10.5.2
+    node-fetch: ^3.2.6
+    prettier: ^2.2.1
+    ts-jest: ^28.0.8
+    typescript: ^4.8.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/databricks-plugin@workspace:src/packages/posthog-databricks-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/databricks-plugin@workspace:src/packages/posthog-databricks-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": 0.10.0
+    jest: ^27.0.4
+  languageName: unknown
+  linkType: soft
+
 "@posthog/downsampling-plugin@workspace:src/packages/downsampling-plugin":
   version: 0.0.0-use.local
   resolution: "@posthog/downsampling-plugin@workspace:src/packages/downsampling-plugin"
@@ -3052,6 +3152,249 @@ __metadata:
     prettier: ^2.2.1
     ts-jest: ^26.5.5
     typescript: ^4.2.4
+  languageName: unknown
+  linkType: soft
+
+"@posthog/event-sequence-timer-plugin@workspace:src/packages/event-sequence-timer-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/event-sequence-timer-plugin@workspace:src/packages/event-sequence-timer-plugin"
+  dependencies:
+    "@babel/preset-env": ^7.19.0
+    "@babel/preset-typescript": ^7.18.6
+    "@posthog/plugin-scaffold": ^1.3.4
+    "@types/jest": ^29.0.0
+    husky: ^4.3.0
+    jest: ^26.6.3
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/filter-out-plugin@workspace:src/packages/posthog-filter-out-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/filter-out-plugin@workspace:src/packages/posthog-filter-out-plugin"
+  dependencies:
+    "@jest/globals": ^29.1.2
+    "@posthog/plugin-scaffold": ^1.3.4
+    "@types/node": ^18.8.0
+    "@typescript-eslint/eslint-plugin": ^5.39.0
+    "@typescript-eslint/parser": ^5.39.0
+    eslint-config-airbnb: ^19.0.4
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-prettier: ^4.2.1
+    jest: ^29.1.2
+    prettier: ^2.7.1
+    ts-jest: ^29.0.3
+    ts-node: ^10.9.1
+    typescript: ^4.8.4
+  languageName: unknown
+  linkType: soft
+
+"@posthog/first-time-event-tracker@workspace:src/packages/first-time-event-tracker":
+  version: 0.0.0-use.local
+  resolution: "@posthog/first-time-event-tracker@workspace:src/packages/first-time-event-tracker"
+  dependencies:
+    "@posthog/plugin-scaffold": ^1.3.4
+    jest: ^26.6.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/gcs-plugin@workspace:src/packages/posthog-gcs-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/gcs-plugin@workspace:src/packages/posthog-gcs-plugin"
+  dependencies:
+    "@google-cloud/storage": ^5.8.5
+    "@posthog/plugin-scaffold": ^0.11.0
+    "@types/node": ^16.0.0
+  languageName: unknown
+  linkType: soft
+
+"@posthog/geoip-plugin@workspace:src/packages/posthog-plugin-geoip":
+  version: 0.0.0-use.local
+  resolution: "@posthog/geoip-plugin@workspace:src/packages/posthog-plugin-geoip"
+  dependencies:
+    "@maxmind/geoip2-node": ^2.3.1
+    "@posthog/plugin-scaffold": "github:PostHog/plugin-scaffold"
+    "@types/jest": ^26.0.19
+    "@typescript-eslint/eslint-plugin": ^4.12.0
+    "@typescript-eslint/parser": ^4.12.0
+    eslint: ^7.21.0
+    eslint-config-prettier: ^8.1.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    husky: ~4.3.6
+    jest: ^26.6.3
+    lint-staged: ~10.5.3
+    prettier: ^2.2.1
+    ts-jest: ^26.4.4
+    typescript: ^4.1.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/github-release-tracking-plugin@workspace:src/packages/github-release-tracking-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/github-release-tracking-plugin@workspace:src/packages/github-release-tracking-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^1.3.4
+    "@types/node": ^18.7.18
+    husky: ^4.3.0
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/gitlab-release-tracking-plugin@workspace:src/packages/gitlab-release-tracking-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/gitlab-release-tracking-plugin@workspace:src/packages/gitlab-release-tracking-plugin"
+  dependencies:
+    husky: ^4.3.0
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/gitub-star-sync-plugin@workspace:src/packages/github-star-sync-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/gitub-star-sync-plugin@workspace:src/packages/github-star-sync-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.9
+    jest: ^26.6.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/hello-world-plugin@workspace:src/packages/posthog-hello-world-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/hello-world-plugin@workspace:src/packages/posthog-hello-world-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": 0.10.0
+    eslint: ^8.9.0
+    jest: ^27.0.4
+  languageName: unknown
+  linkType: soft
+
+"@posthog/hubspot-plugin@workspace:src/packages/hubspot-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/hubspot-plugin@workspace:src/packages/hubspot-plugin"
+  dependencies:
+    husky: ^4.3.0
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/ingestion-alert-plugin@workspace:src/packages/ingestion-alert-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/ingestion-alert-plugin@workspace:src/packages/ingestion-alert-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": 0.10.0
+  languageName: unknown
+  linkType: soft
+
+"@posthog/intercom-plugin@workspace:src/packages/posthog-intercom-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/intercom-plugin@workspace:src/packages/posthog-intercom-plugin"
+  dependencies:
+    "@babel/preset-env": ^7.16.11
+    "@posthog/plugin-scaffold": ^0.12.10
+    "@types/jest": ^26.0.19
+    "@types/node-fetch": ^2.5.10
+    "@typescript-eslint/eslint-plugin": ^4.12.0
+    "@typescript-eslint/parser": ^4.12.0
+    babel-jest: ^27.5.1
+    eslint: ^7.21.0
+    eslint-config-prettier: ^8.1.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    husky: ~4.3.6
+    jest: ^26.6.3
+    jest-fetch-mock: ^3.0.3
+    lint-staged: ~10.5.3
+    node-fetch: 2.6.2
+    prettier: ^2.2.1
+    ts-jest: ^26.4.4
+    typescript: ^4.1.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/mailboxlayer-plugin@workspace:src/packages/mailboxlayer-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/mailboxlayer-plugin@workspace:src/packages/mailboxlayer-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.7
+    husky: ^4.3.0
+    jest: ^26.6.3
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/migrator3000-plugin@workspace:src/packages/posthog-plugin-migrator3000":
+  version: 0.0.0-use.local
+  resolution: "@posthog/migrator3000-plugin@workspace:src/packages/posthog-plugin-migrator3000"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.3
+    "@posthog/plugin-scaffold": ~0.12.9
+    "@types/jest": ^26.0.19
+    "@types/node-fetch": ^2.5.10
+    "@typescript-eslint/eslint-plugin": ^4.12.0
+    "@typescript-eslint/parser": ^4.12.0
+    eslint: ^7.21.0
+    eslint-config-prettier: ^8.1.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    husky: ~4.3.6
+    jest: ^26.6.3
+    jest-fetch-mock: ^3.0.3
+    lint-staged: ~10.5.3
+    node-fetch: ^2.6.1
+    prettier: ^2.2.1
+    ts-jest: ^26.4.4
+    typescript: ^4.1.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/netdata-event-processing@workspace:src/packages/posthog-netdata-event-processing":
+  version: 0.0.0-use.local
+  resolution: "@posthog/netdata-event-processing@workspace:src/packages/posthog-netdata-event-processing"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.2
+    jest: ^26.6.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/orbit-love-plugin@workspace:src/packages/posthog-orbit-love-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/orbit-love-plugin@workspace:src/packages/posthog-orbit-love-plugin"
+  languageName: unknown
+  linkType: soft
+
+"@posthog/pagerduty-plugin@workspace:src/packages/posthog-pagerduty-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/pagerduty-plugin@workspace:src/packages/posthog-pagerduty-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": 0.2.8-alpha.2
+  languageName: unknown
+  linkType: soft
+
+"@posthog/patterns-app@workspace:src/packages/posthog-patterns-app":
+  version: 0.0.0-use.local
+  resolution: "@posthog/patterns-app@workspace:src/packages/posthog-patterns-app"
+  dependencies:
+    "@babel/preset-env": ^7.18.10
+    "@posthog/plugin-scaffold": ^1.2.0
+    "@types/jest": ^28.1.6
+    "@types/node": ^18.0.3
+    jest: ^27.5.1
+    jest-fetch-mock: ^3.0.3
+    node-fetch: ^3.2.6
+    ts-jest: ^28.0.7
+    typescript: ^4.7.4
   languageName: unknown
   linkType: soft
 
@@ -3154,6 +3497,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@posthog/plugin-unduplicates@workspace:src/packages/posthog-app-unduplicates":
+  version: 0.0.0-use.local
+  resolution: "@posthog/plugin-unduplicates@workspace:src/packages/posthog-app-unduplicates"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.12.10
+    "@types/jest": ^26.0.19
+    "@typescript-eslint/eslint-plugin": ^4.12.0
+    "@typescript-eslint/parser": ^4.12.0
+    eslint: ^7.21.0
+    eslint-config-prettier: ^8.1.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    given2: ^2.1.7
+    husky: ~4.3.6
+    jest: ^26.6.3
+    lint-staged: ~10.5.3
+    prettier: ^2.2.1
+    ts-jest: ^26.4.4
+    typescript: ^4.1.3
+  languageName: unknown
+  linkType: soft
+
 "@posthog/postgres-plugin@workspace:src/packages/postgres-plugin":
   version: 0.0.0-use.local
   resolution: "@posthog/postgres-plugin@workspace:src/packages/postgres-plugin"
@@ -3162,6 +3529,27 @@ __metadata:
     "@posthog/plugin-scaffold": ^0.10.0
     "@types/pg": ^8.6.0
     pg: ^8.0.0
+  languageName: unknown
+  linkType: soft
+
+"@posthog/property-filter-plugin@workspace:src/packages/posthog-property-filter-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/property-filter-plugin@workspace:src/packages/posthog-property-filter-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^1.3.4
+    jest: ^27.5.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/property-flattener-plugin@workspace:src/packages/flatten-properties-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/property-flattener-plugin@workspace:src/packages/flatten-properties-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.7
+    husky: ^4.3.0
+    jest: ^26.6.3
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
   languageName: unknown
   linkType: soft
 
@@ -3174,6 +3562,17 @@ __metadata:
     "@posthog/plugin-scaffold": ^0.12.0
     "@types/generic-pool": ^3.1.9
     generic-pool: ^3.7.8
+  languageName: unknown
+  linkType: soft
+
+"@posthog/redshift-import-plugin@workspace:src/packages/posthog-redshift-import-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/redshift-import-plugin@workspace:src/packages/posthog-redshift-import-plugin"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.3
+    "@posthog/plugin-scaffold": 0.12.5
+    "@types/pg": ^7.14.11
+    pg: ^8.0.0
   languageName: unknown
   linkType: soft
 
@@ -3192,6 +3591,41 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@posthog/replicator-plugin@workspace:src/packages/posthog-plugin-replicator":
+  version: 0.0.0-use.local
+  resolution: "@posthog/replicator-plugin@workspace:src/packages/posthog-plugin-replicator"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.3
+    "@posthog/plugin-scaffold": ~0.12.9
+    "@types/jest": ^26.0.19
+    "@types/node-fetch": ^2.5.10
+    "@typescript-eslint/eslint-plugin": ^4.12.0
+    "@typescript-eslint/parser": ^4.12.0
+    eslint: ^7.21.0
+    eslint-config-prettier: ^8.1.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    husky: ~4.3.6
+    jest: ^26.6.3
+    jest-fetch-mock: ^3.0.3
+    lint-staged: ~10.5.3
+    node-fetch: ^2.6.1
+    prettier: ^2.2.1
+    ts-jest: ^26.4.4
+    typescript: ^4.1.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/rudderstack-plugin@workspace:src/packages/rudderstack-posthog-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/rudderstack-plugin@workspace:src/packages/rudderstack-posthog-plugin"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.5
+  languageName: unknown
+  linkType: soft
+
 "@posthog/s3-export-plugin@workspace:src/packages/s3-export-plugin":
   version: 0.0.0-use.local
   resolution: "@posthog/s3-export-plugin@workspace:src/packages/s3-export-plugin"
@@ -3205,6 +3639,28 @@ __metadata:
     jest: ^27.0.4
     ts-jest: ^28.0.8
     typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
+
+"@posthog/salesforce-plugin@workspace:src/packages/salesforce-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/salesforce-plugin@workspace:src/packages/salesforce-plugin"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.3
+    "@posthog/plugin-scaffold": 0.12.10
+    "@types/jest": ^26.0.19
+    "@types/node-fetch": ^2.5.8
+    "@types/qs": ^6.9.6
+    "@typescript-eslint/eslint-plugin": ^4.12.0
+    "@typescript-eslint/parser": ^4.12.0
+    eslint: ^7.0.0
+    jest: ^26.6.3
+    lint-staged: ~10.5.3
+    prettier: ^2.2.1
+    rimraf: ^3.0.2
+    standard-version: ^9.3.0
+    ts-jest: ^26.4.4
+    typescript: ^4.1.3
   languageName: unknown
   linkType: soft
 
@@ -3225,6 +3681,44 @@ __metadata:
     rollup-plugin-typescript2: ^0.27.1
     ts-node: ^9.0.0
     typescript: ^4.0.5
+  languageName: unknown
+  linkType: soft
+
+"@posthog/semver-flattener-plugin@workspace:src/packages/semver-flattener-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/semver-flattener-plugin@workspace:src/packages/semver-flattener-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": 1.3.4
+    "@types/jest": ^29.0.0
+    eslint: ^8.23.0
+    husky: ^8.0.1
+    jest: ^28.1.3
+    lint-staged: ^13.0.3
+    prettier: ^2.7.1
+    ts-jest: ^28.0.8
+    typescript: ^4.8.2
+  languageName: unknown
+  linkType: soft
+
+"@posthog/sendgrid-plugin@workspace:src/packages/sendgrid-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/sendgrid-plugin@workspace:src/packages/sendgrid-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.6.0
+    husky: ^4.3.0
+    jest: ^26.6.3
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/shopify-sync-plugin@workspace:src/packages/posthog-shopify-sync-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/shopify-sync-plugin@workspace:src/packages/posthog-shopify-sync-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.9
+    eslint: ^8.9.0
+    jest: ^26.6.3
   languageName: unknown
   linkType: soft
 
@@ -3249,6 +3743,122 @@ __metadata:
     ts-jest: ^27.1.4
     typescript: ^4.6.3
     uuid: ^8.3.2
+  languageName: unknown
+  linkType: soft
+
+"@posthog/taxonomy-plugin@workspace:src/packages/taxonomy-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/taxonomy-plugin@workspace:src/packages/taxonomy-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.7
+    husky: ^4.3.0
+    jest: ^26.6.3
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/timestamp-parser-plugin@workspace:src/packages/timestamp-parser-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/timestamp-parser-plugin@workspace:src/packages/timestamp-parser-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.7
+    husky: ^4.3.0
+    jest: ^26.6.3
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/twilio-plugin@workspace:src/packages/posthog-twilio-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/twilio-plugin@workspace:src/packages/posthog-twilio-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": 0.10.0
+    jest: ^27.0.4
+    node-fetch: ^3.2.0
+  languageName: unknown
+  linkType: soft
+
+"@posthog/twitter-followers-plugin@workspace:src/packages/twitter-followers-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/twitter-followers-plugin@workspace:src/packages/twitter-followers-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.2.7
+    husky: ^4.3.0
+    jest: ^26.6.3
+    lint-staged: ^10.5.2
+    prettier: ^2.2.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/url-normalizer-plugin@workspace:src/packages/posthog-url-normalizer-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/url-normalizer-plugin@workspace:src/packages/posthog-url-normalizer-plugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^1.0.4
+    "@types/jest": ^28.1.1
+    jest: ^28.1.1
+    ts-jest: ^28.0.4
+    typescript: ^4.7.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/useragent-plugin@workspace:src/packages/useragentplugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/useragent-plugin@workspace:src/packages/useragentplugin"
+  dependencies:
+    "@posthog/plugin-scaffold": ^0.12.10
+    "@types/jest": ^27.0.3
+    detect-browser: ^5.3.0
+    esbuild: ^0.14.6
+    esbuild-jest: ^0.5.0
+    jest: ^27.4.5
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@posthog/variance-plugin@workspace:src/packages/posthog-variance-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/variance-plugin@workspace:src/packages/posthog-variance-plugin"
+  dependencies:
+    "@commitlint/cli": 17.1.2
+    "@commitlint/config-conventional": 17.1.0
+    "@posthog/plugin-scaffold": 1.3.4
+    "@rollup/plugin-commonjs": 22.0.2
+    "@rollup/plugin-node-resolve": 14.1.0
+    "@rollup/plugin-replace": 4.0.0
+    "@rollup/plugin-typescript": 8.5.0
+    "@types/jest": 29.1.1
+    "@types/lodash.get": 4.4.7
+    "@types/lodash.set": 4.3.7
+    "@typescript-eslint/eslint-plugin": 5.38.1
+    "@typescript-eslint/parser": 5.38.1
+    eslint: 8.24.0
+    eslint-config-prettier: 8.5.0
+    eslint-plugin-simple-import-sort: 8.0.0
+    eslint-plugin-sort-keys-fix: 1.1.2
+    eslint-plugin-typescript-sort-keys: 2.1.0
+    eslint-plugin-unused-imports: 2.0.0
+    husky: 8.0.1
+    jest: 29.1.2
+    jest-fetch-mock: 3.0.3
+    lodash.get: 4.4.2
+    lodash.set: 4.3.2
+    prettier: 2.7.1
+    rollup: 2.79.1
+    standard-version: 9.5.0
+    ts-jest: 29.0.3
+    tslib: 2.4.0
+    typescript: 4.8.3
+  languageName: unknown
+  linkType: soft
+
+"@posthog/zendesk-plugin@workspace:src/packages/posthog-zendesk-plugin":
+  version: 0.0.0-use.local
+  resolution: "@posthog/zendesk-plugin@workspace:src/packages/posthog-zendesk-plugin"
+  dependencies:
+    node-fetch: ^3.2.0
   languageName: unknown
   linkType: soft
 
@@ -4364,28 +4974,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vinovest/posthog-salesforce@workspace:src/packages/salesforce-plugin":
-  version: 0.0.0-use.local
-  resolution: "@vinovest/posthog-salesforce@workspace:src/packages/salesforce-plugin"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.3
-    "@posthog/plugin-scaffold": 0.12.10
-    "@types/jest": ^26.0.19
-    "@types/node-fetch": ^2.5.8
-    "@types/qs": ^6.9.6
-    "@typescript-eslint/eslint-plugin": ^4.12.0
-    "@typescript-eslint/parser": ^4.12.0
-    eslint: ^7.0.0
-    jest: ^26.6.3
-    lint-staged: ~10.5.3
-    prettier: ^2.2.1
-    rimraf: ^3.0.2
-    standard-version: ^9.3.0
-    ts-jest: ^26.4.4
-    typescript: ^4.1.3
-  languageName: unknown
-  linkType: soft
-
 "@xmldom/xmldom@npm:^0.7.5":
   version: 0.7.6
   resolution: "@xmldom/xmldom@npm:0.7.6"
@@ -5214,16 +5802,6 @@ __metadata:
   checksum: d27d4e7942994eb03152fe1ae828cd68cfe69e3a9aadcf7b1d5433761839ee0009c8139305c596d010236c912d65c1889d062784b2514869c61995410ae4ca9a
   languageName: node
   linkType: hard
-
-"bitbucket-release-tracker@workspace:src/packages/bitbucket-release-tracker":
-  version: 0.0.0-use.local
-  resolution: "bitbucket-release-tracker@workspace:src/packages/bitbucket-release-tracker"
-  dependencies:
-    husky: ^4.3.0
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
 
 "bl@npm:^4.1.0":
   version: 4.1.0
@@ -6514,24 +7092,6 @@ __metadata:
   checksum: 5f05e6fd2e3df0b44695c2f08b9ef38b011862b274e320665176467c0725e44a53e341bc4959a41176e83b66064ab786262e7380fd1cabeae6efee0d255bb4e3
   languageName: node
   linkType: hard
-
-"customerio-plugin@workspace:src/packages/customerio-plugin":
-  version: 0.0.0-use.local
-  resolution: "customerio-plugin@workspace:src/packages/customerio-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^1.0.4
-    "@types/jest": ^29.0.0
-    "@types/node": ^17.0.41
-    "@types/node-fetch": ^2.6.1
-    husky: ^4.3.0
-    jest: ^29.0.2
-    lint-staged: ^10.5.2
-    node-fetch: ^3.2.6
-    prettier: ^2.2.1
-    ts-jest: ^28.0.8
-    typescript: ^4.8.3
-  languageName: unknown
-  linkType: soft
 
 "dargs@npm:^7.0.0":
   version: 7.0.0
@@ -8042,21 +8602,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"event-sequence-timer-plugin@workspace:src/packages/event-sequence-timer-plugin":
-  version: 0.0.0-use.local
-  resolution: "event-sequence-timer-plugin@workspace:src/packages/event-sequence-timer-plugin"
-  dependencies:
-    "@babel/preset-env": ^7.19.0
-    "@babel/preset-typescript": ^7.18.6
-    "@posthog/plugin-scaffold": ^1.3.4
-    "@types/jest": ^29.0.0
-    husky: ^4.3.0
-    jest: ^26.6.3
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
-
 "event-target-shim@npm:^5.0.0":
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
@@ -8506,15 +9051,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"first-time-event-tracker@workspace:src/packages/first-time-event-tracker":
-  version: 0.0.0-use.local
-  resolution: "first-time-event-tracker@workspace:src/packages/first-time-event-tracker"
-  dependencies:
-    "@posthog/plugin-scaffold": ^1.3.4
-    jest: ^26.6.3
-  languageName: unknown
-  linkType: soft
-
 "flat-cache@npm:^3.0.4":
   version: 3.0.4
   resolution: "flat-cache@npm:3.0.4"
@@ -8946,16 +9482,6 @@ __metadata:
   checksum: e6d2764c15bbab6d1d1000d1181bb907f6b3796bb04f63614dba571b18369e0ecb1beaf27ce8da5b24307ef607e3a5f262a67cb9575510b9446aac697d421beb
   languageName: node
   linkType: hard
-
-"gitlab-release-tracking-plugin@workspace:src/packages/gitlab-release-tracking-plugin":
-  version: 0.0.0-use.local
-  resolution: "gitlab-release-tracking-plugin@workspace:src/packages/gitlab-release-tracking-plugin"
-  dependencies:
-    husky: ^4.3.0
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
 
 "given2@npm:^2.1.7":
   version: 2.1.7
@@ -9418,16 +9944,6 @@ __metadata:
   checksum: 571fccdf38184f05943e12d37d6ce38197becdd69e58d03f43637f7fa1269cf303a7d228aa27e5b27bbd3af8f09fd938e1c91dcfefff2df7ba77c20ed8dfc765
   languageName: node
   linkType: hard
-
-"hubspot-plugin@workspace:src/packages/hubspot-plugin":
-  version: 0.0.0-use.local
-  resolution: "hubspot-plugin@workspace:src/packages/hubspot-plugin"
-  dependencies:
-    husky: ^4.3.0
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
 
 "human-signals@npm:^1.1.1":
   version: 1.1.1
@@ -13013,18 +13529,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mailboxlayer-plugin@workspace:src/packages/mailboxlayer-plugin":
-  version: 0.0.0-use.local
-  resolution: "mailboxlayer-plugin@workspace:src/packages/mailboxlayer-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.7
-    husky: ^4.3.0
-    jest: ^26.6.3
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
-
 "make-dir@npm:^3.0.0, make-dir@npm:^3.0.2":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -14563,117 +15067,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posthog-app-advanced-geoip@workspace:src/packages/posthog-app-advanced-geoip":
-  version: 0.0.0-use.local
-  resolution: "posthog-app-advanced-geoip@workspace:src/packages/posthog-app-advanced-geoip"
-  dependencies:
-    "@posthog/plugin-scaffold": ^1.2.0
-    "@types/jest": ^26.0.19
-    "@typescript-eslint/eslint-plugin": ^4.12.0
-    "@typescript-eslint/parser": ^4.12.0
-    eslint: ^7.21.0
-    eslint-config-prettier: ^8.1.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^4.3.1
-    eslint-plugin-simple-import-sort: ^7.0.0
-    husky: ~4.3.6
-    jest: ^26.6.3
-    lint-staged: ~10.5.3
-    prettier: ^2.2.1
-    ts-jest: ^26.4.4
-    typescript: ^4.1.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-automatic-cohorts-plugin@workspace:src/packages/posthog-automatic-cohorts-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-automatic-cohorts-plugin@workspace:src/packages/posthog-automatic-cohorts-plugin"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.5
-    "@posthog/plugin-scaffold": ^1.3.4
-    "@types/jest": ^26.0.22
-    "@types/node": ^14.14.41
-    "@types/node-fetch": ^2.5.10
-    jest: ^26.6.3
-    node-fetch: ^2.6.1
-    ts-jest: ^26.5.5
-    typescript: ^4.2.4
-  languageName: unknown
-  linkType: soft
-
-"posthog-avo-plugin@workspace:src/packages/posthog-avo-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-avo-plugin@workspace:src/packages/posthog-avo-plugin"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.3
-    "@posthog/plugin-scaffold": ^0.12.10
-    "@types/generic-pool": ^3.1.9
-    "@types/node": ^17.0.24
-    "@types/node-fetch": ^2.6.1
-    aws-sdk: ^2.885.0
-    generic-pool: ^3.7.8
-    node-fetch: ^3.2.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-currency-normalization-plugin@workspace:src/packages/currency-normalization-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-currency-normalization-plugin@workspace:src/packages/currency-normalization-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^1.3.4
-    jest: ^26.6.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-databricks-plugin@workspace:src/packages/posthog-databricks-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-databricks-plugin@workspace:src/packages/posthog-databricks-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": 0.10.0
-    jest: ^27.0.4
-  languageName: unknown
-  linkType: soft
-
-"posthog-filter-out-plugin@workspace:src/packages/posthog-filter-out-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-filter-out-plugin@workspace:src/packages/posthog-filter-out-plugin"
-  dependencies:
-    "@jest/globals": ^29.1.2
-    "@posthog/plugin-scaffold": ^1.3.4
-    "@types/node": ^18.8.0
-    "@typescript-eslint/eslint-plugin": ^5.39.0
-    "@typescript-eslint/parser": ^5.39.0
-    eslint-config-airbnb: ^19.0.4
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-prettier: ^4.2.1
-    jest: ^29.1.2
-    prettier: ^2.7.1
-    ts-jest: ^29.0.3
-    ts-node: ^10.9.1
-    typescript: ^4.8.4
-  languageName: unknown
-  linkType: soft
-
-"posthog-gcs-plugin@workspace:src/packages/posthog-gcs-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-gcs-plugin@workspace:src/packages/posthog-gcs-plugin"
-  dependencies:
-    "@google-cloud/storage": ^5.8.5
-    "@posthog/plugin-scaffold": ^0.11.0
-    "@types/node": ^16.0.0
-  languageName: unknown
-  linkType: soft
-
-"posthog-gitub-star-sync-plugin@workspace:src/packages/github-star-sync-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-gitub-star-sync-plugin@workspace:src/packages/github-star-sync-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.9
-    jest: ^26.6.3
-  languageName: unknown
-  linkType: soft
-
 "posthog-heartbeat-plugin@workspace:src/packages/posthog-heartbeat-plugin":
   version: 0.0.0-use.local
   resolution: "posthog-heartbeat-plugin@workspace:src/packages/posthog-heartbeat-plugin"
@@ -14684,52 +15077,6 @@ __metadata:
     node-fetch: ^3.2.5
     prettier: ^2.2.1
     typescript: ^4.7.2
-  languageName: unknown
-  linkType: soft
-
-"posthog-hello-world-plugin@workspace:src/packages/posthog-hello-world-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-hello-world-plugin@workspace:src/packages/posthog-hello-world-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": 0.10.0
-    eslint: ^8.9.0
-    jest: ^27.0.4
-  languageName: unknown
-  linkType: soft
-
-"posthog-ingestion-alert-plugin@workspace:src/packages/ingestion-alert-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-ingestion-alert-plugin@workspace:src/packages/ingestion-alert-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": 0.10.0
-  languageName: unknown
-  linkType: soft
-
-"posthog-intercom-plugin@workspace:src/packages/posthog-intercom-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-intercom-plugin@workspace:src/packages/posthog-intercom-plugin"
-  dependencies:
-    "@babel/preset-env": ^7.16.11
-    "@posthog/plugin-scaffold": ^0.12.10
-    "@types/jest": ^26.0.19
-    "@types/node-fetch": ^2.5.10
-    "@typescript-eslint/eslint-plugin": ^4.12.0
-    "@typescript-eslint/parser": ^4.12.0
-    babel-jest: ^27.5.1
-    eslint: ^7.21.0
-    eslint-config-prettier: ^8.1.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^4.3.1
-    eslint-plugin-simple-import-sort: ^7.0.0
-    husky: ~4.3.6
-    jest: ^26.6.3
-    jest-fetch-mock: ^3.0.3
-    lint-staged: ~10.5.3
-    node-fetch: 2.6.2
-    prettier: ^2.2.1
-    ts-jest: ^26.4.4
-    typescript: ^4.1.3
   languageName: unknown
   linkType: soft
 
@@ -14773,141 +15120,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"posthog-netdata-event-processing@workspace:src/packages/posthog-netdata-event-processing":
-  version: 0.0.0-use.local
-  resolution: "posthog-netdata-event-processing@workspace:src/packages/posthog-netdata-event-processing"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.2
-    jest: ^26.6.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-pagerduty-plugin@workspace:src/packages/posthog-pagerduty-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-pagerduty-plugin@workspace:src/packages/posthog-pagerduty-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": 0.2.8-alpha.2
-  languageName: unknown
-  linkType: soft
-
-"posthog-patterns-app@workspace:src/packages/posthog-patterns-app":
-  version: 0.0.0-use.local
-  resolution: "posthog-patterns-app@workspace:src/packages/posthog-patterns-app"
-  dependencies:
-    "@babel/preset-env": ^7.18.10
-    "@posthog/plugin-scaffold": ^1.2.0
-    "@types/jest": ^28.1.6
-    "@types/node": ^18.0.3
-    jest: ^27.5.1
-    jest-fetch-mock: ^3.0.3
-    node-fetch: ^3.2.6
-    ts-jest: ^28.0.7
-    typescript: ^4.7.4
-  languageName: unknown
-  linkType: soft
-
-"posthog-plugin-geoip@workspace:src/packages/posthog-plugin-geoip":
-  version: 0.0.0-use.local
-  resolution: "posthog-plugin-geoip@workspace:src/packages/posthog-plugin-geoip"
-  dependencies:
-    "@maxmind/geoip2-node": ^2.3.1
-    "@posthog/plugin-scaffold": "github:PostHog/plugin-scaffold"
-    "@types/jest": ^26.0.19
-    "@typescript-eslint/eslint-plugin": ^4.12.0
-    "@typescript-eslint/parser": ^4.12.0
-    eslint: ^7.21.0
-    eslint-config-prettier: ^8.1.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^4.3.1
-    eslint-plugin-simple-import-sort: ^7.0.0
-    husky: ~4.3.6
-    jest: ^26.6.3
-    lint-staged: ~10.5.3
-    prettier: ^2.2.1
-    ts-jest: ^26.4.4
-    typescript: ^4.1.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-plugin-migrator3000@workspace:src/packages/posthog-plugin-migrator3000":
-  version: 0.0.0-use.local
-  resolution: "posthog-plugin-migrator3000@workspace:src/packages/posthog-plugin-migrator3000"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.3
-    "@posthog/plugin-scaffold": ~0.12.9
-    "@types/jest": ^26.0.19
-    "@types/node-fetch": ^2.5.10
-    "@typescript-eslint/eslint-plugin": ^4.12.0
-    "@typescript-eslint/parser": ^4.12.0
-    eslint: ^7.21.0
-    eslint-config-prettier: ^8.1.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^4.3.1
-    eslint-plugin-simple-import-sort: ^7.0.0
-    husky: ~4.3.6
-    jest: ^26.6.3
-    jest-fetch-mock: ^3.0.3
-    lint-staged: ~10.5.3
-    node-fetch: ^2.6.1
-    prettier: ^2.2.1
-    ts-jest: ^26.4.4
-    typescript: ^4.1.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-plugin-replicator@workspace:src/packages/posthog-plugin-replicator":
-  version: 0.0.0-use.local
-  resolution: "posthog-plugin-replicator@workspace:src/packages/posthog-plugin-replicator"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.3
-    "@posthog/plugin-scaffold": ~0.12.9
-    "@types/jest": ^26.0.19
-    "@types/node-fetch": ^2.5.10
-    "@typescript-eslint/eslint-plugin": ^4.12.0
-    "@typescript-eslint/parser": ^4.12.0
-    eslint: ^7.21.0
-    eslint-config-prettier: ^8.1.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^4.3.1
-    eslint-plugin-simple-import-sort: ^7.0.0
-    husky: ~4.3.6
-    jest: ^26.6.3
-    jest-fetch-mock: ^3.0.3
-    lint-staged: ~10.5.3
-    node-fetch: ^2.6.1
-    prettier: ^2.2.1
-    ts-jest: ^26.4.4
-    typescript: ^4.1.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-plugin-unduplicates@workspace:src/packages/posthog-app-unduplicates":
-  version: 0.0.0-use.local
-  resolution: "posthog-plugin-unduplicates@workspace:src/packages/posthog-app-unduplicates"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.12.10
-    "@types/jest": ^26.0.19
-    "@typescript-eslint/eslint-plugin": ^4.12.0
-    "@typescript-eslint/parser": ^4.12.0
-    eslint: ^7.21.0
-    eslint-config-prettier: ^8.1.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^4.3.1
-    eslint-plugin-simple-import-sort: ^7.0.0
-    given2: ^2.1.7
-    husky: ~4.3.6
-    jest: ^26.6.3
-    lint-staged: ~10.5.3
-    prettier: ^2.2.1
-    ts-jest: ^26.4.4
-    typescript: ^4.1.3
-  languageName: unknown
-  linkType: soft
-
 "posthog-plugin@workspace:src/packages/posthog-engage-so-plugin":
   version: 0.0.0-use.local
   resolution: "posthog-plugin@workspace:src/packages/posthog-engage-so-plugin"
@@ -14916,121 +15128,6 @@ __metadata:
     jest: ^28.1.1
     pre-commit: ^1.2.2
     standard: ^17.0.0
-  languageName: unknown
-  linkType: soft
-
-"posthog-redshift-import-plugin@workspace:src/packages/posthog-redshift-import-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-redshift-import-plugin@workspace:src/packages/posthog-redshift-import-plugin"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.3
-    "@posthog/plugin-scaffold": 0.12.5
-    "@types/pg": ^7.14.11
-    pg: ^8.0.0
-  languageName: unknown
-  linkType: soft
-
-"posthog-release-tracking-plugin@workspace:src/packages/github-release-tracking-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-release-tracking-plugin@workspace:src/packages/github-release-tracking-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^1.3.4
-    "@types/node": ^18.7.18
-    husky: ^4.3.0
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
-
-"posthog-semver-flattener-plugin@workspace:src/packages/semver-flattener-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-semver-flattener-plugin@workspace:src/packages/semver-flattener-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": 1.3.4
-    "@types/jest": ^29.0.0
-    eslint: ^8.23.0
-    husky: ^8.0.1
-    jest: ^28.1.3
-    lint-staged: ^13.0.3
-    prettier: ^2.7.1
-    ts-jest: ^28.0.8
-    typescript: ^4.8.2
-  languageName: unknown
-  linkType: soft
-
-"posthog-shopify-sync-plugin@workspace:src/packages/posthog-shopify-sync-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-shopify-sync-plugin@workspace:src/packages/posthog-shopify-sync-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.9
-    eslint: ^8.9.0
-    jest: ^26.6.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-twilio-plugin@workspace:src/packages/posthog-twilio-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-twilio-plugin@workspace:src/packages/posthog-twilio-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": 0.10.0
-    jest: ^27.0.4
-    node-fetch: ^3.2.0
-  languageName: unknown
-  linkType: soft
-
-"posthog-url-normalizer-plugin@workspace:src/packages/posthog-url-normalizer-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-url-normalizer-plugin@workspace:src/packages/posthog-url-normalizer-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^1.0.4
-    "@types/jest": ^28.1.1
-    jest: ^28.1.1
-    ts-jest: ^28.0.4
-    typescript: ^4.7.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-variance-plugin@workspace:src/packages/posthog-variance-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-variance-plugin@workspace:src/packages/posthog-variance-plugin"
-  dependencies:
-    "@commitlint/cli": 17.1.2
-    "@commitlint/config-conventional": 17.1.0
-    "@posthog/plugin-scaffold": 1.3.4
-    "@rollup/plugin-commonjs": 22.0.2
-    "@rollup/plugin-node-resolve": 14.1.0
-    "@rollup/plugin-replace": 4.0.0
-    "@rollup/plugin-typescript": 8.5.0
-    "@types/jest": 29.1.1
-    "@types/lodash.get": 4.4.7
-    "@types/lodash.set": 4.3.7
-    "@typescript-eslint/eslint-plugin": 5.38.1
-    "@typescript-eslint/parser": 5.38.1
-    eslint: 8.24.0
-    eslint-config-prettier: 8.5.0
-    eslint-plugin-simple-import-sort: 8.0.0
-    eslint-plugin-sort-keys-fix: 1.1.2
-    eslint-plugin-typescript-sort-keys: 2.1.0
-    eslint-plugin-unused-imports: 2.0.0
-    husky: 8.0.1
-    jest: 29.1.2
-    jest-fetch-mock: 3.0.3
-    lodash.get: 4.4.2
-    lodash.set: 4.3.2
-    prettier: 2.7.1
-    rollup: 2.79.1
-    standard-version: 9.5.0
-    ts-jest: 29.0.3
-    tslib: 2.4.0
-    typescript: 4.8.3
-  languageName: unknown
-  linkType: soft
-
-"posthog-zendesk-plugin@workspace:src/packages/posthog-zendesk-plugin":
-  version: 0.0.0-use.local
-  resolution: "posthog-zendesk-plugin@workspace:src/packages/posthog-zendesk-plugin"
-  dependencies:
-    node-fetch: ^3.2.0
   languageName: unknown
   linkType: soft
 
@@ -15195,27 +15292,6 @@ __metadata:
   checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
   languageName: node
   linkType: hard
-
-"property-filter-plugin@workspace:src/packages/posthog-property-filter-plugin":
-  version: 0.0.0-use.local
-  resolution: "property-filter-plugin@workspace:src/packages/posthog-property-filter-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^1.3.4
-    jest: ^27.5.1
-  languageName: unknown
-  linkType: soft
-
-"property-flattener-plugin@workspace:src/packages/flatten-properties-plugin":
-  version: 0.0.0-use.local
-  resolution: "property-flattener-plugin@workspace:src/packages/flatten-properties-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.7
-    husky: ^4.3.0
-    jest: ^26.6.3
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
 
 "proto3-json-serializer@npm:^0.1.8":
   version: 0.1.9
@@ -16112,14 +16188,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rudderstack-posthog-plugin@workspace:src/packages/rudderstack-posthog-plugin":
-  version: 0.0.0-use.local
-  resolution: "rudderstack-posthog-plugin@workspace:src/packages/rudderstack-posthog-plugin"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.5
-  languageName: unknown
-  linkType: soft
-
 "run-async@npm:^2.4.0":
   version: 2.4.1
   resolution: "run-async@npm:2.4.1"
@@ -16297,18 +16365,6 @@ __metadata:
   checksum: e0649fb18a1da909df7b5a6f586314a7f6e052385fc1e6eafa7084dd77c0787e755ab35ca491f9eec986fe1d0d6d36eae85a21eb7e2ed32ae5906796acb92c56
   languageName: node
   linkType: hard
-
-"sendgrid-plugin@workspace:src/packages/sendgrid-plugin":
-  version: 0.0.0-use.local
-  resolution: "sendgrid-plugin@workspace:src/packages/sendgrid-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.6.0
-    husky: ^4.3.0
-    jest: ^26.6.3
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
 
 "set-blocking@npm:^2.0.0":
   version: 2.0.0
@@ -17164,18 +17220,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"taxonomy-plugin@workspace:src/packages/taxonomy-plugin":
-  version: 0.0.0-use.local
-  resolution: "taxonomy-plugin@workspace:src/packages/taxonomy-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.7
-    husky: ^4.3.0
-    jest: ^26.6.3
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
-
 "teeny-request@npm:^7.0.0, teeny-request@npm:^7.1.3":
   version: 7.2.0
   resolution: "teeny-request@npm:7.2.0"
@@ -17295,18 +17339,6 @@ __metadata:
   checksum: a38c3e059853c494af95d50c072b83f8b676a9ba2818dcc5b108ef252230735c54e0185437618596c790bbba8fcdaef5b290405981ffa09dce67b1f1bf190cbd
   languageName: node
   linkType: hard
-
-"timestamp-parser-plugin@workspace:src/packages/timestamp-parser-plugin":
-  version: 0.0.0-use.local
-  resolution: "timestamp-parser-plugin@workspace:src/packages/timestamp-parser-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.7
-    husky: ^4.3.0
-    jest: ^26.6.3
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
 
 "tiny-lru@npm:9.0.3":
   version: 9.0.3
@@ -17668,18 +17700,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"twitter-followers-plugin@workspace:src/packages/twitter-followers-plugin":
-  version: 0.0.0-use.local
-  resolution: "twitter-followers-plugin@workspace:src/packages/twitter-followers-plugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.2.7
-    husky: ^4.3.0
-    jest: ^26.6.3
-    lint-staged: ^10.5.2
-    prettier: ^2.2.1
-  languageName: unknown
-  linkType: soft
-
 "type-check@npm:^0.4.0, type-check@npm:~0.4.0":
   version: 0.4.0
   resolution: "type-check@npm:0.4.0"
@@ -18034,20 +18054,6 @@ __metadata:
   checksum: 08a130289f5238fcbf8f59a18951286a6e660d17acccc9d58d9b69dfa0ee19aa038e8f95721b00b432c36d1629a9e32a464bf2e7e0ae6a244c42ddb30bdd8b33
   languageName: node
   linkType: hard
-
-"useragent-plugin@workspace:src/packages/useragentplugin":
-  version: 0.0.0-use.local
-  resolution: "useragent-plugin@workspace:src/packages/useragentplugin"
-  dependencies:
-    "@posthog/plugin-scaffold": ^0.12.10
-    "@types/jest": ^27.0.3
-    detect-browser: ^5.3.0
-    esbuild: ^0.14.6
-    esbuild-jest: ^0.5.0
-    jest: ^27.4.5
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
 
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:~1.0.1":
   version: 1.0.2

@@ -1,5 +1,5 @@
 {
-    "name": "posthog-plugin-unduplicates",
+    "name": "@posthog/plugin-unduplicates",
     "version": "0.0.1",
     "description": "Prevent duplicates in your data by rejecting duplicate events at ingestion.",
     "main": "index.ts",

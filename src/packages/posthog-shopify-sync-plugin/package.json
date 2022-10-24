@@ -1,5 +1,5 @@
 {
-    "name": "posthog-shopify-sync-plugin",
+    "name": "@posthog/shopify-sync-plugin",
     "version": "0.0.1",
     "description": "Sync Shopify Events to PostHog",
     "repository": {

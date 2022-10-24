@@ -1,5 +1,5 @@
 {
-    "name": "property-flattener-plugin",
+    "name": "@posthog/property-flattener-plugin",
     "version": "0.0.1",
     "description": "Flatten event properties to easily access them in filters.",
     "main": "index.js",
