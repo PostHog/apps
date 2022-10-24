@@ -1,0 +1,35 @@
+name: 'CD'
+
+on:
+    push:
+        branches:
+            - main
+            - master
+
+jobs:
+    release:
+        name: Publish new releases for all packages
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Checkout the repository
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+                  token: ${{ secrets.POSTHOG_BOT_GITHUB_TOKEN }}
+
+            - name: Set up Node 16
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 16
+                  registry-url: https://registry.npmjs.org
+
+            - name: Install dependencies
+              run: yarn --frozen-lockfile
+
+            - name: Build packages
+              run: yarn build
+
+            - name: Publish all packages
+              run: yarn publish-all
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,5 +1,3 @@
-// rollup.config.js
-
 import fs from 'fs'
 
 import typescript from '@rollup/plugin-typescript'
@@ -11,8 +9,8 @@ const packages = fs.readdirSync('./src/packages', { withFileTypes: true }).filte
 
 export default packages.map(({ name }) => {
     /*const plugin = JSON.parse(
-    fs.readFileSync(`./src/packages/${name}/plugin.json`).toString("utf-8")
-  );*/
+      fs.readFileSync(`./src/packages/${name}/plugin.json`).toString("utf-8")
+    );*/
 
     const srcExists = fs.existsSync(`./src/packages/${name}/src`)
     const isTypescript = fs.existsSync(
