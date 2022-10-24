@@ -1,7 +1,6 @@
 {
-    "name": "posthog-semver-flattener-plugin",
-    "private": true,
-    "version": "0.1.0",
+    "name": "@posthog/semver-flattener-plugin",
+    "version": "0.0.1",
     "keywords": [
         "posthog",
         "plugin"

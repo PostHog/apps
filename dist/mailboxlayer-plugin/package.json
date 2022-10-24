@@ -1,5 +1,5 @@
 {
-    "name": "mailboxlayer-plugin",
+    "name": "@posthog/mailboxlayer-plugin",
     "version": "0.0.1",
     "description": "Get email scores for PostHog users using the Mailboxlayer API.",
     "main": "index.js",

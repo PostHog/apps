@@ -1,5 +1,5 @@
 {
-    "name": "posthog-currency-normalization-plugin",
+    "name": "@posthog/currency-normalization-plugin",
     "version": "0.0.1",
     "description": "Convert ingested payment values between currencies",
     "main": "index.js",
