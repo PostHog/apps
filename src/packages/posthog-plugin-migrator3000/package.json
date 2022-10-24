@@ -2,11 +2,7 @@
     "name": "posthog-plugin-migrator3000",
     "version": "0.0.1",
     "description": "Migrate your PostHog events to a new instance.",
-    "keywords": [
-        "posthog",
-        "plugin",
-        "migration"
-    ],
+    "keywords": ["posthog", "plugin", "migration"],
     "main": "index.ts",
     "repository": "github:PostHog/posthog-plugin-migrator3000",
     "bugs": {
