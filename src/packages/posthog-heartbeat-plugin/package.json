@@ -1,6 +1,5 @@
 {
-    "name": "posthog-heartbeat-plugin",
-    "private": true,
+    "name": "@posthog/heartbeat-plugin",
     "version": "0.0.1",
     "keywords": [
         "posthog",
