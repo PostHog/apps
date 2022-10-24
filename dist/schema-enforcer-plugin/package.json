@@ -1,6 +1,6 @@
 {
     "name": "@posthog/schema-enforcer-plugin",
-    "version": "0.0.3",
+    "version": "0.0.1",
     "description": "Enforce schema on events to ensure clean data.",
     "main": "dist/index.js",
     "scripts": {
@@ -20,7 +20,7 @@
     },
     "homepage": "https://github.com/PostHog/posthog-schema-enforcer-plugin#readme",
     "devDependencies": {
-        "posthog-plugins": "^0.1.2",
+        "@posthog/plugin-scaffold": "^1.3.4",
         "rimraf": "^3.0.0",
         "rollup": "^2.22.1",
         "rollup-plugin-commonjs": "^10.1.0",

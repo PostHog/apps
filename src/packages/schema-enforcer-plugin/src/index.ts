@@ -1,4 +1,4 @@
-import { PluginEvent } from 'posthog-plugins'
+import { PluginEvent } from '@posthog/plugin-scaffold'
 import { SchemaEvent, Meta } from './types'
 import { isValidSchemaFile } from './lib'
 

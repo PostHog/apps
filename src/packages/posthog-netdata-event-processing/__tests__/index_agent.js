@@ -6,7 +6,7 @@ const {
     getMeta,
     resetMeta,
     clone,
-} = require('posthog-plugins/test/utils.js')
+} = require('@posthog/plugin-scaffold/test/utils.js')
 const { setupPlugin, processEvent } = require('../index')
 
 const netdataPluginVersion = '0.0.13'
@@ -27,7 +27,10 @@ test('setupPlugin', async () => {
 
 // test has_alarms_critical
 test('has_alarms_critical', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "alarms_critical": 1 } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { $current_url: 'agent backend', alarms_critical: 1 },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
@@ -46,7 +49,7 @@ test('has_alarms_critical', async () => {
 
 // test has_alarms_warning
 test('has_alarms_warning', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "alarms_warning": 0 } })
+    const event = createEvent({ event: 'test event', properties: { $current_url: 'agent backend', alarms_warning: 0 } })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
@@ -65,7 +68,10 @@ test('has_alarms_warning', async () => {
 
 // test netdata_buildinfo
 test('netdata_buildinfo', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "netdata_buildinfo": "JSON-C|dbengine|Native HTTPS|LWS v3.2.2" } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { $current_url: 'agent backend', netdata_buildinfo: 'JSON-C|dbengine|Native HTTPS|LWS v3.2.2' },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
@@ -90,26 +96,26 @@ test('host_collectors', async () => {
     const event = createEvent({
         event: 'test event',
         properties: {
-            "$current_url":"agent backend",
-            "host_collectors": [
+            $current_url: 'agent backend',
+            host_collectors: [
                 {
-                    "plugin": "python.d.plugin",
-                    "module": "dockerhub"
+                    plugin: 'python.d.plugin',
+                    module: 'dockerhub',
                 },
                 {
-                    "plugin": "apps.plugin",
-                    "module": ""
+                    plugin: 'apps.plugin',
+                    module: '',
                 },
                 {
-                    "plugin": "proc.plugin",
-                    "module": "/proc/diskstats"
+                    plugin: 'proc.plugin',
+                    module: '/proc/diskstats',
                 },
                 {
-                    "plugin": "proc.plugin",
-                    "module": "/proc/softirqs"
+                    plugin: 'proc.plugin',
+                    module: '/proc/softirqs',
                 },
-            ]
-        }
+            ],
+        },
     })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
@@ -137,9 +143,9 @@ test('host_collectors_null', async () => {
     const event = createEvent({
         event: 'test event',
         properties: {
-            "$current_url":"agent backend",
-            "host_collectors": [null]
-        }
+            $current_url: 'agent backend',
+            host_collectors: [null],
+        },
     })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
@@ -158,12 +164,15 @@ test('host_collectors_null', async () => {
 
 // test netdata_machine_guid
 test('netdata_machine_guid', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "netdata_machine_guid": "" } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { $current_url: 'agent backend', netdata_machine_guid: '' },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
         properties: {
-            "$current_url":"agent backend",
+            $current_url: 'agent backend',
             netdata_machine_guid: 'empty',
             netdata_machine_guid_is_empty: true,
             netdata_posthog_plugin_version: netdataPluginVersion,
@@ -178,12 +187,15 @@ test('netdata_machine_guid', async () => {
 
 // test netdata_machine_guid
 test('netdata_machine_guid', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "netdata_machine_guid": "123" } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { $current_url: 'agent backend', netdata_machine_guid: '123' },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
         properties: {
-            "$current_url":"agent backend",
+            $current_url: 'agent backend',
             netdata_machine_guid: '123',
             netdata_machine_guid_is_empty: false,
             netdata_posthog_plugin_version: netdataPluginVersion,
@@ -198,12 +210,15 @@ test('netdata_machine_guid', async () => {
 
 // test netdata_person_id
 test('netdata_person_id', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "netdata_person_id": "" } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { $current_url: 'agent backend', netdata_person_id: '' },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
         properties: {
-            "$current_url":"agent backend",
+            $current_url: 'agent backend',
             netdata_person_id: 'empty',
             netdata_person_id_is_empty: true,
             netdata_posthog_plugin_version: netdataPluginVersion,
@@ -218,12 +233,15 @@ test('netdata_person_id', async () => {
 
 // test netdata_person_id
 test('netdata_person_id', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "netdata_person_id": "123" } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { $current_url: 'agent backend', netdata_person_id: '123' },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
         properties: {
-            "$current_url":"agent backend",
+            $current_url: 'agent backend',
             netdata_person_id: '123',
             netdata_person_id_is_empty: false,
             netdata_posthog_plugin_version: netdataPluginVersion,
@@ -238,7 +256,7 @@ test('netdata_person_id', async () => {
 
 // test distinct_id
 test('distinct_id', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url":"agent backend", "distinct_id": "" } })
+    const event = createEvent({ event: 'test event', properties: { $current_url: 'agent backend', distinct_id: '' } })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
@@ -258,7 +276,10 @@ test('distinct_id', async () => {
 
 // test distinct_id
 test('distinct_id', async () => {
-    const event = createEvent({ event: 'test event', properties: { "distinct_id": "123", "$current_url": "agent backend" } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { distinct_id: '123', $current_url: 'agent backend' },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
@@ -276,97 +297,89 @@ test('distinct_id', async () => {
     })
 })
 
-
 // test data_testid
 test('data_testid', async () => {
     const eventExample = {
-        "event": "$autocapture",
-        "distinct_id": "dev-test",
-        "$current_url": "agent backend",
-        "properties": {
-            "$current_url": "agent backend",
-            "$elements": [
+        event: '$autocapture',
+        distinct_id: 'dev-test',
+        $current_url: 'agent backend',
+        properties: {
+            $current_url: 'agent backend',
+            $elements: [
                 {
-                    "attr__data-testid": "date-picker::click-quick-selector::::21600",
+                    'attr__data-testid': 'date-picker::click-quick-selector::::21600',
                 },
                 {
-                    "attr__href": "#menu_web_log_nginx"
+                    attr__href: '#menu_web_log_nginx',
                 },
                 {
-                    "event": null,
-                    "text": null,
-                    "tag_name": "div",
-                    "attr_class": [
-                        "bjKBDB",
-                        "styled__ShortPick-sc-1yj3701-6"
-                    ],
-                    "href": null,
-                    "attr_id": null,
-                    "nth_child": 1,
-                    "nth_of_type": 1,
-                    "attributes": {
-                        "attr__class": "styled__ShortPick-sc-1yj3701-6 bjKBDB"
+                    event: null,
+                    text: null,
+                    tag_name: 'div',
+                    attr_class: ['bjKBDB', 'styled__ShortPick-sc-1yj3701-6'],
+                    href: null,
+                    attr_id: null,
+                    nth_child: 1,
+                    nth_of_type: 1,
+                    attributes: {
+                        attr__class: 'styled__ShortPick-sc-1yj3701-6 bjKBDB',
                     },
-                    "order": 1
+                    order: 1,
                 },
                 {
-                    "event": null,
-                    "text": "unshared",
-                    "tag_name": "span",
-                    "attr_class": [
-                        "chart-legend-bottomstyled__DimensionLabel-ltgk2z-9",
-                        "iMmOhf"
-                    ],
-                    "href": null,
-                    "attr_id": null,
-                    "nth_child": 2,
-                    "nth_of_type": 1,
-                    "attributes": {
-                        "attr__class": "chart-legend-bottomstyled__DimensionLabel-ltgk2z-9 iMmOhf"
+                    event: null,
+                    text: 'unshared',
+                    tag_name: 'span',
+                    attr_class: ['chart-legend-bottomstyled__DimensionLabel-ltgk2z-9', 'iMmOhf'],
+                    href: null,
+                    attr_id: null,
+                    nth_child: 2,
+                    nth_of_type: 1,
+                    attributes: {
+                        attr__class: 'chart-legend-bottomstyled__DimensionLabel-ltgk2z-9 iMmOhf',
                     },
-                    "order": 0
+                    order: 0,
                 },
                 {
-                    "$el_text": "unshared"
+                    $el_text: 'unshared',
                 },
                 {
-                    "event": null,
-                    "text": "unshared",
-                    "tag_name": "span",
-                    "attr_class": [
-                        "chart-legend-bottomstyled__DimensionLabel-ltgk2z-9",
-                        "iMmOhf"
-                    ],
-                    "href": null,
-                    "attr_id": null,
-                    "nth_child": 2,
-                    "nth_of_type": 1,
-                    "attributes": {
-                        "attr__class": "chart-legend-bottomstyled__DimensionLabel-ltgk2z-9 iMmOhf"
+                    event: null,
+                    text: 'unshared',
+                    tag_name: 'span',
+                    attr_class: ['chart-legend-bottomstyled__DimensionLabel-ltgk2z-9', 'iMmOhf'],
+                    href: null,
+                    attr_id: null,
+                    nth_child: 2,
+                    nth_of_type: 1,
+                    attributes: {
+                        attr__class: 'chart-legend-bottomstyled__DimensionLabel-ltgk2z-9 iMmOhf',
                     },
-                    "order": 0
-
+                    order: 0,
                 },
                 {
-                    "attr__data-id": "newyork_netdata_rocks_mem_ksm",
-                    "attr__data-legend-position": "bottom",
-                    "attr__data-netdata": "mem.ksm",
-                }
-            ]
-        }
+                    'attr__data-id': 'newyork_netdata_rocks_mem_ksm',
+                    'attr__data-legend-position': 'bottom',
+                    'attr__data-netdata': 'mem.ksm',
+                },
+            ],
+        },
     }
     const event = createEvent(eventExample)
     const eventCopy = await processEvent(clone(event), getMeta())
-    expect(eventCopy['properties']['el_data_testid']).toEqual("date-picker::click-quick-selector::::21600")
-    expect(eventCopy['properties']['el_href_menu']).toEqual("#menu_web_log_nginx")
-    expect(eventCopy['properties']['el_text']).toEqual("unshared")
-    expect(eventCopy['properties']['el_data_netdata']).toEqual("mem.ksm")
-    expect(eventCopy['properties']['interaction_type']).toEqual("menu")
+    expect(eventCopy['properties']['el_data_testid']).toEqual('date-picker::click-quick-selector::::21600')
+    expect(eventCopy['properties']['el_href_menu']).toEqual('#menu_web_log_nginx')
+    expect(eventCopy['properties']['el_text']).toEqual('unshared')
+    expect(eventCopy['properties']['el_data_netdata']).toEqual('mem.ksm')
+    expect(eventCopy['properties']['interaction_type']).toEqual('menu')
 })
 
 // test menu
 test('menu', async () => {
-    const event = createEvent({ event: 'test event', properties: {"$current_url": "agent backend", "$elements":[{"attr__href": "#menu_system_submenu_cpu"}]} })
+    const event = createEvent({
+        event: 'test event',
+        properties: { $current_url: 'agent backend', $elements: [{ attr__href: '#menu_system_submenu_cpu' }] },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
@@ -397,7 +410,10 @@ test('processEvent does not crash with identify', async () => {
 
 // test config_https_available
 test('config_https_available', async () => {
-    const event = createEvent({ event: 'test event', properties: { "config_https_available": true, "$current_url": "agent backend" } })
+    const event = createEvent({
+        event: 'test event',
+        properties: { config_https_available: true, $current_url: 'agent backend' },
+    })
     const eventCopy = await processEvent(clone(event), getMeta())
     expect(eventCopy).toEqual({
         ...event,
@@ -416,92 +432,97 @@ test('config_https_available', async () => {
 
 // test event_source
 test('event_source', async () => {
-    const event = createEvent({ event: 'test event', properties: { "$current_url": "http://london3.my-netdata.io/#menu_dockerhub_submenu_status;after=-420;before=0;theme=slate" } })
-    const eventCopy = await processEvent(clone(event), getMeta())
-    expect(eventCopy['properties']['event_source']).toEqual("agent")
+    const event = createEvent({
+        event: 'test event',
+        properties: {
+            $current_url: 'http://london3.my-netdata.io/#menu_dockerhub_submenu_status;after=-420;before=0;theme=slate',
+        },
     })
+    const eventCopy = await processEvent(clone(event), getMeta())
+    expect(eventCopy['properties']['event_source']).toEqual('agent')
+})
 
 // test event_source_agent_backend
 test('event_source_agent_backend', async () => {
     const eventExample = {
-        "event": "$pageview",
-        "distinct_id": "dev-test",
-        "properties": {
-            "$current_url": "agent backend",
-        }
+        event: '$pageview',
+        distinct_id: 'dev-test',
+        properties: {
+            $current_url: 'agent backend',
+        },
     }
     const event = createEvent(eventExample)
     const eventCopy = await processEvent(clone(event), getMeta())
-    expect(eventCopy['properties']['event_source']).toEqual("agent")
+    expect(eventCopy['properties']['event_source']).toEqual('agent')
 })
 
 // test event_source_agent_frontend
 test('event_source_agent_frontend', async () => {
     const eventExample = {
-        "event": "$pageview",
-        "distinct_id": "dev-test",
-        "properties": {
-            "$current_url": "agent dashboard",
-        }
+        event: '$pageview',
+        distinct_id: 'dev-test',
+        properties: {
+            $current_url: 'agent dashboard',
+        },
     }
     const event = createEvent(eventExample)
     const eventCopy = await processEvent(clone(event), getMeta())
-    expect(eventCopy['properties']['event_source']).toEqual("agent")
+    expect(eventCopy['properties']['event_source']).toEqual('agent')
 })
 
 // test el_name
 test('el_name', async () => {
     const eventExample = {
-        "event": "$autocapture",
-        "distinct_id": "dev-test",
-        "properties": {
-            "$current_url": "agent dashboard",
-            "$elements": [
+        event: '$autocapture',
+        distinct_id: 'dev-test',
+        properties: {
+            $current_url: 'agent dashboard',
+            $elements: [
                 {
-                    "attr__foo": "foo"
+                    attr__foo: 'foo',
                 },
                 {
-                    "attr__bar": "bar",
+                    attr__bar: 'bar',
                 },
                 {
-                    "attr__data-id": "newyork_netdata_rocks_mem_ksm",
-                    "attr__data-legend-position": "bottom",
-                    "attr__data-netdata": "mem.ksm",
-                    "attr__name": "foo",
-                }
-            ]
-        }
+                    'attr__data-id': 'newyork_netdata_rocks_mem_ksm',
+                    'attr__data-legend-position': 'bottom',
+                    'attr__data-netdata': 'mem.ksm',
+                    attr__name: 'foo',
+                },
+            ],
+        },
     }
     const event = createEvent(eventExample)
     const eventCopy = await processEvent(clone(event), getMeta())
-    expect(eventCopy['properties']['el_name']).toEqual("foo")
+    expect(eventCopy['properties']['el_name']).toEqual('foo')
 })
 
 // test el_class
 test('el_class', async () => {
     const eventExample = {
-        "event": "$autocapture",
-        "distinct_id": "dev-test",
-        "properties": {
-            "$current_url": "agent dashboard",
-            "$elements": [
+        event: '$autocapture',
+        distinct_id: 'dev-test',
+        properties: {
+            $current_url: 'agent dashboard',
+            $elements: [
                 {
-                    "attr__foo": "foo"
+                    attr__foo: 'foo',
                 },
                 {
-                    "attr__bar": "bar",
-                    "attributes": {
-                        "attr__aria-label": "my_aria_label",
-                        "attr__class": "my_att_class"
+                    attr__bar: 'bar',
+                    attributes: {
+                        'attr__aria-label': 'my_aria_label',
+                        attr__class: 'my_att_class',
                     },
                 },
                 {
-                    "attr__class": "my_class"
-                }
-            ]
-        }
+                    attr__class: 'my_class',
+                },
+            ],
+        },
     }
     const event = createEvent(eventExample)
     const eventCopy = await processEvent(clone(event), getMeta())
-    expect(eventCopy['properties']['el_class']).toEqual("my_class")
+    expect(eventCopy['properties']['el_class']).toEqual('my_class')
 })
