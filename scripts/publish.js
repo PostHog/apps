@@ -5,7 +5,7 @@ const packages = fs.readdirSync('./dist', { withFileTypes: true }).filter((diren
 
 for (let { name } of packages) {
     try {
-        execSync('npm publish --access public --dry-run', { cwd: `./dist/${name}` })
+        execSync('npm publish --access public', { cwd: `./dist/${name}` })
     } catch (error) {
         console.error(`Encountered error while publishing ${name}: ${error}`)
     }
