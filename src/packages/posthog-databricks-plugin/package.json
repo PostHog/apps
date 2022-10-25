@@ -17,7 +17,7 @@
     },
     "devDependencies": {
         "@posthog/plugin-scaffold": "0.10.0",
-        "jest": "^27.0.4"
+        "jest": "^29.2.2"
     },
     "homepage": "https://github.com/samcaspus/posthog-databricks-plugin#readme"
 }
