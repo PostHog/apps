@@ -9,28 +9,28 @@ describe('correctly matches and extracts events', () => {
     test('correctly extracts two pairs', () => {
         expect(extractEventsToTrack('(test1,test2),(test3,test4)')).toStrictEqual([
             ['test1', 'test2'],
-            ['test3', 'test4']
+            ['test3', 'test4'],
         ])
     })
 
     test('correctly extracts a pair with a space in the name', () => {
         expect(extractEventsToTrack('(test event,test2),(test3,test4)')).toStrictEqual([
             ['test event', 'test2'],
-            ['test3', 'test4']
+            ['test3', 'test4'],
         ])
     })
 
     test('correctly extracts a pair with a trailing space', () => {
         expect(extractEventsToTrack('(test event,another event ),(test3,test4)')).toStrictEqual([
             ['test event', 'another event'],
-            ['test3', 'test4']
+            ['test3', 'test4'],
         ])
     })
 
     test('correctly extracts a pair with a leading space', () => {
         expect(extractEventsToTrack('(test event, another event),(test3,test4)')).toStrictEqual([
             ['test event', 'another event'],
-            ['test3', 'test4']
+            ['test3', 'test4'],
         ])
     })
 })

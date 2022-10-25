@@ -5,7 +5,7 @@
     "author": "Emanuele Capparelli (k@emkpp.com)",
     "license": "MIT",
     "dependencies": {
-        "@types/node-fetch": "^2.6.1",
+        "@types/node-fetch": "^2.6.2",
         "aws-sdk": "^2.1095.0",
         "posthog-js": "^1.18.0"
     },
