@@ -5,12 +5,11 @@ import { randomBytes } from 'crypto';
 
 function transformEventToRow(fullEvent) {
     const { event, properties, $set, $set_once, distinct_id, team_id, site_url, now, sent_at, uuid, ...rest } = fullEvent;
-    const ip = (properties === null || properties === void 0 ? void 0 : properties['$ip']) || fullEvent.ip;
-    const timestamp = fullEvent.timestamp || (properties === null || properties === void 0 ? void 0 : properties.timestamp) || now || sent_at;
+    const ip = properties?.['$ip'] || fullEvent.ip;
+    const timestamp = fullEvent.timestamp || properties?.timestamp || now || sent_at;
     let ingestedProperties = properties;
     let elements = [];
-    // only move prop to elements for the $autocapture action
-    if (event === '$autocapture' && (properties === null || properties === void 0 ? void 0 : properties['$elements'])) {
+    if (event === '$autocapture' && properties?.['$elements']) {
         const { $elements, ...props } = properties;
         ingestedProperties = props;
         elements = $elements;
@@ -40,7 +39,7 @@ const setupPlugin = async ({ attachments, global, config }) => {
     try {
         credentials = JSON.parse(attachments.googleCloudKeyJson.contents.toString());
     }
-    catch (_a) {
+    catch {
         throw new Error('Credentials JSON file has invalid JSON!');
     }
     const storage = new Storage({
@@ -62,7 +61,6 @@ const exportEvents = async (events, { global, config }) => {
     let csvString = 'uuid,event,properties,elements,people_set,people_set_once,distinct_id,team_id,ip,site_url,timestamp\n';
     for (let i = 0; i < rows.length; ++i) {
         const { uuid, event, properties, elements, people_set, people_set_once, distinct_id, team_id, ip, site_url, timestamp, } = rows[i];
-        // order is important
         csvString += `${uuid},${event},${properties},${elements},${people_set},${people_set_once},${distinct_id},${team_id},${ip},${site_url},${timestamp}`;
         if (i !== rows.length - 1) {
             csvString += '\n';
@@ -73,7 +71,6 @@ const exportEvents = async (events, { global, config }) => {
     const dayTime = `${day.split('-').join('')}-${time.split(':').join('')}`;
     const suffix = randomBytes(8).toString('hex');
     const fileName = `${day}/${dayTime}-${suffix}.csv`;
-    // some minor hackiness to upload without access to the filesystem
     const dataStream = new PassThrough();
     const gcFile = global.bucket.file(fileName);
     dataStream.push(csvString);
@@ -93,7 +90,7 @@ const exportEvents = async (events, { global, config }) => {
             });
         });
     }
-    catch (_a) {
+    catch {
         console.error(`Failed to upload ${rows.length} event${rows.length > 1 ? 's' : ''} to GCS. Retrying later.`);
         throw new RetryError();
     }

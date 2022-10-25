@@ -10,7 +10,6 @@ const ELEMENT_TRANSFORMATIONS = {
 const parseAndSendEvents = async (events, { config, global }) => {
     const batch = [];
     for (const event of events) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { team_id, now, offset, sent_at, $token, project_id, api_key, ...sendableEvent } = {
             ...event,
             token: config.projectApiKey,
@@ -73,7 +72,6 @@ const plugin = {
         const currentDate = new Date();
         const lastRun = await cache.get('last_run', null);
         if (!lastRun || currentDate.getTime() - Number(lastRun) > TEN_MINUTES) {
-            // this "magic" key is added via the historical export upgrade
             const isExportRunning = await storage.get('is_export_running', false);
             if (isExportRunning) {
                 return;
@@ -115,7 +113,6 @@ const plugin = {
         if (events.length === 0) {
             return;
         }
-        // dont export live events, only historical ones
         if (global.versionMajor > 1 || (global.versionMajor === 1 && global.versionMinor > 29)) {
             if (!events[0].properties || !events[0].properties['$$is_historical_export_event']) {
                 return;

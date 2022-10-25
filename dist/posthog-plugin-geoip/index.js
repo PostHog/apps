@@ -1,4 +1,4 @@
-const ONE_DAY = 60 * 60 * 24; // 24h in seconds
+const ONE_DAY = 60 * 60 * 24;
 const defaultLocationSetProps = {
     $geoip_city_name: null,
     $geoip_country_name: null,
@@ -23,42 +23,41 @@ const defaultLocationSetOnceProps = {
 };
 const plugin = {
     processEvent: async (event, { geoip, cache }) => {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
         if (!geoip) {
             throw new Error('This PostHog version does not have GeoIP capabilities! Upgrade to PostHog 1.24.0 or later');
         }
-        let ip = ((_a = event.properties) === null || _a === void 0 ? void 0 : _a.$ip) || event.ip;
-        if (ip && !((_b = event.properties) === null || _b === void 0 ? void 0 : _b.$geoip_disable)) {
+        let ip = event.properties?.$ip || event.ip;
+        if (ip && !event.properties?.$geoip_disable) {
             ip = String(ip);
             if (ip === '127.0.0.1') {
-                ip = '13.106.122.3'; // Spoofing an Australian IP address for local development
+                ip = '13.106.122.3';
             }
             const response = await geoip.locate(ip);
             if (response) {
                 const location = {};
                 if (response.city) {
-                    location['city_name'] = (_c = response.city.names) === null || _c === void 0 ? void 0 : _c.en;
+                    location['city_name'] = response.city.names?.en;
                 }
                 if (response.country) {
-                    location['country_name'] = (_d = response.country.names) === null || _d === void 0 ? void 0 : _d.en;
+                    location['country_name'] = response.country.names?.en;
                     location['country_code'] = response.country.isoCode;
                 }
                 if (response.continent) {
-                    location['continent_name'] = (_e = response.continent.names) === null || _e === void 0 ? void 0 : _e.en;
+                    location['continent_name'] = response.continent.names?.en;
                     location['continent_code'] = response.continent.code;
                 }
                 if (response.postal) {
                     location['postal_code'] = response.postal.code;
                 }
                 if (response.location) {
-                    location['latitude'] = (_f = response.location) === null || _f === void 0 ? void 0 : _f.latitude;
-                    location['longitude'] = (_g = response.location) === null || _g === void 0 ? void 0 : _g.longitude;
-                    location['time_zone'] = (_h = response.location) === null || _h === void 0 ? void 0 : _h.timeZone;
+                    location['latitude'] = response.location?.latitude;
+                    location['longitude'] = response.location?.longitude;
+                    location['time_zone'] = response.location?.timeZone;
                 }
                 if (response.subdivisions) {
                     for (const [index, subdivision] of response.subdivisions.entries()) {
                         location[`subdivision_${index + 1}_code`] = subdivision.isoCode;
-                        location[`subdivision_${index + 1}_name`] = (_j = subdivision.names) === null || _j === void 0 ? void 0 : _j.en;
+                        location[`subdivision_${index + 1}_name`] = subdivision.names?.en;
                     }
                 }
                 if (!event.properties) {
@@ -68,19 +67,16 @@ const plugin = {
                 const lastIpSetEntry = await cache.get(event.distinct_id, null);
                 if (typeof lastIpSetEntry === 'string') {
                     const [lastIpSet, timestamp] = lastIpSetEntry.split('|');
-                    // New IP but this event is late and another event that happened after
-                    // but was received earlier has already updated the props
                     const isEventSettingPropertiesLate = event.timestamp && timestamp && new Date(event.timestamp) < new Date(timestamp);
-                    // Person props update is not needed if the event's IP is the same as last set for the person
                     if (lastIpSet === ip || isEventSettingPropertiesLate) {
                         setPersonProps = false;
                     }
                 }
                 if (setPersonProps) {
-                    event.$set = { ...defaultLocationSetProps, ...((_k = event.$set) !== null && _k !== void 0 ? _k : {}) };
+                    event.$set = { ...defaultLocationSetProps, ...(event.$set ?? {}) };
                     event.$set_once = {
                         ...defaultLocationSetOnceProps,
-                        ...((_l = event.$set_once) !== null && _l !== void 0 ? _l : {}),
+                        ...(event.$set_once ?? {}),
                     };
                 }
                 for (const [key, value] of Object.entries(location)) {

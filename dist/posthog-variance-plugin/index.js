@@ -1976,14 +1976,12 @@ const mappings = {
     },
 };
 async function onEvent(event, { config }) {
-    var _a, _b, _c;
     if (!isValidEvent(event))
         return;
     if (event.event.startsWith(`$`) && !isSupportedEvent(event.event)) {
         console.debug(`Unsupported event: ${event.event}`);
         return;
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const output = {
         libary: {
             name: NAME,
@@ -1993,7 +1991,7 @@ async function onEvent(event, { config }) {
         timestamp: event.timestamp,
     };
     constructPayload(output, event, generic);
-    const url = (_a = event.properties) === null || _a === void 0 ? void 0 : _a.$current_url;
+    const url = event.properties?.$current_url;
     let search;
     if (typeof url === `string`) {
         search = new URL(url).search;
@@ -2006,10 +2004,10 @@ async function onEvent(event, { config }) {
             case PostHogEventType.alias:
                 break;
             case PostHogEventType.group:
-                foreachProperties((_b = event.properties) === null || _b === void 0 ? void 0 : _b.$groups, (key, value) => lodash_set(output, `traits.${key}`, value));
+                foreachProperties(event.properties?.$groups, (key, value) => lodash_set(output, `traits.${key}`, value));
                 break;
             case PostHogEventType.identify:
-                foreachProperties((_c = event.properties) === null || _c === void 0 ? void 0 : _c.$set, (key, value) => lodash_set(output, `traits.${key}`, value));
+                foreachProperties(event.properties?.$set, (key, value) => lodash_set(output, `traits.${key}`, value));
                 break;
             case PostHogEventType.page:
                 if (search)

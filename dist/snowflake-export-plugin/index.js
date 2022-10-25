@@ -23,12 +23,11 @@ const CSV_FIELD_DELIMITER = '|$|';
 const FILES_STAGED_KEY = '_files_staged_for_copy_into_snowflake';
 function transformEventToRow(fullEvent) {
     const { event, properties, $set, $set_once, distinct_id, team_id, site_url, now, sent_at, uuid, ...rest } = fullEvent;
-    const ip = (properties === null || properties === void 0 ? void 0 : properties['$ip']) || fullEvent.ip;
-    const timestamp = fullEvent.timestamp || (properties === null || properties === void 0 ? void 0 : properties.timestamp) || now || sent_at;
+    const ip = properties?.['$ip'] || fullEvent.ip;
+    const timestamp = fullEvent.timestamp || properties?.timestamp || now || sent_at;
     let ingestedProperties = properties;
     let elements = [];
-    // only move prop to elements for the $autocapture action
-    if (event === '$autocapture' && (properties === null || properties === void 0 ? void 0 : properties['$elements'])) {
+    if (event === '$autocapture' && properties?.['$elements']) {
         const { $elements, ...props } = properties;
         ingestedProperties = props;
         elements = $elements;
@@ -77,6 +76,16 @@ function generateCsvString(events) {
     return csvRows.join('\n');
 }
 class Snowflake {
+    pool;
+    s3connector;
+    database;
+    dbschema;
+    table;
+    stage;
+    warehouse;
+    s3Options;
+    gcsOptions;
+    gcsConnector;
     constructor({ account, username, password, database, dbschema, table, stage, specifiedRole, warehouse, }) {
         this.pool = this.createConnectionPool(account, username, password, specifiedRole);
         this.s3connector = null;
@@ -253,7 +262,6 @@ class Snowflake {
         }
         const csvString = generateCsvString(events);
         const fileName = `${global.parsedBucketPath}${generateCsvFileName()}`;
-        // some minor hackiness to upload without access to the filesystem
         const dataStream = new PassThrough();
         const gcFile = this.gcsConnector.file(fileName);
         dataStream.push(csvString);
@@ -302,7 +310,7 @@ const snowflakePlugin = {
             try {
                 await global.snowflake.copyIntoTableFromStage(payload.filesStagedForCopy, global.purgeEventsFromStage, global.forceCopy, global.debug);
             }
-            catch (_a) {
+            catch {
                 const nextRetrySeconds = 2 ** payload.retriesPerformedSoFar * 3;
                 await jobs
                     .retryCopyIntoSnowflake({
@@ -363,7 +371,7 @@ const snowflakePlugin = {
             try {
                 credentials = JSON.parse(attachments.gcsCredentials.contents.toString());
             }
-            catch (_a) {
+            catch {
                 throw new Error('Credentials JSON file has invalid JSON!');
             }
             global.snowflake.createGCSConnector(credentials, config.bucketName, config.storageIntegrationName);
@@ -382,10 +390,9 @@ const snowflakePlugin = {
     async teardownPlugin(meta) {
         const { global } = meta;
         try {
-            // prevent some issues with plugin reloads
             await copyIntoSnowflake(meta, true);
         }
-        catch (_a) { }
+        catch { }
         await global.snowflake.clear();
     },
     async exportEvents(events, meta) {
@@ -413,7 +420,6 @@ const snowflakePlugin = {
         }
     },
     async runEveryMinute(meta) {
-        // Run copyIntoSnowflake more often to spread out load better
         await meta.jobs.copyIntoSnowflakeJob({}).runIn(20, 'seconds');
         await meta.jobs.copyIntoSnowflakeJob({}).runIn(40, 'seconds');
         await copyIntoSnowflake(meta);
@@ -448,10 +454,9 @@ async function copyIntoSnowflake({ cache, storage, global, jobs, config }, force
             try {
                 await global.snowflake.copyIntoTableFromStage(chunkStagedForCopy, global.purgeEventsFromStage, global.forceCopy, global.debug);
                 console.log('COPY INTO ran successfully');
-                // if we succeed, go to the next chunk, else we'll enqueue a retry below
                 continue;
             }
-            catch (_a) {
+            catch {
                 console.error(`Failed to copy ${String(filesStagedForCopy)} from object storage into Snowflake. Retrying in 3s.`);
             }
         }

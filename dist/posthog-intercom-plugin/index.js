@@ -83,7 +83,7 @@ async function sendEventToIntercom(url, apiKey, email, event, distinct_id, event
             const sendEventResponseJson = await sendEventResponse.json();
             errorMessage = sendEventResponseJson.errors ? sendEventResponseJson.errors[0].message : '';
         }
-        catch (_a) { }
+        catch { }
         console.error(`Unable to send event ${event} for ${email} to Intercom. Status Code: ${sendEventResponse.status}. Error message: ${errorMessage}`);
     }
     else {
@@ -95,7 +95,7 @@ async function fetchWithRetry(url, options = {}, method = 'GET') {
         const res = await fetch(url, { method: method, ...options });
         return res;
     }
-    catch (_a) {
+    catch {
         throw new RetryError('Service is down, retry later');
     }
 }
@@ -136,7 +136,7 @@ function getTimestamp(event) {
             return Number(event['timestamp']);
         }
     }
-    catch (_a) {
+    catch {
         console.error('Event timestamp cannot be parsed as a number');
     }
     const date = event['sent_at'] ? new Date(event['sent_at']) : new Date();

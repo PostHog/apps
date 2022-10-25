@@ -11,12 +11,9 @@ const filterEvents = (events, config) => {
     let filteredEvents = events.filter((event) => allowedEventTypesSet.has(event.event));
     return filteredEvents;
 };
-// Plugin method that runs on plugin load
-//@ts-ignore
 async function setupPlugin({ config }) {
     console.log("Loaded Patterns app.");
 }
-// Plugin method to export events
 const exportEvents = async (events, { config }) => {
     let filteredEvents = filterEvents(events, config);
     console.log(`Exporting events to Patterns webhook... ${filteredEvents.length}/${events.length} events`);

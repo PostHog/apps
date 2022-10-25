@@ -8,12 +8,11 @@ const makeLogger = (debugLoggingOn) => {
         debug: debugLoggingOn
             ? console.debug
             : () => {
-                /* no-op debug logging */
             },
     };
 };
 const CACHE_TOKEN = 'SF_AUTH_TOKEN';
-const CACHE_TTL = 60 * 60 * 5; // in seconds
+const CACHE_TTL = 60 * 60 * 5;
 function verifyConfig({ config }) {
     if (!config.salesforceHost) {
         throw new Error('host not provided!');
@@ -34,7 +33,7 @@ function verifyConfig({ config }) {
 async function sendEventToSalesforce(event, meta) {
     try {
         const { config, global } = meta;
-        global.logger.debug('processing event: ', event === null || event === void 0 ? void 0 : event.event);
+        global.logger.debug('processing event: ', event?.event);
         const token = await getToken(meta);
         const properties = getProperties(event, meta);
         const response = await fetch(`${config.salesforceHost}/${config.eventPath}`, {
@@ -128,14 +127,11 @@ async function statusOk(res, logger) {
     return String(res.status)[0] === '2';
 }
 function getProperties(event, { config }) {
-    var _a;
-    // Spreading so the TypeScript compiler understands that in the
-    // reducer there's no way the properties will be undefined
     const { properties } = event;
     if (!properties) {
         return {};
     }
-    if (!((_a = config.propertiesToInclude) === null || _a === void 0 ? void 0 : _a.trim())) {
+    if (!config.propertiesToInclude?.trim()) {
         return properties;
     }
     const allParameters = config.propertiesToInclude.split(',');

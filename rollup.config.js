@@ -48,19 +48,8 @@ export default packages.map(({ name }) => {
             isTypescript
                 ? typescript({
                       tsconfig: `./src/packages/${name}/tsconfig.json`,
-                      compilerOptions: {
-                          baseUrl: `./src/packages/${name}`,
-                      },
-                      include: [`./src/packages/${name}/**/*.js`, `./src/packages/${name}/**/*.ts`],
-                      exclude: [
-                          `node_modules/`,
-                          '*.test*',
-                          '**/*.test*',
-                          'dist/',
-                          '*.config.*',
-                          'jest.config.js',
-                          '*/__tests__/',
-                      ],
+                      include: [`**/*.js`, `**/*.ts`],
+                      exclude: ['**/*.config*', `node_modules/`, '*.test*', '**/*.test*', 'dist/', '**/__tests__/'],
                       outputToFilesystem: false,
                   })
                 : undefined,

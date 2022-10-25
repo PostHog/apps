@@ -46,7 +46,6 @@ const exportEvents = async (events, { config, global }) => {
         }
     }
     try {
-        // start a tracking session
         const sessionStartRes = await fetch('https://api.avo.app/inspector/posthog/v1/track', {
             method: 'POST',
             headers: global.defaultHeaders,
@@ -70,13 +69,11 @@ const exportEvents = async (events, { config, global }) => {
         if (sessionStartRes.status !== 200) {
             throw new Error(`sessionStarted request failed with status code ${sessionStartRes.status}`);
         }
-        // track events
         const trackEventsRes = await fetch('https://api.avo.app/inspector/posthog/v1/track', {
             method: 'POST',
             headers: global.defaultHeaders,
             body: JSON.stringify(avoEvents),
         });
-        // https://github.com/node-fetch/node-fetch/issues/1262
         const trackEventsResJson = (await trackEventsRes.json());
         if (trackEventsRes.status !== 200 ||
             !trackEventsResJson ||
@@ -99,7 +96,6 @@ const convertPosthogPropsToAvoProps = (properties) => {
     }
     return avoProps;
 };
-// Compatible with the Avo Rudderstack integration
 const getPropValueType = (propValue) => {
     let propType = typeof propValue;
     if (propValue == null) {

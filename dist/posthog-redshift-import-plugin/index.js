@@ -18,15 +18,11 @@ const setupPlugin = async ({ config, cache, jobs, global, storage }) => {
     if (!config.clusterHost.endsWith('redshift.amazonaws.com')) {
         throw new Error('Cluster host must be a valid AWS Redshift host');
     }
-    // the way this is done means we'll continuously import as the table grows
-    // to only import historical data, we should set a totalRows value in storage once
     const totalRowsResult = await executeQuery(`SELECT COUNT(1) FROM ${sanitizeSqlIdentifier(config.tableName)}`, [], config);
     if (!totalRowsResult || totalRowsResult.error || !totalRowsResult.queryResult) {
         throw new Error('Unable to connect to Redshift!');
     }
     global.totalRows = Number(totalRowsResult.queryResult.rows[0].count);
-    // if set to only import historical data, take a "snapshot" of the count
-    // on the first run and only import up to that point
     if (config.importMechanism === 'Only import historical data') {
         const totalRowsSnapshot = await storage.get('total_rows_snapshot', null);
         if (!totalRowsSnapshot) {
@@ -36,9 +32,7 @@ const setupPlugin = async ({ config, cache, jobs, global, storage }) => {
             global.totalRows = Number(totalRowsSnapshot);
         }
     }
-    // used for picking up where we left off after a restart
     const offset = await storage.get(REDIS_OFFSET_KEY, 0);
-    // needed to prevent race conditions around offsets leading to events ingested twice
     let initialOffset = Number(offset);
     global.initialOffset = initialOffset;
     let newOffset = initialOffset;
@@ -121,8 +115,6 @@ const importAndIngestEvents = async (payload, meta) => {
     console.log(`Processed rows ${offset}-${offset + EVENTS_PER_BATCH} and ingested ${eventsToIngest.length} event${eventsToIngest.length > 1 ? 's' : ''} from them.`);
     await jobs.importAndIngestEvents({ retriesPerformedSoFar: 0 }).runNow();
 };
-// Transformations can be added by any contributor
-// 'author' should be the contributor's GH username
 const transformations = {
     'default': {
         author: 'yakkomajuri',
@@ -150,7 +142,7 @@ const transformations = {
             try {
                 rowToEventMap = JSON.parse(attachments.rowToEventMap.contents.toString());
             }
-            catch (_a) {
+            catch {
                 throw new Error('Row to event mapping JSON file contains invalid JSON!');
             }
             const eventToIngest = {
