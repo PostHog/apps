@@ -1,5 +1,5 @@
 {
-    "name": "posthog-plugin",
+    "name": "@posthog/engage-so-plugin",
     "version": "0.0.1",
     "description": "Engage + Posthog Integration",
     "main": "index.js",
