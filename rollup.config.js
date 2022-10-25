@@ -8,10 +8,6 @@ import copy from 'rollup-plugin-copy'
 const packages = fs.readdirSync('./src/packages', { withFileTypes: true }).filter((dirent) => dirent.isDirectory())
 
 export default packages.map(({ name }) => {
-    /*const plugin = JSON.parse(
-      fs.readFileSync(`./src/packages/${name}/plugin.json`).toString("utf-8")
-    );*/
-
     const srcExists = fs.existsSync(`./src/packages/${name}/src`)
     const isTypescript = fs.existsSync(
         srcExists ? `./src/packages/${name}/src/index.ts` : `./src/packages/${name}/index.ts`
