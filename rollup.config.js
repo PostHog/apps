@@ -60,6 +60,7 @@ export default packages.map(({ name }) => {
                             `./src/packages/${name}/plugin.json`,
                             `./src/packages/${name}/README.md`,
                             `./src/packages/${name}/package.json`,
+                            `./src/packages/${name}/logo.png`,
                             `./LICENSE`,
                         ],
                         dest: `./dist/${name}`,
