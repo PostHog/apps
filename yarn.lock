@@ -7487,6 +7487,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"drop-events-on-property-plugin@workspace:src/packages/drop-events-on-property-plugin":
+  version: 0.0.0-use.local
+  resolution: "drop-events-on-property-plugin@workspace:src/packages/drop-events-on-property-plugin"
+  languageName: unknown
+  linkType: soft
+
 "duplexify@npm:^4.0.0, duplexify@npm:^4.1.1":
   version: 4.1.2
   resolution: "duplexify@npm:4.1.2"
