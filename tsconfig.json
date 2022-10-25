@@ -26,5 +26,6 @@
         "noUncheckedIndexedAccess": true,
 
         "skipLibCheck": true
-    }
+    },
+    "exclude": ["./scripts/*"]
 }
