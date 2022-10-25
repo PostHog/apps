@@ -1,13 +1,5 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils')
-const { compilerOptions } = require('./tsconfig')
-
-const moduleNameMapper = undefined
-if (compilerOptions.paths) {
-    moduleNameMapper = pathsToModuleNameMapper(compilerOptions.paths, { prefix: 'src/' })
-}
+const config = require('../../../jest.config.base.cjs')
 
 module.exports = {
-    preset: 'ts-jest',
-    testEnvironment: 'node',
-    moduleNameMapper,
+    ...config,
 }
