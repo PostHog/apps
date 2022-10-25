@@ -1,6 +1,6 @@
 {
     "name": "@posthog/redshift-import-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Import PostHog events from Amazon Redshift.",
     "devDependencies": {
         "@posthog/plugin-contrib": "^0.0.3",

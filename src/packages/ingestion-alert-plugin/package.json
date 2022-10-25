@@ -1,6 +1,6 @@
 {
     "name": "@posthog/ingestion-alert-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "keywords": [
         "posthog",
         "plugin"

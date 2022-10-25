@@ -1,6 +1,6 @@
 {
     "name": "@posthog/s3-export-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Export PostHog events to Amazon S3 on ingestion.",
     "scripts": {
         "test": "jest"

@@ -1,6 +1,6 @@
 {
     "name": "@posthog/twitter-followers-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Get Twitter follower numbers in PostHog daily.",
     "main": "index.js",
     "repository": {

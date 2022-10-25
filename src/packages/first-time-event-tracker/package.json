@@ -1,6 +1,6 @@
 {
     "name": "@posthog/first-time-event-tracker",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Track if a given event is the first event of this type for a user.",
     "main": "index.js",
     "scripts": {

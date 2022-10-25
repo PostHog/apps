@@ -1,6 +1,6 @@
 {
     "name": "@posthog/databricks-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "posthog databricks plugin",
     "main": "index.js",
     "scripts": {
