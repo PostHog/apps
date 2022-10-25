@@ -55,17 +55,13 @@ export default packages.map(({ name }) => {
                 : undefined,
             copy({
                 targets: [
-                    { src: `./src/packages/${name}/plugin.json`, dest: `./dist/${name}` },
                     {
-                        src: `./src/packages/${name}/package.json`,
-                        dest: `./dist/${name}`,
-                    },
-                    {
-                        src: `./src/packages/${name}/README.md`,
-                        dest: `./dist/${name}`,
-                    },
-                    {
-                        src: `./LICENSE`,
+                        src: [
+                            `./src/packages/${name}/plugin.json`,
+                            `./src/packages/${name}/README.md`,
+                            `./src/packages/${name}/package.json`,
+                            `./LICENSE`,
+                        ],
                         dest: `./dist/${name}`,
                     },
                 ],
