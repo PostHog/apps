@@ -1,7 +1,7 @@
 [
     {
         "name": "Currency Normalization",
-        "url": "https://github.com/PostHog/currency-normalization-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/currency-normalization-plugin",
         "description": "Normalise monetary values into a base currency",
         "verified": true,
         "maintainer": "official",
@@ -10,7 +10,7 @@
     },
     {
         "name": "GeoIP",
-        "url": "https://github.com/PostHog/posthog-plugin-geoip",
+        "url": "https://www.npmjs.com/package/@posthog/geoip-plugin",
         "description": "Enrich PostHog events and persons with IP location data.",
         "verified": true,
         "maintainer": "official",
@@ -19,7 +19,7 @@
     },
     {
         "name": "Hello World",
-        "url": "https://github.com/PostHog/posthog-hello-world-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/hello-world-plugin",
         "description": "Greet the world with every PostHog event. An example plugin.",
         "verified": true,
         "maintainer": "official",
@@ -28,7 +28,7 @@
     },
     {
         "name": "GitHub Release Tracker",
-        "url": "https://github.com/PostHog/github-release-tracking-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/github-release-tracking-plugin",
         "description": "Integrate PostHog with GitHub and get automatic release annotations.",
         "verified": true,
         "maintainer": "official",
@@ -37,7 +37,7 @@
     },
     {
         "name": "GitLab Release Tracker",
-        "url": "https://github.com/PostHog/gitlab-release-tracking-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/gitlab-release-tracking-plugin",
         "description": "Integrate PostHog with GitLab and get automatic release annotations.",
         "verified": true,
         "maintainer": "official",
@@ -46,7 +46,7 @@
     },
     {
         "name": "Bitbucket Release Tracker",
-        "url": "https://github.com/PostHog/bitbucket-release-tracker",
+        "url": "https://www.npmjs.com/package/@posthog/bitbucket-release-tracker",
         "description": "Integrate PostHog with Bitbucket and get automatic release annotations.",
         "verified": true,
         "maintainer": "official",
@@ -55,7 +55,7 @@
     },
     {
         "name": "Twitter Followers",
-        "url": "https://github.com/PostHog/twitter-followers-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/twitter-followers-plugin",
         "description": "Get your Twitter follower numbers daily without signing up to the Twitter API.",
         "verified": true,
         "maintainer": "official",
@@ -64,7 +64,7 @@
     },
     {
         "name": "Hubspot",
-        "url": "https://github.com/PostHog/hubspot-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/hubspot-plugin",
         "description": "Send emails and user data to Hubspot when you identify users using PostHog.",
         "verified": true,
         "maintainer": "official",
@@ -73,7 +73,7 @@
     },
     {
         "name": "Replicator",
-        "url": "https://github.com/PostHog/posthog-plugin-replicator",
+        "url": "https://www.npmjs.com/package/@posthog/replicator-plugin",
         "description": "Replicate PostHog event stream in another PostHog instance.",
         "verified": true,
         "maintainer": "official",
@@ -92,7 +92,7 @@
     },
     {
         "name": "Customer.io",
-        "url": "https://github.com/PostHog/customerio-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/customerio-plugin",
         "description": "Send event data and available emails to Customer.io.",
         "verified": true,
         "maintainer": "official",
@@ -101,7 +101,7 @@
     },
     {
         "name": "Sendgrid",
-        "url": "https://github.com/PostHog/sendgrid-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/sendgrid-plugin",
         "description": "Send emails and user data to Sendgrid when you identify users using PostHog.",
         "verified": true,
         "maintainer": "official",
@@ -110,7 +110,7 @@
     },
     {
         "name": "Email Scoring",
-        "url": "https://github.com/PostHog/mailboxlayer-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/mailboxlayer-plugin",
         "description": "Add email scores to PostHog user profiles using the Mailboxlayer API.",
         "verified": true,
         "maintainer": "official",
@@ -119,7 +119,7 @@
     },
     {
         "name": "BigQuery Export",
-        "url": "https://github.com/PostHog/bigquery-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/bigquery-plugin",
         "description": "Sends events to a Google BigQuery database on ingestion.",
         "verified": true,
         "maintainer": "official",
@@ -128,7 +128,7 @@
     },
     {
         "name": "Pub/Sub Export",
-        "url": "https://github.com/posthog/pubsub-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/pubsub-plugin",
         "description": "Sends events to a Google Pub/Sub topic on ingestion.",
         "verified": true,
         "maintainer": "community",
@@ -137,7 +137,7 @@
     },
     {
         "name": "S3 Export",
-        "url": "https://github.com/PostHog/s3-export-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/s3-export-plugin",
         "description": "Sends events to a S3 bucket on ingestion.",
         "verified": true,
         "maintainer": "official",
@@ -146,7 +146,7 @@
     },
     {
         "name": "Snowflake Export",
-        "url": "https://github.com/PostHog/snowflake-export-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/snowflake-export-plugin",
         "description": "Sends events to Snowflake on ingestion.",
         "verified": true,
         "maintainer": "official",
@@ -165,7 +165,7 @@
     },
     {
         "name": "Timestamp Parser",
-        "url": "https://github.com/PostHog/timestamp-parser-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/timestamp-parser-plugin",
         "description": "Parse your event timestamps into useful date properties.",
         "verified": true,
         "maintainer": "official",
@@ -174,7 +174,7 @@
     },
     {
         "name": "Taxonomy Standardizer",
-        "url": "https://github.com/PostHog/taxonomy-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/taxonomy-plugin",
         "description": "Standardize your event names into a single pattern.",
         "verified": true,
         "maintainer": "official",
@@ -183,7 +183,7 @@
     },
     {
         "name": "Property Flattener",
-        "url": "https://github.com/PostHog/flatten-properties-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/property-flattener-plugin",
         "description": "Flatten event properties to easily access them in filters.",
         "verified": true,
         "maintainer": "official",
@@ -192,7 +192,7 @@
     },
     {
         "name": "Event Sequence Timer Plugin",
-        "url": "https://github.com/PostHog/event-sequence-timer-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/event-sequence-timer-plugin",
         "description": "Measure the time taken for a user to perform Event B after performing Event A.",
         "verified": true,
         "maintainer": "official",
@@ -201,7 +201,7 @@
     },
     {
         "name": "First Time Event Tracker",
-        "url": "https://github.com/PostHog/first-time-event-tracker",
+        "url": "https://www.npmjs.com/package/@posthog/first-time-event-tracker",
         "description": "Track if a given event is the first event of this type for a user or the first event of its type ever.",
         "verified": true,
         "maintainer": "official",
@@ -210,7 +210,7 @@
     },
     {
         "name": "Salesforce",
-        "url": "https://github.com/PostHog/salesforce-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/salesforce-plugin",
         "description": "Send events to a salesforce endpoint",
         "verified": true,
         "maintainer": "community",
@@ -220,7 +220,7 @@
     },
     {
         "name": "Redshift Export",
-        "url": "https://github.com/PostHog/redshift-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/redshift-plugin",
         "description": "Sends events to Redshift on ingestion.",
         "verified": true,
         "maintainer": "official",
@@ -229,7 +229,7 @@
     },
     {
         "name": "Downsampling",
-        "url": "https://github.com/PostHog/downsampling-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/downsampling-plugin",
         "description": "Reduces the number of events going into PostHog.",
         "verified": true,
         "maintainer": "official",
@@ -238,7 +238,7 @@
     },
     {
         "name": "PostgreSQL Export",
-        "url": "https://github.com/PostHog/postgres-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/postgres-plugin",
         "description": "Export PostHog events to a PostgreSQL instance on ingestion.",
         "verified": true,
         "maintainer": "official",
@@ -246,8 +246,8 @@
         "type": "data_out"
     },
     {
-        "name": "Pagerduty (BETA)",
-        "url": "https://github.com/PostHog/posthog-pagerduty-plugin",
+        "name": "Pagerduty",
+        "url": "https://www.npmjs.com/package/@posthog/pagerduty-plugin",
         "description": "This plugin alerts PagerDuty when a PostHog insights/trends graph goes below or above a threshold.",
         "verified": true,
         "maintainer": "official",
@@ -256,7 +256,7 @@
     },
     {
         "name": "GCS Export",
-        "url": "https://github.com/PostHog/posthog-gcs-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/gcs-plugin",
         "description": "Export events to a Google Cloud Storage bucket.",
         "verified": true,
         "maintainer": "official",
@@ -265,7 +265,7 @@
     },
     {
         "name": "Automatic Cohort Creator",
-        "url": "https://github.com/PostHog/posthog-automatic-cohorts-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/automatic-cohorts-plugin",
         "description": "Automatic cohort creation based on user properties.",
         "verified": true,
         "maintainer": "official",
@@ -274,7 +274,7 @@
     },
     {
         "name": "RudderStack Export",
-        "url": "https://github.com/rudderlabs/rudderstack-posthog-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/rudderstack-plugin",
         "description": "Export events from PostHog to Rudderstack, using PostHog as a RudderStack source.",
         "verified": true,
         "maintainer": "community",
@@ -283,7 +283,7 @@
     },
     {
         "name": "Orbit Stats Sync",
-        "url": "https://github.com/PostHog/posthog-orbit-love-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/orbit-love-plugin",
         "description": "Regularly sync statistics from Orbit.love directly into PostHog.",
         "verified": true,
         "maintainer": "official",
@@ -292,7 +292,7 @@
     },
     {
         "name": "Redshift Import Plugin (BETA)",
-        "url": "https://github.com/PostHog/posthog-redshift-import-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/redshift-import-plugin",
         "description": "Import data from Redshift into PostHog. (This plugin is in BETA, use at your own risk!)",
         "verified": true,
         "maintainer": "official",
@@ -301,7 +301,7 @@
     },
     {
         "name": "Github Star Sync",
-        "url": "https://github.com/PostHog/github-star-sync-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/gitub-star-sync-plugin",
         "description": "Synchronise Github stars with PostHog, with each star as a separate event.",
         "verified": true,
         "maintainer": "official",
@@ -310,7 +310,7 @@
     },
     {
         "name": "Migrator 3000 (Beta)",
-        "url": "https://github.com/PostHog/posthog-plugin-migrator3000",
+        "url": "https://www.npmjs.com/package/@posthog/migrator3000-plugin",
         "description": "BETA - Migrate events to a new PostHog instance. Currently available for self-hosted users only.",
         "verified": true,
         "maintainer": "official",
@@ -319,7 +319,7 @@
     },
     {
         "name": "Ingestion Alert",
-        "url": "https://github.com/PostHog/ingestion-alert-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/ingestion-alert-plugin",
         "description": "This plugin triggers a webhook when no events have been ingested for a specified period of time. It can be used to alert you when ingestion for your project / instance is not working correctly..",
         "verified": true,
         "maintainer": "official",
@@ -328,7 +328,7 @@
     },
     {
         "name": "Heartbeat",
-        "url": "https://github.com/PostHog/posthog-heartbeat-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/heartbeat-plugin",
         "description": "This is a very simple plugin which sends one event to your project per minute. It can be used to ensure a continuous flow of events when monitoring whether ingestion is up and running. Works great in conjunction with Posthog Ingestion Alert Plugin",
         "verified": true,
         "maintainer": "official",
@@ -337,7 +337,7 @@
     },
     {
         "name": "Property Filter",
-        "url": "https://github.com/witty-works/posthog-property-filter-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/property-filter-plugin",
         "description": "This plugin will set all configured properties to null inside an ingested event.",
         "verified": true,
         "maintainer": "community",
@@ -346,7 +346,7 @@
     },
     {
         "name": "Zendesk",
-        "url": "https://github.com/PostHog/posthog-zendesk-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/zendesk-plugin",
         "description": "Import new and historic ticket events to PostHog, update persons in Zendesk with context about recent events from your product",
         "verified": true,
         "maintainer": "community",
@@ -355,7 +355,7 @@
     },
     {
         "name": "Netdata event processing (ALPHA)",
-        "url": "https://github.com/netdata/posthog-netdata-event-processing",
+        "url": "https://www.npmjs.com/package/@posthog/netdata-event-processing",
         "description": "Process events for Netdata",
         "verified": true,
         "maintainer": "community",
@@ -364,7 +364,7 @@
     },
     {
         "name": "Avo Inspector Plugin",
-        "url": "https://github.com/posthog/posthog-avo-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/avo-plugin",
         "description": "Send PostHog events to the Avo Inspector",
         "verified": true,
         "maintainer": "official",
@@ -373,7 +373,7 @@
     },
     {
         "name": "Drop Events Based On Property",
-        "url": "https://github.com/PostHog/drop-events-on-property-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/drop-events-on-property-plugin",
         "description": "Drop events based on whether a property exist and optionally whether that property has a specific value.",
         "verified": true,
         "maintainer": "official",
@@ -382,7 +382,7 @@
     },
     {
         "name": "Twilio",
-        "url": "https://github.com/PostHog/posthog-twilio-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/twilio-plugin",
         "description": "Send SMS messages via twilio based on events occuring in PostHog",
         "verified": true,
         "maintainer": "community",
@@ -391,7 +391,7 @@
     },
     {
         "name": "Intercom",
-        "url": "https://github.com/PostHog/posthog-intercom-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/intercom-plugin",
         "description": "Send usage data to intercom for contacts",
         "verified": true,
         "maintainer": "community",
@@ -400,7 +400,7 @@
     },
     {
         "name": "DataBricks",
-        "url": "https://github.com/PostHog/posthog-databricks-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/databricks-plugin",
         "description": "Export your PostHog data to databricks warehouse",
         "verified": true,
         "maintainer": "community",
@@ -409,7 +409,7 @@
     },
     {
         "name": "AWS Kinesis",
-        "url": "https://github.com/PostHog/posthog-kinesis-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/kinesis-plugin",
         "description": "Sends event data to Posthog from a Kinesis Stream",
         "verified": true,
         "maintainer": "community",
@@ -418,7 +418,7 @@
     },
     {
         "name": "Unduplicates",
-        "url": "https://github.com/paolodamico/posthog-app-unduplicates",
+        "url": "https://www.npmjs.com/package/@posthog/plugin-unduplicates",
         "description": "Prevent duplicates in your data.",
         "verified": true,
         "maintainer": "community",
@@ -427,7 +427,7 @@
     },
     {
         "name": "Advanced GeoIP",
-        "url": "https://github.com/paolodamico/posthog-app-advanced-geoip",
+        "url": "https://www.npmjs.com/package/@posthog/advanced-geoip-app",
         "description": "Advanced GeoIP filtering app for PostHog.",
         "verified": true,
         "maintainer": "community",
@@ -436,7 +436,7 @@
     },
     {
         "name": "Variance",
-        "url": "https://github.com/PostHog/posthog-variance-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/variance-plugin",
         "description": "Export customer data into Variance.",
         "verified": true,
         "maintainer": "community",
@@ -445,7 +445,7 @@
     },
     {
         "name": "Shopify Connector",
-        "url": "https://github.com/posthog/posthog-shopify-sync-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/shopify-sync-plugin",
         "description": "Sync customer and order data from Shopify, into PostHog..",
         "verified": true,
         "maintainer": "community",
@@ -454,7 +454,7 @@
     },
     {
         "name": "Engage.so Connector",
-        "url": "https://github.com/PostHog/posthog-engage-so-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/engage-so-plugin",
         "description": "Send events tracked through PostHog to Engage.",
         "verified": true,
         "maintainer": "community",
@@ -463,7 +463,7 @@
     },
     {
         "name": "URL normalizer",
-        "url": "https://github.com/PostHog/posthog-url-normalizer-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/url-normalizer-plugin",
         "description": "Normalize the format of urls in your application allowing you to more easily compare them in insights.",
         "verified": true,
         "maintainer": "community",
@@ -472,7 +472,7 @@
     },
     {
         "name": "Patterns.app Connector",
-        "url": "https://github.com/PostHog/posthog-patterns-app",
+        "url": "https://www.npmjs.com/package/@posthog/patterns-app",
         "description": "Send events tracked through PostHog to Patterns",
         "verified": true,
         "maintainer": "community",
@@ -481,7 +481,7 @@
     },
     {
         "name": "SemVer Flattener",
-        "url": "https://github.com/PostHog/semver-flattener-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/semver-flattener-plugin",
         "description": "Flattens a SemVer version into useful standalone properties.",
         "verified": true,
         "maintainer": "official",
@@ -490,7 +490,7 @@
     },
     {
         "name": "Filter Out",
-        "url": "https://github.com/PostHog/posthog-filter-out-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/filter-out-plugin",
         "description": "Injest only those events satisfying the given filter conditions",
         "verified": true,
         "maintainer": "community",
