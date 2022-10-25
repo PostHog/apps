@@ -24,7 +24,7 @@ const transformations = [
         matchPattern: /([\s])([a-z])/g,
         transform: (str, matchPattern) => defaultTransformation(str, matchPattern, ' ')
     },
-]; 
+];
 
 const configSelectionMap = {
     "camelCase": 0,
@@ -45,7 +45,7 @@ async function processEventBatch(events, { config }) {
 
 const defaultTransformation = (str, matchPattern, sep) => {
     const parsedStr = str.replace(
-        matchPattern, 
+        matchPattern,
         (substr) => sep + (substr.length === 1 ?  substr.toLowerCase() : substr[1].toLowerCase())
     );
     if (parsedStr[0] === sep) {
