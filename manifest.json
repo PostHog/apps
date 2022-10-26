@@ -1,121 +1,43 @@
 [
     {
-        "name": "Currency Normalization",
-        "url": "https://www.npmjs.com/package/@posthog/currency-normalization-plugin",
-        "description": "Normalise monetary values into a base currency",
+        "name": "Advanced GeoIP",
+        "url": "https://www.npmjs.com/package/@posthog/advanced-geoip-app",
+        "description": "Advanced GeoIP filtering app for PostHog.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-app-advanced-geoip/logo.png"
+    },
+    {
+        "name": "Automatic Cohort Creator",
+        "url": "https://www.npmjs.com/package/@posthog/automatic-cohorts-plugin",
+        "description": "Automatic cohort creation based on user properties.",
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "data_in"
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-automatic-cohorts-plugin/logo.png"
     },
     {
-        "name": "GeoIP",
-        "url": "https://www.npmjs.com/package/@posthog/geoip-plugin",
-        "description": "Enrich PostHog events and persons with IP location data.",
+        "name": "Avo Inspector Plugin",
+        "url": "https://www.npmjs.com/package/@posthog/avo-plugin",
+        "description": "Send PostHog events to the Avo Inspector",
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "data_in"
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-avo-plugin/logo.png"
     },
     {
-        "name": "Hello World",
-        "url": "https://www.npmjs.com/package/@posthog/hello-world-plugin",
-        "description": "Greet the world with every PostHog event. An example plugin.",
+        "name": "AWS Kinesis",
+        "url": "https://www.npmjs.com/package/@posthog/kinesis-plugin",
+        "description": "Sends event data to Posthog from a Kinesis Stream",
         "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": false,
-        "type": "data_in"
-    },
-    {
-        "name": "GitHub Release Tracker",
-        "url": "https://www.npmjs.com/package/@posthog/github-release-tracking-plugin",
-        "description": "Integrate PostHog with GitHub and get automatic release annotations.",
-        "verified": true,
-        "maintainer": "official",
+        "maintainer": "community",
         "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "GitLab Release Tracker",
-        "url": "https://www.npmjs.com/package/@posthog/gitlab-release-tracking-plugin",
-        "description": "Integrate PostHog with GitLab and get automatic release annotations.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Bitbucket Release Tracker",
-        "url": "https://www.npmjs.com/package/@posthog/bitbucket-release-tracker",
-        "description": "Integrate PostHog with Bitbucket and get automatic release annotations.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Twitter Followers",
-        "url": "https://www.npmjs.com/package/@posthog/twitter-followers-plugin",
-        "description": "Get your Twitter follower numbers daily without signing up to the Twitter API.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Hubspot",
-        "url": "https://www.npmjs.com/package/@posthog/hubspot-plugin",
-        "description": "Send emails and user data to Hubspot when you identify users using PostHog.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Replicator",
-        "url": "https://www.npmjs.com/package/@posthog/replicator-plugin",
-        "description": "Replicate PostHog event stream in another PostHog instance.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Schema Enforcer",
-        "url": "https://www.npmjs.com/package/@posthog/schema-enforcer-plugin",
-        "description": "Prevent ingestion of events that don't match your specified schemas.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering",
-        "imageLink": "https://raw.githubusercontent.com/PostHog/posthog-schema-enforcer-plugin/main/logo.png"
-    },
-    {
-        "name": "Customer.io",
-        "url": "https://www.npmjs.com/package/@posthog/customerio-plugin",
-        "description": "Send event data and available emails to Customer.io.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Sendgrid",
-        "url": "https://www.npmjs.com/package/@posthog/sendgrid-plugin",
-        "description": "Send emails and user data to Sendgrid when you identify users using PostHog.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Email Scoring",
-        "url": "https://www.npmjs.com/package/@posthog/mailboxlayer-plugin",
-        "description": "Add email scores to PostHog user profiles using the Mailboxlayer API.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-kinesis-plugin/logo.png"
     },
     {
         "name": "BigQuery Export",
@@ -124,71 +46,88 @@
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "data_out"
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/bigquery-plugin/logo.png"
     },
     {
-        "name": "Pub/Sub Export",
-        "url": "https://www.npmjs.com/package/@posthog/pubsub-plugin",
-        "description": "Sends events to a Google Pub/Sub topic on ingestion.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "S3 Export",
-        "url": "https://www.npmjs.com/package/@posthog/s3-export-plugin",
-        "description": "Sends events to a S3 bucket on ingestion.",
+        "name": "Bitbucket Release Tracker",
+        "url": "https://www.npmjs.com/package/@posthog/bitbucket-release-tracker",
+        "description": "Integrate PostHog with Bitbucket and get automatic release annotations.",
         "verified": true,
         "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Snowflake Export",
-        "url": "https://www.npmjs.com/package/@posthog/snowflake-export-plugin",
-        "description": "Sends events to Snowflake on ingestion.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Useragent Enhancer",
-        "url": "https://www.npmjs.com/package/@posthog/useragent-plugin",
-        "description": "Enhances events with browser details when the event has a \"$useragent\" property.",
-        "verified": true,
-        "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "imageLink": "https://raw.githubusercontent.com/weyert/useragentplugin/main/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/bitbucket-release-tracker/logo.png"
     },
     {
-        "name": "Timestamp Parser",
-        "url": "https://www.npmjs.com/package/@posthog/timestamp-parser-plugin",
-        "description": "Parse your event timestamps into useful date properties.",
+        "name": "Currency Normalization",
+        "url": "https://www.npmjs.com/package/@posthog/currency-normalization-plugin",
+        "description": "Normalise monetary values into a base currency",
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/currency-normalization-plugin/logo.png"
     },
     {
-        "name": "Taxonomy Standardizer",
-        "url": "https://www.npmjs.com/package/@posthog/taxonomy-plugin",
-        "description": "Standardize your event names into a single pattern.",
+        "name": "Customer.io",
+        "url": "https://www.npmjs.com/package/@posthog/customerio-plugin",
+        "description": "Send event data and available emails to Customer.io.",
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/customerio-plugin/logo.png"
     },
     {
-        "name": "Property Flattener",
-        "url": "https://www.npmjs.com/package/@posthog/property-flattener-plugin",
-        "description": "Flatten event properties to easily access them in filters.",
+        "name": "DataBricks",
+        "url": "https://www.npmjs.com/package/@posthog/databricks-plugin",
+        "description": "Export your PostHog data to databricks warehouse",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-databricks-plugin/logo.png"
+    },
+    {
+        "name": "Downsampling",
+        "url": "https://www.npmjs.com/package/@posthog/downsampling-plugin",
+        "description": "Reduces the number of events going into PostHog.",
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/downsampling-plugin/logo.png"
+    },
+    {
+        "name": "Drop Events Based On Property",
+        "url": "https://www.npmjs.com/package/@posthog/drop-events-on-property-plugin",
+        "description": "Drop events based on whether a property exist and optionally whether that property has a specific value.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/drop-events-on-property-plugin/logo.png"
+    },
+    {
+        "name": "Email Scoring",
+        "url": "https://www.npmjs.com/package/@posthog/mailboxlayer-plugin",
+        "description": "Add email scores to PostHog user profiles using the Mailboxlayer API.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/mailboxlayer-plugin/logo.png"
+    },
+    {
+        "name": "Engage.so Connector",
+        "url": "https://www.npmjs.com/package/@posthog/engage-so-plugin",
+        "description": "Send events tracked through PostHog to Engage.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-engage-so-plugin/logo.png"
     },
     {
         "name": "Event Sequence Timer Plugin",
@@ -197,7 +136,18 @@
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/event-sequence-timer-plugin/logo.png"
+    },
+    {
+        "name": "Filter Out",
+        "url": "https://www.npmjs.com/package/@posthog/filter-out-plugin",
+        "description": "Injest only those events satisfying the given filter conditions",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-filter-out-plugin/logo.png"
     },
     {
         "name": "First Time Event Tracker",
@@ -206,7 +156,248 @@
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/first-time-event-tracker/logo.png"
+    },
+    {
+        "name": "GCS Export",
+        "url": "https://www.npmjs.com/package/@posthog/gcs-plugin",
+        "description": "Export events to a Google Cloud Storage bucket.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-gcs-plugin/logo.png"
+    },
+    {
+        "name": "GeoIP",
+        "url": "https://www.npmjs.com/package/@posthog/geoip-plugin",
+        "description": "Enrich PostHog events and persons with IP location data.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-plugin-geoip/logo.png"
+    },
+    {
+        "name": "GitHub Release Tracker",
+        "url": "https://www.npmjs.com/package/@posthog/github-release-tracking-plugin",
+        "description": "Integrate PostHog with GitHub and get automatic release annotations.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/github-release-tracking-plugin/logo.png"
+    },
+    {
+        "name": "Github Star Sync",
+        "url": "https://www.npmjs.com/package/@posthog/gitub-star-sync-plugin",
+        "description": "Synchronise Github stars with PostHog, with each star as a separate event.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/github-star-sync-plugin/logo.png"
+    },
+    {
+        "name": "GitLab Release Tracker",
+        "url": "https://www.npmjs.com/package/@posthog/gitlab-release-tracking-plugin",
+        "description": "Integrate PostHog with GitLab and get automatic release annotations.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/gitlab-release-tracking-plugin/logo.png"
+    },
+    {
+        "name": "Heartbeat",
+        "url": "https://www.npmjs.com/package/@posthog/heartbeat-plugin",
+        "description": "This is a very simple plugin which sends one event to your project per minute. It can be used to ensure a continuous flow of events when monitoring whether ingestion is up and running. Works great in conjunction with Posthog Ingestion Alert Plugin",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-heartbeat-plugin/logo.png"
+    },
+    {
+        "name": "Hello World",
+        "url": "https://www.npmjs.com/package/@posthog/hello-world-plugin",
+        "description": "Greet the world with every PostHog event. An example plugin.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": false,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-hello-world-plugin/logo.png"
+    },
+    {
+        "name": "Hubspot",
+        "url": "https://www.npmjs.com/package/@posthog/hubspot-plugin",
+        "description": "Send emails and user data to Hubspot when you identify users using PostHog.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/hubspot-plugin/logo.png"
+    },
+    {
+        "name": "Ingestion Alert",
+        "url": "https://www.npmjs.com/package/@posthog/ingestion-alert-plugin",
+        "description": "This plugin triggers a webhook when no events have been ingested for a specified period of time. It can be used to alert you when ingestion for your project / instance is not working correctly..",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/ingestion-alert-plugin/logo.png"
+    },
+    {
+        "name": "Intercom",
+        "url": "https://www.npmjs.com/package/@posthog/intercom-plugin",
+        "description": "Send usage data to intercom for contacts",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-intercom-plugin/logo.png"
+    },
+    {
+        "name": "Migrator 3000 (Beta)",
+        "url": "https://www.npmjs.com/package/@posthog/migrator3000-plugin",
+        "description": "BETA - Migrate events to a new PostHog instance. Currently available for self-hosted users only.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-plugin-migrator3000/logo.png"
+    },
+    {
+        "name": "Netdata event processing (ALPHA)",
+        "url": "https://www.npmjs.com/package/@posthog/netdata-event-processing",
+        "description": "Process events for Netdata",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-netdata-event-processing/logo.png"
+    },
+    {
+        "name": "Orbit Stats Sync",
+        "url": "https://www.npmjs.com/package/@posthog/orbit-love-plugin",
+        "description": "Regularly sync statistics from Orbit.love directly into PostHog.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-orbit-love-plugin/logo.png"
+    },
+    {
+        "name": "Pagerduty",
+        "url": "https://www.npmjs.com/package/@posthog/pagerduty-plugin",
+        "description": "This plugin alerts PagerDuty when a PostHog insights/trends graph goes below or above a threshold.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-pagerduty-plugin/logo.png"
+    },
+    {
+        "name": "Patterns.app Connector",
+        "url": "https://www.npmjs.com/package/@posthog/patterns-app",
+        "description": "Send events tracked through PostHog to Patterns",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-patterns-app/logo.png"
+    },
+    {
+        "name": "PostgreSQL Export",
+        "url": "https://www.npmjs.com/package/@posthog/postgres-plugin",
+        "description": "Export PostHog events to a PostgreSQL instance on ingestion.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/postgres-plugin/logo.png"
+    },
+    {
+        "name": "Property Filter",
+        "url": "https://www.npmjs.com/package/@posthog/property-filter-plugin",
+        "description": "This plugin will set all configured properties to null inside an ingested event.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-property-filter-plugin/logo.png"
+    },
+    {
+        "name": "Property Flattener",
+        "url": "https://www.npmjs.com/package/@posthog/property-flattener-plugin",
+        "description": "Flatten event properties to easily access them in filters.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/flatten-properties-plugin/logo.png"
+    },
+    {
+        "name": "Pub/Sub Export",
+        "url": "https://www.npmjs.com/package/@posthog/pubsub-plugin",
+        "description": "Sends events to a Google Pub/Sub topic on ingestion.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/pubsub-plugin/logo.png"
+    },
+    {
+        "name": "Redshift Export",
+        "url": "https://www.npmjs.com/package/@posthog/redshift-plugin",
+        "description": "Sends events to Redshift on ingestion.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/redshift-plugin/logo.png"
+    },
+    {
+        "name": "Redshift Import Plugin (BETA)",
+        "url": "https://www.npmjs.com/package/@posthog/redshift-import-plugin",
+        "description": "Import data from Redshift into PostHog. (This plugin is in BETA, use at your own risk!)",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-redshift-import-plugin/logo.png"
+    },
+    {
+        "name": "Replicator",
+        "url": "https://www.npmjs.com/package/@posthog/replicator-plugin",
+        "description": "Replicate PostHog event stream in another PostHog instance.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-plugin-replicator/logo.png"
+    },
+    {
+        "name": "RudderStack Export",
+        "url": "https://www.npmjs.com/package/@posthog/rudderstack-plugin",
+        "description": "Export events from PostHog to Rudderstack, using PostHog as a RudderStack source.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/rudderstack-posthog-plugin/logo.png"
+    },
+    {
+        "name": "S3 Export",
+        "url": "https://www.npmjs.com/package/@posthog/s3-export-plugin",
+        "description": "Sends events to a S3 bucket on ingestion.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/s3-export-plugin/logo.png"
     },
     {
         "name": "Salesforce",
@@ -216,268 +407,19 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "imageLink": "https://raw.githubusercontent.com/PostHog/salesforce-plugin/main/logo.png"
+        "imageLink": "https://raw.githubusercontent.com/PostHog/salesforce-plugin/main/logo.png",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/salesforce-plugin/logo.png"
     },
     {
-        "name": "Redshift Export",
-        "url": "https://www.npmjs.com/package/@posthog/redshift-plugin",
-        "description": "Sends events to Redshift on ingestion.",
+        "name": "Schema Enforcer",
+        "url": "https://www.npmjs.com/package/@posthog/schema-enforcer-plugin",
+        "description": "Prevent ingestion of events that don't match your specified schemas.",
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Downsampling",
-        "url": "https://www.npmjs.com/package/@posthog/downsampling-plugin",
-        "description": "Reduces the number of events going into PostHog.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "PostgreSQL Export",
-        "url": "https://www.npmjs.com/package/@posthog/postgres-plugin",
-        "description": "Export PostHog events to a PostgreSQL instance on ingestion.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Pagerduty",
-        "url": "https://www.npmjs.com/package/@posthog/pagerduty-plugin",
-        "description": "This plugin alerts PagerDuty when a PostHog insights/trends graph goes below or above a threshold.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "GCS Export",
-        "url": "https://www.npmjs.com/package/@posthog/gcs-plugin",
-        "description": "Export events to a Google Cloud Storage bucket.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Automatic Cohort Creator",
-        "url": "https://www.npmjs.com/package/@posthog/automatic-cohorts-plugin",
-        "description": "Automatic cohort creation based on user properties.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "RudderStack Export",
-        "url": "https://www.npmjs.com/package/@posthog/rudderstack-plugin",
-        "description": "Export events from PostHog to Rudderstack, using PostHog as a RudderStack source.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Orbit Stats Sync",
-        "url": "https://www.npmjs.com/package/@posthog/orbit-love-plugin",
-        "description": "Regularly sync statistics from Orbit.love directly into PostHog.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Redshift Import Plugin (BETA)",
-        "url": "https://www.npmjs.com/package/@posthog/redshift-import-plugin",
-        "description": "Import data from Redshift into PostHog. (This plugin is in BETA, use at your own risk!)",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Github Star Sync",
-        "url": "https://www.npmjs.com/package/@posthog/gitub-star-sync-plugin",
-        "description": "Synchronise Github stars with PostHog, with each star as a separate event.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Migrator 3000 (Beta)",
-        "url": "https://www.npmjs.com/package/@posthog/migrator3000-plugin",
-        "description": "BETA - Migrate events to a new PostHog instance. Currently available for self-hosted users only.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Ingestion Alert",
-        "url": "https://www.npmjs.com/package/@posthog/ingestion-alert-plugin",
-        "description": "This plugin triggers a webhook when no events have been ingested for a specified period of time. It can be used to alert you when ingestion for your project / instance is not working correctly..",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Heartbeat",
-        "url": "https://www.npmjs.com/package/@posthog/heartbeat-plugin",
-        "description": "This is a very simple plugin which sends one event to your project per minute. It can be used to ensure a continuous flow of events when monitoring whether ingestion is up and running. Works great in conjunction with Posthog Ingestion Alert Plugin",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Property Filter",
-        "url": "https://www.npmjs.com/package/@posthog/property-filter-plugin",
-        "description": "This plugin will set all configured properties to null inside an ingested event.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Zendesk",
-        "url": "https://www.npmjs.com/package/@posthog/zendesk-plugin",
-        "description": "Import new and historic ticket events to PostHog, update persons in Zendesk with context about recent events from your product",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Netdata event processing (ALPHA)",
-        "url": "https://www.npmjs.com/package/@posthog/netdata-event-processing",
-        "description": "Process events for Netdata",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Avo Inspector Plugin",
-        "url": "https://www.npmjs.com/package/@posthog/avo-plugin",
-        "description": "Send PostHog events to the Avo Inspector",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Drop Events Based On Property",
-        "url": "https://www.npmjs.com/package/@posthog/drop-events-on-property-plugin",
-        "description": "Drop events based on whether a property exist and optionally whether that property has a specific value.",
-        "verified": true,
-        "maintainer": "official",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Twilio",
-        "url": "https://www.npmjs.com/package/@posthog/twilio-plugin",
-        "description": "Send SMS messages via twilio based on events occuring in PostHog",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Intercom",
-        "url": "https://www.npmjs.com/package/@posthog/intercom-plugin",
-        "description": "Send usage data to intercom for contacts",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "DataBricks",
-        "url": "https://www.npmjs.com/package/@posthog/databricks-plugin",
-        "description": "Export your PostHog data to databricks warehouse",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "AWS Kinesis",
-        "url": "https://www.npmjs.com/package/@posthog/kinesis-plugin",
-        "description": "Sends event data to Posthog from a Kinesis Stream",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Unduplicates",
-        "url": "https://www.npmjs.com/package/@posthog/plugin-unduplicates",
-        "description": "Prevent duplicates in your data.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Advanced GeoIP",
-        "url": "https://www.npmjs.com/package/@posthog/advanced-geoip-app",
-        "description": "Advanced GeoIP filtering app for PostHog.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Variance",
-        "url": "https://www.npmjs.com/package/@posthog/variance-plugin",
-        "description": "Export customer data into Variance.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "Shopify Connector",
-        "url": "https://www.npmjs.com/package/@posthog/shopify-sync-plugin",
-        "description": "Sync customer and order data from Shopify, into PostHog..",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_in"
-    },
-    {
-        "name": "Engage.so Connector",
-        "url": "https://www.npmjs.com/package/@posthog/engage-so-plugin",
-        "description": "Send events tracked through PostHog to Engage.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
-    },
-    {
-        "name": "URL normalizer",
-        "url": "https://www.npmjs.com/package/@posthog/url-normalizer-plugin",
-        "description": "Normalize the format of urls in your application allowing you to more easily compare them in insights.",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
-    },
-    {
-        "name": "Patterns.app Connector",
-        "url": "https://www.npmjs.com/package/@posthog/patterns-app",
-        "description": "Send events tracked through PostHog to Patterns",
-        "verified": true,
-        "maintainer": "community",
-        "displayOnWebsiteLib": true,
-        "type": "data_out"
+        "type": "ingestion_filtering",
+        "imageLink": "https://raw.githubusercontent.com/PostHog/posthog-schema-enforcer-plugin/main/logo.png",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/schema-enforcer-plugin/logo.png"
     },
     {
         "name": "SemVer Flattener",
@@ -486,15 +428,128 @@
         "verified": true,
         "maintainer": "official",
         "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/semver-flattener-plugin/logo.png"
     },
     {
-        "name": "Filter Out",
-        "url": "https://www.npmjs.com/package/@posthog/filter-out-plugin",
-        "description": "Injest only those events satisfying the given filter conditions",
+        "name": "Sendgrid",
+        "url": "https://www.npmjs.com/package/@posthog/sendgrid-plugin",
+        "description": "Send emails and user data to Sendgrid when you identify users using PostHog.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/sendgrid-plugin/logo.png"
+    },
+    {
+        "name": "Shopify Connector",
+        "url": "https://www.npmjs.com/package/@posthog/shopify-sync-plugin",
+        "description": "Sync customer and order data from Shopify, into PostHog..",
         "verified": true,
         "maintainer": "community",
         "displayOnWebsiteLib": true,
-        "type": "ingestion_filtering"
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-shopify-sync-plugin/logo.png"
+    },
+    {
+        "name": "Snowflake Export",
+        "url": "https://www.npmjs.com/package/@posthog/snowflake-export-plugin",
+        "description": "Sends events to Snowflake on ingestion.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/snowflake-export-plugin/logo.png"
+    },
+    {
+        "name": "Taxonomy Standardizer",
+        "url": "https://www.npmjs.com/package/@posthog/taxonomy-plugin",
+        "description": "Standardize your event names into a single pattern.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/taxonomy-plugin/logo.png"
+    },
+    {
+        "name": "Timestamp Parser",
+        "url": "https://www.npmjs.com/package/@posthog/timestamp-parser-plugin",
+        "description": "Parse your event timestamps into useful date properties.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/timestamp-parser-plugin/logo.png"
+    },
+    {
+        "name": "Twilio",
+        "url": "https://www.npmjs.com/package/@posthog/twilio-plugin",
+        "description": "Send SMS messages via twilio based on events occuring in PostHog",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-twilio-plugin/logo.png"
+    },
+    {
+        "name": "Twitter Followers",
+        "url": "https://www.npmjs.com/package/@posthog/twitter-followers-plugin",
+        "description": "Get your Twitter follower numbers daily without signing up to the Twitter API.",
+        "verified": true,
+        "maintainer": "official",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/twitter-followers-plugin/logo.png"
+    },
+    {
+        "name": "Unduplicates",
+        "url": "https://www.npmjs.com/package/@posthog/plugin-unduplicates",
+        "description": "Prevent duplicates in your data.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-app-unduplicates/logo.png"
+    },
+    {
+        "name": "URL normalizer",
+        "url": "https://www.npmjs.com/package/@posthog/url-normalizer-plugin",
+        "description": "Normalize the format of urls in your application allowing you to more easily compare them in insights.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "ingestion_filtering",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-url-normalizer-plugin/logo.png"
+    },
+    {
+        "name": "Useragent Enhancer",
+        "url": "https://www.npmjs.com/package/@posthog/useragent-plugin",
+        "description": "Enhances events with browser details when the event has a \"$useragent\" property.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "imageLink": "https://raw.githubusercontent.com/weyert/useragentplugin/main/logo.png",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/useragentplugin/logo.png"
+    },
+    {
+        "name": "Variance",
+        "url": "https://www.npmjs.com/package/@posthog/variance-plugin",
+        "description": "Export customer data into Variance.",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-variance-plugin/logo.png"
+    },
+    {
+        "name": "Zendesk",
+        "url": "https://www.npmjs.com/package/@posthog/zendesk-plugin",
+        "description": "Import new and historic ticket events to PostHog, update persons in Zendesk with context about recent events from your product",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_in",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-zendesk-plugin/logo.png"
     }
 ]
