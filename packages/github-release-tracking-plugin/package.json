@@ -1,6 +1,6 @@
 {
     "name": "@posthog/github-release-tracking-plugin",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Track GitHub releases in PostHog.",
     "main": "index.ts",
     "repository": {

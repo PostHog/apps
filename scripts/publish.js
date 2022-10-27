@@ -17,7 +17,7 @@ for await (let { name } of packages) {
     }
 
     try {
-        execSync('npm publish --access public --dry-run', { cwd: `./packages/${name}` })
+        execSync('npm publish --access public', { cwd: `./packages/${name}` })
     } catch (error) {
         console.error(`Encountered error while publishing ${name}: ${error}`)
     }

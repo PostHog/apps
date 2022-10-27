@@ -1,10 +1,7 @@
 {
     "name": "@posthog/heartbeat-plugin",
-    "version": "0.0.2",
-    "keywords": [
-        "posthog",
-        "plugin"
-    ],
+    "version": "0.0.3",
+    "keywords": ["posthog", "plugin"],
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
     "scripts": {
