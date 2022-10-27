@@ -1,0 +1,2 @@
+releases:
+  "@posthog/first-time-event-tracker": patch

@@ -1,0 +1,2 @@
+releases:
+  "@posthog/netdata-event-processing": patch

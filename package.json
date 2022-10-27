@@ -1,6 +1,6 @@
 {
     "name": "@posthog/apps",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Mono-repo for all PostHog apps",
     "homepage": "https://posthog.com/apps",
     "repository": "git@github.com:PostHog/apps.git",
@@ -20,7 +20,9 @@
         "node": ">=16 <19"
     },
     "private": true,
-    "workspaces": ["./packages/*"],
+    "workspaces": [
+        "./packages/*"
+    ],
     "devDependencies": {
         "@rollup/plugin-commonjs": "^23.0.2",
         "@rollup/plugin-node-resolve": "^15.0.1",

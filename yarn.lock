@@ -3007,9 +3007,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@posthog/advanced-geoip-app@workspace:src/packages/posthog-app-advanced-geoip":
+"@posthog/advanced-geoip-app@workspace:packages/posthog-app-advanced-geoip":
   version: 0.0.0-use.local
-  resolution: "@posthog/advanced-geoip-app@workspace:src/packages/posthog-app-advanced-geoip"
+  resolution: "@posthog/advanced-geoip-app@workspace:packages/posthog-app-advanced-geoip"
   dependencies:
     "@posthog/plugin-scaffold": ^1.2.0
     "@types/jest": ^26.0.19
@@ -3046,9 +3046,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/automatic-cohorts-plugin@workspace:src/packages/posthog-automatic-cohorts-plugin":
+"@posthog/automatic-cohorts-plugin@workspace:packages/posthog-automatic-cohorts-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/automatic-cohorts-plugin@workspace:src/packages/posthog-automatic-cohorts-plugin"
+  resolution: "@posthog/automatic-cohorts-plugin@workspace:packages/posthog-automatic-cohorts-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.5
     "@posthog/plugin-scaffold": ^1.3.4
@@ -3062,9 +3062,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/avo-plugin@workspace:src/packages/posthog-avo-plugin":
+"@posthog/avo-plugin@workspace:packages/posthog-avo-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/avo-plugin@workspace:src/packages/posthog-avo-plugin"
+  resolution: "@posthog/avo-plugin@workspace:packages/posthog-avo-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": ^0.12.10
@@ -3077,9 +3077,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/bigquery-plugin@workspace:src/packages/bigquery-plugin":
+"@posthog/bigquery-plugin@workspace:packages/bigquery-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/bigquery-plugin@workspace:src/packages/bigquery-plugin"
+  resolution: "@posthog/bigquery-plugin@workspace:packages/bigquery-plugin"
   dependencies:
     "@google-cloud/bigquery": ^5.6.0
     "@posthog/plugin-contrib": ^0.0.4
@@ -3094,9 +3094,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/bitbucket-release-tracker@workspace:src/packages/bitbucket-release-tracker":
+"@posthog/bitbucket-release-tracker@workspace:packages/bitbucket-release-tracker":
   version: 0.0.0-use.local
-  resolution: "@posthog/bitbucket-release-tracker@workspace:src/packages/bitbucket-release-tracker"
+  resolution: "@posthog/bitbucket-release-tracker@workspace:packages/bitbucket-release-tracker"
   dependencies:
     husky: ^4.3.0
     lint-staged: ^10.5.2
@@ -3104,18 +3104,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/currency-normalization-plugin@workspace:src/packages/currency-normalization-plugin":
+"@posthog/currency-normalization-plugin@workspace:packages/currency-normalization-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/currency-normalization-plugin@workspace:src/packages/currency-normalization-plugin"
+  resolution: "@posthog/currency-normalization-plugin@workspace:packages/currency-normalization-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^1.3.4
     jest: ^26.6.3
   languageName: unknown
   linkType: soft
 
-"@posthog/customerio-plugin@workspace:src/packages/customerio-plugin":
+"@posthog/customerio-plugin@workspace:packages/customerio-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/customerio-plugin@workspace:src/packages/customerio-plugin"
+  resolution: "@posthog/customerio-plugin@workspace:packages/customerio-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^1.0.4
     "@types/jest": ^29.0.0
@@ -3131,18 +3131,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/databricks-plugin@workspace:src/packages/posthog-databricks-plugin":
+"@posthog/databricks-plugin@workspace:packages/posthog-databricks-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/databricks-plugin@workspace:src/packages/posthog-databricks-plugin"
+  resolution: "@posthog/databricks-plugin@workspace:packages/posthog-databricks-plugin"
   dependencies:
     "@posthog/plugin-scaffold": 0.10.0
     jest: ^27.0.4
   languageName: unknown
   linkType: soft
 
-"@posthog/downsampling-plugin@workspace:src/packages/downsampling-plugin":
+"@posthog/downsampling-plugin@workspace:packages/downsampling-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/downsampling-plugin@workspace:src/packages/downsampling-plugin"
+  resolution: "@posthog/downsampling-plugin@workspace:packages/downsampling-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.5.0
     "@types/jest": ^26.0.23
@@ -3156,15 +3156,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/drop-events-on-property-plugin@workspace:src/packages/drop-events-on-property-plugin":
+"@posthog/drop-events-on-property-plugin@workspace:packages/drop-events-on-property-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/drop-events-on-property-plugin@workspace:src/packages/drop-events-on-property-plugin"
+  resolution: "@posthog/drop-events-on-property-plugin@workspace:packages/drop-events-on-property-plugin"
   languageName: unknown
   linkType: soft
 
-"@posthog/engage-so-plugin@workspace:src/packages/posthog-engage-so-plugin":
+"@posthog/engage-so-plugin@workspace:packages/posthog-engage-so-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/engage-so-plugin@workspace:src/packages/posthog-engage-so-plugin"
+  resolution: "@posthog/engage-so-plugin@workspace:packages/posthog-engage-so-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^1.0.4
     jest: ^28.1.1
@@ -3173,9 +3173,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/event-sequence-timer-plugin@workspace:src/packages/event-sequence-timer-plugin":
+"@posthog/event-sequence-timer-plugin@workspace:packages/event-sequence-timer-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/event-sequence-timer-plugin@workspace:src/packages/event-sequence-timer-plugin"
+  resolution: "@posthog/event-sequence-timer-plugin@workspace:packages/event-sequence-timer-plugin"
   dependencies:
     "@babel/preset-env": ^7.19.0
     "@babel/preset-typescript": ^7.18.6
@@ -3188,9 +3188,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/filter-out-plugin@workspace:src/packages/posthog-filter-out-plugin":
+"@posthog/filter-out-plugin@workspace:packages/posthog-filter-out-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/filter-out-plugin@workspace:src/packages/posthog-filter-out-plugin"
+  resolution: "@posthog/filter-out-plugin@workspace:packages/posthog-filter-out-plugin"
   dependencies:
     "@jest/globals": ^29.1.2
     "@posthog/plugin-scaffold": ^1.3.4
@@ -3208,18 +3208,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/first-time-event-tracker@workspace:src/packages/first-time-event-tracker":
+"@posthog/first-time-event-tracker@workspace:packages/first-time-event-tracker":
   version: 0.0.0-use.local
-  resolution: "@posthog/first-time-event-tracker@workspace:src/packages/first-time-event-tracker"
+  resolution: "@posthog/first-time-event-tracker@workspace:packages/first-time-event-tracker"
   dependencies:
     "@posthog/plugin-scaffold": ^1.3.4
     jest: ^26.6.3
   languageName: unknown
   linkType: soft
 
-"@posthog/gcs-plugin@workspace:src/packages/posthog-gcs-plugin":
+"@posthog/gcs-plugin@workspace:packages/posthog-gcs-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/gcs-plugin@workspace:src/packages/posthog-gcs-plugin"
+  resolution: "@posthog/gcs-plugin@workspace:packages/posthog-gcs-plugin"
   dependencies:
     "@google-cloud/storage": ^5.8.5
     "@posthog/plugin-scaffold": ^0.11.0
@@ -3227,9 +3227,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/geoip-plugin@workspace:src/packages/posthog-plugin-geoip":
+"@posthog/geoip-plugin@workspace:packages/posthog-plugin-geoip":
   version: 0.0.0-use.local
-  resolution: "@posthog/geoip-plugin@workspace:src/packages/posthog-plugin-geoip"
+  resolution: "@posthog/geoip-plugin@workspace:packages/posthog-plugin-geoip"
   dependencies:
     "@maxmind/geoip2-node": ^2.3.1
     "@posthog/plugin-scaffold": "github:PostHog/plugin-scaffold"
@@ -3251,9 +3251,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/github-release-tracking-plugin@workspace:src/packages/github-release-tracking-plugin":
+"@posthog/github-release-tracking-plugin@workspace:packages/github-release-tracking-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/github-release-tracking-plugin@workspace:src/packages/github-release-tracking-plugin"
+  resolution: "@posthog/github-release-tracking-plugin@workspace:packages/github-release-tracking-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^1.3.4
     "@types/node": ^18.7.18
@@ -3263,9 +3263,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/gitlab-release-tracking-plugin@workspace:src/packages/gitlab-release-tracking-plugin":
+"@posthog/gitlab-release-tracking-plugin@workspace:packages/gitlab-release-tracking-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/gitlab-release-tracking-plugin@workspace:src/packages/gitlab-release-tracking-plugin"
+  resolution: "@posthog/gitlab-release-tracking-plugin@workspace:packages/gitlab-release-tracking-plugin"
   dependencies:
     husky: ^4.3.0
     lint-staged: ^10.5.2
@@ -3273,18 +3273,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/gitub-star-sync-plugin@workspace:src/packages/github-star-sync-plugin":
+"@posthog/gitub-star-sync-plugin@workspace:packages/github-star-sync-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/gitub-star-sync-plugin@workspace:src/packages/github-star-sync-plugin"
+  resolution: "@posthog/gitub-star-sync-plugin@workspace:packages/github-star-sync-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.9
     jest: ^26.6.3
   languageName: unknown
   linkType: soft
 
-"@posthog/heartbeat-plugin@workspace:src/packages/posthog-heartbeat-plugin":
+"@posthog/heartbeat-plugin@workspace:packages/posthog-heartbeat-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/heartbeat-plugin@workspace:src/packages/posthog-heartbeat-plugin"
+  resolution: "@posthog/heartbeat-plugin@workspace:packages/posthog-heartbeat-plugin"
   dependencies:
     "@typescript-eslint/eslint-plugin": ^5.27.0
     "@typescript-eslint/parser": ^5.27.0
@@ -3295,9 +3295,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/hello-world-plugin@workspace:src/packages/posthog-hello-world-plugin":
+"@posthog/hello-world-plugin@workspace:packages/posthog-hello-world-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/hello-world-plugin@workspace:src/packages/posthog-hello-world-plugin"
+  resolution: "@posthog/hello-world-plugin@workspace:packages/posthog-hello-world-plugin"
   dependencies:
     "@posthog/plugin-scaffold": 0.10.0
     eslint: ^8.9.0
@@ -3305,9 +3305,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/hubspot-plugin@workspace:src/packages/hubspot-plugin":
+"@posthog/hubspot-plugin@workspace:packages/hubspot-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/hubspot-plugin@workspace:src/packages/hubspot-plugin"
+  resolution: "@posthog/hubspot-plugin@workspace:packages/hubspot-plugin"
   dependencies:
     husky: ^4.3.0
     lint-staged: ^10.5.2
@@ -3315,17 +3315,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/ingestion-alert-plugin@workspace:src/packages/ingestion-alert-plugin":
+"@posthog/ingestion-alert-plugin@workspace:packages/ingestion-alert-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/ingestion-alert-plugin@workspace:src/packages/ingestion-alert-plugin"
+  resolution: "@posthog/ingestion-alert-plugin@workspace:packages/ingestion-alert-plugin"
   dependencies:
     "@posthog/plugin-scaffold": 0.10.0
   languageName: unknown
   linkType: soft
 
-"@posthog/intercom-plugin@workspace:src/packages/posthog-intercom-plugin":
+"@posthog/intercom-plugin@workspace:packages/posthog-intercom-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/intercom-plugin@workspace:src/packages/posthog-intercom-plugin"
+  resolution: "@posthog/intercom-plugin@workspace:packages/posthog-intercom-plugin"
   dependencies:
     "@babel/preset-env": ^7.16.11
     "@posthog/plugin-scaffold": ^0.12.10
@@ -3351,9 +3351,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/kinesis-plugin@workspace:src/packages/posthog-kinesis-plugin":
+"@posthog/kinesis-plugin@workspace:packages/posthog-kinesis-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/kinesis-plugin@workspace:src/packages/posthog-kinesis-plugin"
+  resolution: "@posthog/kinesis-plugin@workspace:packages/posthog-kinesis-plugin"
   dependencies:
     "@babel/preset-env": ^7.16.11
     "@posthog/plugin-scaffold": ^0.12.10
@@ -3380,9 +3380,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/mailboxlayer-plugin@workspace:src/packages/mailboxlayer-plugin":
+"@posthog/mailboxlayer-plugin@workspace:packages/mailboxlayer-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/mailboxlayer-plugin@workspace:src/packages/mailboxlayer-plugin"
+  resolution: "@posthog/mailboxlayer-plugin@workspace:packages/mailboxlayer-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.7
     husky: ^4.3.0
@@ -3392,9 +3392,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/migrator3000-plugin@workspace:src/packages/posthog-plugin-migrator3000":
+"@posthog/migrator3000-plugin@workspace:packages/posthog-plugin-migrator3000":
   version: 0.0.0-use.local
-  resolution: "@posthog/migrator3000-plugin@workspace:src/packages/posthog-plugin-migrator3000"
+  resolution: "@posthog/migrator3000-plugin@workspace:packages/posthog-plugin-migrator3000"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": ~0.12.9
@@ -3419,32 +3419,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/netdata-event-processing@workspace:src/packages/posthog-netdata-event-processing":
+"@posthog/netdata-event-processing@workspace:packages/posthog-netdata-event-processing":
   version: 0.0.0-use.local
-  resolution: "@posthog/netdata-event-processing@workspace:src/packages/posthog-netdata-event-processing"
+  resolution: "@posthog/netdata-event-processing@workspace:packages/posthog-netdata-event-processing"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.2
     jest: ^26.6.3
   languageName: unknown
   linkType: soft
 
-"@posthog/orbit-love-plugin@workspace:src/packages/posthog-orbit-love-plugin":
+"@posthog/orbit-love-plugin@workspace:packages/posthog-orbit-love-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/orbit-love-plugin@workspace:src/packages/posthog-orbit-love-plugin"
+  resolution: "@posthog/orbit-love-plugin@workspace:packages/posthog-orbit-love-plugin"
   languageName: unknown
   linkType: soft
 
-"@posthog/pagerduty-plugin@workspace:src/packages/posthog-pagerduty-plugin":
+"@posthog/pagerduty-plugin@workspace:packages/posthog-pagerduty-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/pagerduty-plugin@workspace:src/packages/posthog-pagerduty-plugin"
+  resolution: "@posthog/pagerduty-plugin@workspace:packages/posthog-pagerduty-plugin"
   dependencies:
     "@posthog/plugin-scaffold": 0.2.8-alpha.2
   languageName: unknown
   linkType: soft
 
-"@posthog/patterns-app@workspace:src/packages/posthog-patterns-app":
+"@posthog/patterns-app@workspace:packages/posthog-patterns-app":
   version: 0.0.0-use.local
-  resolution: "@posthog/patterns-app@workspace:src/packages/posthog-patterns-app"
+  resolution: "@posthog/patterns-app@workspace:packages/posthog-patterns-app"
   dependencies:
     "@babel/preset-env": ^7.18.10
     "@posthog/plugin-scaffold": ^1.2.0
@@ -3557,9 +3557,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@posthog/plugin-unduplicates@workspace:src/packages/posthog-app-unduplicates":
+"@posthog/plugin-unduplicates@workspace:packages/posthog-app-unduplicates":
   version: 0.0.0-use.local
-  resolution: "@posthog/plugin-unduplicates@workspace:src/packages/posthog-app-unduplicates"
+  resolution: "@posthog/plugin-unduplicates@workspace:packages/posthog-app-unduplicates"
   dependencies:
     "@posthog/plugin-scaffold": ^0.12.10
     "@types/jest": ^26.0.19
@@ -3581,9 +3581,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/postgres-plugin@workspace:src/packages/postgres-plugin":
+"@posthog/postgres-plugin@workspace:packages/postgres-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/postgres-plugin@workspace:src/packages/postgres-plugin"
+  resolution: "@posthog/postgres-plugin@workspace:packages/postgres-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": ^0.10.0
@@ -3592,18 +3592,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/property-filter-plugin@workspace:src/packages/posthog-property-filter-plugin":
+"@posthog/property-filter-plugin@workspace:packages/posthog-property-filter-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/property-filter-plugin@workspace:src/packages/posthog-property-filter-plugin"
+  resolution: "@posthog/property-filter-plugin@workspace:packages/posthog-property-filter-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^1.3.4
     jest: ^27.5.1
   languageName: unknown
   linkType: soft
 
-"@posthog/property-flattener-plugin@workspace:src/packages/flatten-properties-plugin":
+"@posthog/property-flattener-plugin@workspace:packages/flatten-properties-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/property-flattener-plugin@workspace:src/packages/flatten-properties-plugin"
+  resolution: "@posthog/property-flattener-plugin@workspace:packages/flatten-properties-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.7
     husky: ^4.3.0
@@ -3613,9 +3613,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/pubsub-plugin@workspace:src/packages/pubsub-plugin":
+"@posthog/pubsub-plugin@workspace:packages/pubsub-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/pubsub-plugin@workspace:src/packages/pubsub-plugin"
+  resolution: "@posthog/pubsub-plugin@workspace:packages/pubsub-plugin"
   dependencies:
     "@google-cloud/pubsub": ^2.16.0
     "@posthog/plugin-contrib": ^0.0.5
@@ -3625,9 +3625,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/redshift-import-plugin@workspace:src/packages/posthog-redshift-import-plugin":
+"@posthog/redshift-import-plugin@workspace:packages/posthog-redshift-import-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/redshift-import-plugin@workspace:src/packages/posthog-redshift-import-plugin"
+  resolution: "@posthog/redshift-import-plugin@workspace:packages/posthog-redshift-import-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": 0.12.5
@@ -3636,9 +3636,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/redshift-plugin@workspace:src/packages/redshift-plugin":
+"@posthog/redshift-plugin@workspace:packages/redshift-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/redshift-plugin@workspace:src/packages/redshift-plugin"
+  resolution: "@posthog/redshift-plugin@workspace:packages/redshift-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": ^1.3.4
@@ -3651,9 +3651,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/replicator-plugin@workspace:src/packages/posthog-plugin-replicator":
+"@posthog/replicator-plugin@workspace:packages/posthog-plugin-replicator":
   version: 0.0.0-use.local
-  resolution: "@posthog/replicator-plugin@workspace:src/packages/posthog-plugin-replicator"
+  resolution: "@posthog/replicator-plugin@workspace:packages/posthog-plugin-replicator"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": ~0.12.9
@@ -3678,17 +3678,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/rudderstack-plugin@workspace:src/packages/rudderstack-posthog-plugin":
+"@posthog/rudderstack-plugin@workspace:packages/rudderstack-posthog-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/rudderstack-plugin@workspace:src/packages/rudderstack-posthog-plugin"
+  resolution: "@posthog/rudderstack-plugin@workspace:packages/rudderstack-posthog-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.5
   languageName: unknown
   linkType: soft
 
-"@posthog/s3-export-plugin@workspace:src/packages/s3-export-plugin":
+"@posthog/s3-export-plugin@workspace:packages/s3-export-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/s3-export-plugin@workspace:src/packages/s3-export-plugin"
+  resolution: "@posthog/s3-export-plugin@workspace:packages/s3-export-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": ^1.0.0
@@ -3702,9 +3702,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/salesforce-plugin@workspace:src/packages/salesforce-plugin":
+"@posthog/salesforce-plugin@workspace:packages/salesforce-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/salesforce-plugin@workspace:src/packages/salesforce-plugin"
+  resolution: "@posthog/salesforce-plugin@workspace:packages/salesforce-plugin"
   dependencies:
     "@posthog/plugin-contrib": ^0.0.3
     "@posthog/plugin-scaffold": 0.12.10
@@ -3724,9 +3724,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/schema-enforcer-plugin@workspace:src/packages/schema-enforcer-plugin":
+"@posthog/schema-enforcer-plugin@workspace:packages/schema-enforcer-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/schema-enforcer-plugin@workspace:src/packages/schema-enforcer-plugin"
+  resolution: "@posthog/schema-enforcer-plugin@workspace:packages/schema-enforcer-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^1.3.4
     husky: ^4.3.0
@@ -3744,9 +3744,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/semver-flattener-plugin@workspace:src/packages/semver-flattener-plugin":
+"@posthog/semver-flattener-plugin@workspace:packages/semver-flattener-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/semver-flattener-plugin@workspace:src/packages/semver-flattener-plugin"
+  resolution: "@posthog/semver-flattener-plugin@workspace:packages/semver-flattener-plugin"
   dependencies:
     "@posthog/plugin-scaffold": 1.3.4
     "@types/jest": ^29.0.0
@@ -3760,9 +3760,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/sendgrid-plugin@workspace:src/packages/sendgrid-plugin":
+"@posthog/sendgrid-plugin@workspace:packages/sendgrid-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/sendgrid-plugin@workspace:src/packages/sendgrid-plugin"
+  resolution: "@posthog/sendgrid-plugin@workspace:packages/sendgrid-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.6.0
     husky: ^4.3.0
@@ -3772,9 +3772,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/shopify-sync-plugin@workspace:src/packages/posthog-shopify-sync-plugin":
+"@posthog/shopify-sync-plugin@workspace:packages/posthog-shopify-sync-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/shopify-sync-plugin@workspace:src/packages/posthog-shopify-sync-plugin"
+  resolution: "@posthog/shopify-sync-plugin@workspace:packages/posthog-shopify-sync-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.9
     eslint: ^8.9.0
@@ -3782,9 +3782,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/snowflake-export-plugin@workspace:src/packages/snowflake-export-plugin":
+"@posthog/snowflake-export-plugin@workspace:packages/snowflake-export-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/snowflake-export-plugin@workspace:src/packages/snowflake-export-plugin"
+  resolution: "@posthog/snowflake-export-plugin@workspace:packages/snowflake-export-plugin"
   dependencies:
     "@google-cloud/storage": ^5.8.5
     "@posthog/plugin-contrib": ^0.0.5
@@ -3806,9 +3806,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/taxonomy-plugin@workspace:src/packages/taxonomy-plugin":
+"@posthog/taxonomy-plugin@workspace:packages/taxonomy-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/taxonomy-plugin@workspace:src/packages/taxonomy-plugin"
+  resolution: "@posthog/taxonomy-plugin@workspace:packages/taxonomy-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.7
     husky: ^4.3.0
@@ -3818,9 +3818,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/timestamp-parser-plugin@workspace:src/packages/timestamp-parser-plugin":
+"@posthog/timestamp-parser-plugin@workspace:packages/timestamp-parser-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/timestamp-parser-plugin@workspace:src/packages/timestamp-parser-plugin"
+  resolution: "@posthog/timestamp-parser-plugin@workspace:packages/timestamp-parser-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.7
     husky: ^4.3.0
@@ -3830,9 +3830,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/twilio-plugin@workspace:src/packages/posthog-twilio-plugin":
+"@posthog/twilio-plugin@workspace:packages/posthog-twilio-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/twilio-plugin@workspace:src/packages/posthog-twilio-plugin"
+  resolution: "@posthog/twilio-plugin@workspace:packages/posthog-twilio-plugin"
   dependencies:
     "@posthog/plugin-scaffold": 0.10.0
     jest: ^27.0.4
@@ -3840,9 +3840,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/twitter-followers-plugin@workspace:src/packages/twitter-followers-plugin":
+"@posthog/twitter-followers-plugin@workspace:packages/twitter-followers-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/twitter-followers-plugin@workspace:src/packages/twitter-followers-plugin"
+  resolution: "@posthog/twitter-followers-plugin@workspace:packages/twitter-followers-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.2.7
     husky: ^4.3.0
@@ -3852,9 +3852,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/url-normalizer-plugin@workspace:src/packages/posthog-url-normalizer-plugin":
+"@posthog/url-normalizer-plugin@workspace:packages/posthog-url-normalizer-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/url-normalizer-plugin@workspace:src/packages/posthog-url-normalizer-plugin"
+  resolution: "@posthog/url-normalizer-plugin@workspace:packages/posthog-url-normalizer-plugin"
   dependencies:
     "@posthog/plugin-scaffold": ^1.0.4
     "@types/jest": ^28.1.1
@@ -3864,9 +3864,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/useragent-plugin@workspace:src/packages/useragentplugin":
+"@posthog/useragent-plugin@workspace:packages/useragentplugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/useragent-plugin@workspace:src/packages/useragentplugin"
+  resolution: "@posthog/useragent-plugin@workspace:packages/useragentplugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.12.10
     "@types/jest": ^27.0.3
@@ -3878,9 +3878,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/variance-plugin@workspace:src/packages/posthog-variance-plugin":
+"@posthog/variance-plugin@workspace:packages/posthog-variance-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/variance-plugin@workspace:src/packages/posthog-variance-plugin"
+  resolution: "@posthog/variance-plugin@workspace:packages/posthog-variance-plugin"
   dependencies:
     "@commitlint/cli": 17.1.2
     "@commitlint/config-conventional": 17.1.0
@@ -3914,9 +3914,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/zendesk-plugin@workspace:src/packages/posthog-zendesk-plugin":
+"@posthog/zendesk-plugin@workspace:packages/posthog-zendesk-plugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/zendesk-plugin@workspace:src/packages/posthog-zendesk-plugin"
+  resolution: "@posthog/zendesk-plugin@workspace:packages/posthog-zendesk-plugin"
   dependencies:
     node-fetch: ^3.2.0
   languageName: unknown
@@ -13038,6 +13038,14 @@ __metadata:
   checksum: 9e10b5a1659f9ed8761d38df3c35effabffbd19fc6107324095238e4ef0ff044392cae9ac64a1c2dda26e532426485342226b93806bd97504b174b0dcf04ed81
   languageName: node
   linkType: hard
+
+"laudspeaker-posthog-plugin@workspace:packages/posthog-laudspeaker-app":
+  version: 0.0.0-use.local
+  resolution: "laudspeaker-posthog-plugin@workspace:packages/posthog-laudspeaker-app"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.5
+  languageName: unknown
+  linkType: soft
 
 "level-blobs@npm:^0.1.7":
   version: 0.1.7

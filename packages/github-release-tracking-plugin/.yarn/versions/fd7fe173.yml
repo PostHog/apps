@@ -1,0 +1,2 @@
+releases:
+  "@posthog/github-release-tracking-plugin": patch

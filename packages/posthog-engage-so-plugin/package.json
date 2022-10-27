@@ -1,6 +1,6 @@
 {
     "name": "@posthog/engage-so-plugin",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Engage + Posthog Integration",
     "main": "index.js",
     "license": "MIT",

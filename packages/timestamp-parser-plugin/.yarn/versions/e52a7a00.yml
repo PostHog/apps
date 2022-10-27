@@ -1,0 +1,2 @@
+releases:
+  "@posthog/timestamp-parser-plugin": patch

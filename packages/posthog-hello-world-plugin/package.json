@@ -1,6 +1,6 @@
 {
     "name": "@posthog/hello-world-plugin",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "keywords": [
         "posthog",
         "plugin"

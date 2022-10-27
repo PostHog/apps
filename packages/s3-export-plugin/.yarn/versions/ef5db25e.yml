@@ -1,0 +1,2 @@
+releases:
+  "@posthog/s3-export-plugin": patch

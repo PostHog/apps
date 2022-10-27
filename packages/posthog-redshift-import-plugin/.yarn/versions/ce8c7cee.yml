@@ -1,0 +1,2 @@
+releases:
+  "@posthog/redshift-import-plugin": patch

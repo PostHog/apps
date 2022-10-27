@@ -1,0 +1,2 @@
+releases:
+  "@posthog/kinesis-plugin": patch
