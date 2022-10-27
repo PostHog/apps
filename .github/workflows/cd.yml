@@ -26,8 +26,8 @@ jobs:
             - name: Install dependencies
               run: yarn install --immutable
 
-            - name: Build packages
-              run: yarn build
+            # - name: Build packages
+            #   run: yarn build
 
             - name: Publish all packages
               run: yarn publish-all
