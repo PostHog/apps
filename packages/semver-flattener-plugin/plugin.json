@@ -1,7 +1,7 @@
 {
     "name": "posthog-semver-flattener",
     "url": "https://github.com/PostHog/posthog-semver-flattener-plugin",
-    "main": "index.js",
+    "main": "index.ts",
     "config": [
         {
             "markdown": "Processes specified properties to flatten sematic versions. Assumes any property contains a string which matches [the SemVer specification](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions)"

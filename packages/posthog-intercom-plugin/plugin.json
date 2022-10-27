@@ -2,7 +2,7 @@
     "name": "Intercom",
     "url": "TODO",
     "description": "Send event data to Intercom on PostHog events.",
-    "main": "index.js",
+    "main": "index.ts",
     "config": [
         {
             "key": "intercomApiKey",

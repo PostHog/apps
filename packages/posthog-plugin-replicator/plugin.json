@@ -2,7 +2,7 @@
     "name": "Replicator",
     "url": "https://github.com/PostHog/posthog-plugin-replicator",
     "description": "Replicate PostHog event stream in another PostHog instance",
-    "main": "index.js",
+    "main": "index.ts",
     "config": [
         {
             "key": "host",

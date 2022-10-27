@@ -2,7 +2,7 @@
     "name": "PostHog Heartbeat Plugin",
     "url": "https://github.com/PostHog/posthog-heartbeat-plugin",
     "description": "Creates one event per minute to validate ingestion pipeline",
-    "main": "index.js",
+    "main": "index.ts",
     "config": [
         {
             "markdown": "Events are emitted once per minute."

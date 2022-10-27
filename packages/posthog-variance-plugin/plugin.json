@@ -2,7 +2,7 @@
   "name": "Variance",
   "url": "https://www.variance.com/docs/posthog",
   "description": "Send event data to Variance",
-  "main": "index.js",
+  "main": "dist/index.js",
   "posthogVersion": ">= 1.25.0",
   "config": [
     {

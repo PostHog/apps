@@ -2,7 +2,7 @@
     "name": "GeoIP",
     "url": "https://github.com/PostHog/posthog-plugin-geoip",
     "description": "Enrich PostHog events and persons with IP location data",
-    "main": "index.js",
+    "main": "index.ts",
     "posthogVersion": ">=1.24.0",
     "stateless": true
 }

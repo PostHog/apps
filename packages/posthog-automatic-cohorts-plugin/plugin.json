@@ -2,7 +2,7 @@
     "name": "Automatic Cohort Creator",
     "url": "https://github.com/PostHog/posthog-automatic-cohorts-plugin",
     "description": "Automatic cohort creation based on user properties.",
-    "main": "index.js",
+    "main": "index.ts",
     "config": [
         {
             "key": "propertiesToTrack",
@@ -31,15 +31,13 @@
             "secret": true
         },
         {
-          "key": "namingConvention",
-          "hint": "Include at least `<property_value>` in your input. Default: `Users with <property_name>=<property_value>``",
-          "name": "Cohort naming convention",
-          "type": "string",
-          "default": "Users with <property_name>=<property_value>",
-          "required": true,
-          "secret": true
+            "key": "namingConvention",
+            "hint": "Include at least `<property_value>` in your input. Default: `Users with <property_name>=<property_value>``",
+            "name": "Cohort naming convention",
+            "type": "string",
+            "default": "Users with <property_name>=<property_value>",
+            "required": true,
+            "secret": true
         }
     ]
 }
-
-

@@ -2,7 +2,7 @@
     "name": "Snowflake Export",
     "url": "https://github.com/posthog/snowflake-export-plugin",
     "description": "Export PostHog events into Snowflake",
-    "main": "index.js",
+    "main": "index.ts",
     "posthogVersion": ">=1.25.0",
     "config": [
         {
@@ -95,7 +95,7 @@
             "key": "purgeFromStage",
             "name": "Purge events from stage after copying?",
             "type": "choice",
-            "choices": ["No", "Yes"],          
+            "choices": ["No", "Yes"],
             "default": "No"
         },
         {

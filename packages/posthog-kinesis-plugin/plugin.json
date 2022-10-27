@@ -2,7 +2,7 @@
     "name": "AWS Kinesis",
     "url": "TODO",
     "description": "Import events to Posthog from a AWS Kinesis Stream.",
-    "main": "index.js",
+    "main": "index.ts",
     "config": [
         {
             "markdown": "Provide an AccessKeyID and a SecretAccessKey for a AWS IAM user with at least the following Kinesis Action rights: `DescribeStream`, `GetShardIterator`, `GetRecords`"

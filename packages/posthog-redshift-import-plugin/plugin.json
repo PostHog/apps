@@ -2,7 +2,7 @@
     "name": "Redshift Import Plugin (BETA)",
     "url": "https://github.com/posthog/posthog-redshift-import-plugin",
     "description": "Import PostHog events from Amazon Redshift.",
-    "main": "index.js",
+    "main": "index.ts",
     "posthogVersion": ">= 1.25.0",
     "config": [
         {

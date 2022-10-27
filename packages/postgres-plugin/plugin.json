@@ -2,7 +2,7 @@
     "name": "PostgreSQL Export Plugin",
     "url": "https://github.com/posthog/postgres-plugin",
     "description": "Export PostHog events to a PostgreSQL instance on ingestion.",
-    "main": "index.js",
+    "main": "index.ts",
     "posthogVersion": ">= 1.29.0",
     "config": [
         {
