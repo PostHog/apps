@@ -2,10 +2,10 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 import { execSync } from 'child_process'
 
-const packages = fs.readdirSync('./dist', { withFileTypes: true }).filter((dirent) => dirent.isDirectory())
+const packages = fs.readdirSync('./packages', { withFileTypes: true }).filter((dirent) => dirent.isDirectory())
 
 for await (let { name } of packages) {
-    const pkg = JSON.parse(fs.readFileSync(`./dist/${name}/package.json`).toString('utf-8'))
+    const pkg = JSON.parse(fs.readFileSync(`./packages/${name}/package.json`).toString('utf-8'))
 
     const res = await fetch('https://registry.npmjs.org/' + pkg.name + '/latest')
 
@@ -17,7 +17,7 @@ for await (let { name } of packages) {
     }
 
     try {
-        execSync('npm publish --access public', { cwd: `./dist/${name}` })
+        execSync('npm publish --access public', { cwd: `./packages/${name}` })
     } catch (error) {
         console.error(`Encountered error while publishing ${name}: ${error}`)
     }
