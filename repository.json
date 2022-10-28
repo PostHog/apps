@@ -260,6 +260,16 @@
         "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-intercom-plugin/logo.png"
     },
     {
+        "name": "Laudspeaker",
+        "url": "https://www.npmjs.com/package/@posthog/laudspeaker-plugin",
+        "description": "Send event data to Laudspeaker",
+        "verified": true,
+        "maintainer": "community",
+        "displayOnWebsiteLib": true,
+        "type": "data_out",
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-laudspeaker-app/logo.png"
+    },
+    {
         "name": "Migrator 3000 (Beta)",
         "url": "https://www.npmjs.com/package/@posthog/migrator3000-plugin",
         "description": "BETA - Migrate events to a new PostHog instance. Currently available for self-hosted users only.",

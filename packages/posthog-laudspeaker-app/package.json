@@ -1,5 +1,5 @@
 {
-    "name": "laudspeaker-posthog-plugin",
+    "name": "@posthog/laudspeaker-plugin",
     "version": "0.0.6",
     "description": "Export data from PostHog",
     "main": "index.js",
