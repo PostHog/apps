@@ -3380,6 +3380,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@posthog/laudspeaker-plugin@workspace:packages/posthog-laudspeaker-app":
+  version: 0.0.0-use.local
+  resolution: "@posthog/laudspeaker-plugin@workspace:packages/posthog-laudspeaker-app"
+  dependencies:
+    "@posthog/plugin-contrib": ^0.0.5
+  languageName: unknown
+  linkType: soft
+
 "@posthog/mailboxlayer-plugin@workspace:packages/mailboxlayer-plugin":
   version: 0.0.0-use.local
   resolution: "@posthog/mailboxlayer-plugin@workspace:packages/mailboxlayer-plugin"
@@ -13038,14 +13046,6 @@ __metadata:
   checksum: 9e10b5a1659f9ed8761d38df3c35effabffbd19fc6107324095238e4ef0ff044392cae9ac64a1c2dda26e532426485342226b93806bd97504b174b0dcf04ed81
   languageName: node
   linkType: hard
-
-"laudspeaker-posthog-plugin@workspace:packages/posthog-laudspeaker-app":
-  version: 0.0.0-use.local
-  resolution: "laudspeaker-posthog-plugin@workspace:packages/posthog-laudspeaker-app"
-  dependencies:
-    "@posthog/plugin-contrib": ^0.0.5
-  languageName: unknown
-  linkType: soft
 
 "level-blobs@npm:^0.1.7":
   version: 0.1.7
