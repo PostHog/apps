@@ -10,5 +10,6 @@
     "license": "ISC",
     "dependencies": {
         "@posthog/plugin-contrib": "^0.0.5"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-laudspeaker-app/logo.png"
 }

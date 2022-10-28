@@ -30,5 +30,6 @@
     },
     "lint-staged": {
         "*.{js,ts,tsx,json,yml}": "prettier --write"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/sendgrid-plugin/logo.png"
 }

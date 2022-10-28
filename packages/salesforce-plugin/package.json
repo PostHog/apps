@@ -42,5 +42,6 @@
     },
     "dependencies": {
         "@posthog/plugin-contrib": "^0.0.3"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/salesforce-plugin/logo.png"
 }

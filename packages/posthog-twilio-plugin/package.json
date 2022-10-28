@@ -17,5 +17,6 @@
     "devDependencies": {
         "@posthog/plugin-scaffold": "0.10.0",
         "jest": "^27.0.4"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-twilio-plugin/logo.png"
 }

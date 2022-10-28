@@ -11,5 +11,6 @@
         "aws-sdk": "^2.885.0",
         "generic-pool": "^3.7.8",
         "node-fetch": "^3.2.3"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-avo-plugin/logo.png"
 }

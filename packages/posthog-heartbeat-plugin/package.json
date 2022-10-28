@@ -1,7 +1,10 @@
 {
     "name": "@posthog/heartbeat-plugin",
     "version": "0.0.4",
-    "keywords": ["posthog", "plugin"],
+    "keywords": [
+        "posthog",
+        "plugin"
+    ],
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
     "scripts": {
@@ -17,5 +20,6 @@
         "node-fetch": "^3.2.5",
         "prettier": "^2.2.1",
         "typescript": "^4.7.2"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-heartbeat-plugin/logo.png"
 }

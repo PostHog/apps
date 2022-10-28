@@ -11,5 +11,6 @@
         "jest": "^28.1.1",
         "ts-jest": "^28.0.4",
         "typescript": "^4.7.3"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-url-normalizer-plugin/logo.png"
 }

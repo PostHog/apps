@@ -19,5 +19,6 @@
         "@posthog/plugin-scaffold": "0.10.0",
         "jest": "^27.0.4"
     },
-    "homepage": "https://github.com/samcaspus/posthog-databricks-plugin#readme"
+    "homepage": "https://github.com/samcaspus/posthog-databricks-plugin#readme",
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-databricks-plugin/logo.png"
 }

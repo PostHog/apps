@@ -2,7 +2,11 @@
     "name": "@posthog/migrator3000-plugin",
     "version": "0.0.4",
     "description": "Migrate your PostHog events to a new instance.",
-    "keywords": ["posthog", "plugin", "migration"],
+    "keywords": [
+        "posthog",
+        "plugin",
+        "migration"
+    ],
     "main": "index.ts",
     "repository": "github:PostHog/posthog-plugin-migrator3000",
     "bugs": {
@@ -48,5 +52,6 @@
     "lint-staged": {
         "*.{js,ts}": "eslint --fix",
         "*.{ts,tsx,js,jsx,json,yaml,toml,css,scss,html,xml}": "prettier --write"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-plugin-migrator3000/logo.png"
 }

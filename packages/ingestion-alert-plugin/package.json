@@ -12,5 +12,6 @@
     },
     "devDependencies": {
         "@posthog/plugin-scaffold": "0.10.0"
-    }
+    },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/ingestion-alert-plugin/logo.png"
 }
