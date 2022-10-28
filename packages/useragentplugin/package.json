@@ -1,6 +1,6 @@
 {
     "name": "@posthog/user-agent-app",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Automatically attach detailed browser details to the event when $useragent property exists",
     "main": "dist/index.js",
     "files": [
