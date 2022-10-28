@@ -55,5 +55,6 @@
             "default": "No",
             "hint": "Advanced"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/bigquery-plugin/logo.png"
 }

@@ -4,18 +4,8 @@
     "url": "https://github.com/PostHog/github-star-sync-plugin",
     "main": "index.js",
     "config": [
-        {
-            "key": "user",
-            "name": "Github Username",
-            "type": "string",
-            "required": true
-        },
-        {
-            "key": "repo",
-            "name": "Github Repository",
-            "type": "string",
-            "required": true
-        },
+        { "key": "user", "name": "Github Username", "type": "string", "required": true },
+        { "key": "repo", "name": "Github Repository", "type": "string", "required": true },
         {
             "key": "token",
             "name": "Github API Token",
@@ -24,13 +14,7 @@
             "required": false,
             "secret": true
         },
-        {
-            "key": "eventName",
-            "name": "Event name",
-            "type": "string",
-            "required": false,
-            "default": "GitHub Star"
-        },
+        { "key": "eventName", "name": "Event name", "type": "string", "required": false, "default": "GitHub Star" },
         {
             "key": "resetStorage",
             "name": "Reset",
@@ -40,5 +24,6 @@
             "required": false,
             "default": "No"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/github-star-sync-plugin/logo.png"
 }

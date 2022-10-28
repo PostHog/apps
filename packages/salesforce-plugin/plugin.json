@@ -24,33 +24,10 @@
             "default": "POST",
             "type": "string"
         },
-        {
-            "key": "username",
-            "name": "Username",
-            "type": "string",
-            "required": true
-        },
-        {
-            "key": "password",
-            "name": "Password",
-            "type": "string",
-            "required": false,
-            "secret": true
-        },
-        {
-            "key": "consumerKey",
-            "name": "Consumer key",
-            "type": "string",
-            "required": true,
-            "secret": true
-        },
-        {
-            "key": "consumerSecret",
-            "name": "Consumer secret",
-            "type": "string",
-            "required": true,
-            "secret": true
-        },
+        { "key": "username", "name": "Username", "type": "string", "required": true },
+        { "key": "password", "name": "Password", "type": "string", "required": false, "secret": true },
+        { "key": "consumerKey", "name": "Consumer key", "type": "string", "required": true, "secret": true },
+        { "key": "consumerSecret", "name": "Consumer secret", "type": "string", "required": true, "secret": true },
         {
             "key": "eventsToInclude",
             "name": "Events to include",
@@ -71,5 +48,6 @@
             "choices": ["debug logging on", "debug logging off"],
             "default": "debug logging off"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/salesforce-plugin/logo.png"
 }

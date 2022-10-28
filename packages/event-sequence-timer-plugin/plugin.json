@@ -23,5 +23,6 @@
             "default": "Yes",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/event-sequence-timer-plugin/logo.png"
 }

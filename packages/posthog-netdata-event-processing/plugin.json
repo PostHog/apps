@@ -1,8 +1,8 @@
 {
-  "name": "PostHog Netdata Event Processing",
-  "url": "https://github.com/andrewm4894/posthog-netdata-event-processing",
-  "description": "A Posthog plugin to do some data processing on our Posthog events as they arrive.",
-  "main": "index.js",
-  "config": [
-  ]
+    "name": "PostHog Netdata Event Processing",
+    "url": "https://github.com/andrewm4894/posthog-netdata-event-processing",
+    "description": "A Posthog plugin to do some data processing on our Posthog events as they arrive.",
+    "main": "index.js",
+    "config": [],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-netdata-event-processing/logo.png"
 }

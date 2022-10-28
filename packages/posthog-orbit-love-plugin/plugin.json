@@ -19,5 +19,6 @@
             "hint": "The workspace ID to pull the report for. Use comma-separated values for multiple workspaces.",
             "required": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-orbit-love-plugin/logo.png"
 }

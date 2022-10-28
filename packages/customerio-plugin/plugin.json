@@ -48,5 +48,6 @@
             "type": "string",
             "hint": "If this is set, only the specified events (comma-separated) will be sent to Customer.io."
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/customerio-plugin/logo.png"
 }

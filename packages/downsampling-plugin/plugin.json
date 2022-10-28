@@ -22,5 +22,6 @@
             "default": "Distinct ID aware sampling",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/downsampling-plugin/logo.png"
 }

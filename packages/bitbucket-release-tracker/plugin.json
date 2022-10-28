@@ -4,9 +4,7 @@
     "description": "Track Bitbucket releases in PostHog.",
     "main": "index.js",
     "config": [
-        {
-            "markdown": "Specify your Bitbucket configuration here."
-        },
+        { "markdown": "Specify your Bitbucket configuration here." },
         {
             "key": "posthogHost",
             "hint": "Optional - defaults to https://app.posthog.com",
@@ -66,5 +64,6 @@
             "required": false,
             "secret": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/bitbucket-release-tracker/logo.png"
 }

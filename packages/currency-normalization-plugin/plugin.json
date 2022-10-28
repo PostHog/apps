@@ -46,5 +46,6 @@
             "default": "normalized_currency",
             "required": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/currency-normalization-plugin/logo.png"
 }

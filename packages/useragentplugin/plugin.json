@@ -24,5 +24,6 @@
             "default": "false",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/useragentplugin/logo.png"
 }

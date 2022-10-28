@@ -12,25 +12,9 @@
             "hint": "In the format of \"ab12345\" or \"ab12345.region.cloud\"",
             "required": true
         },
-        {
-            "key": "username",
-            "name": "Snowflake username",
-            "type": "string",
-            "required": true
-        },
-        {
-            "key": "password",
-            "name": "Snowflake password",
-            "type": "string",
-            "required": false,
-            "secret": true
-        },
-        {
-            "key": "database",
-            "name": "Snowflake database name",
-            "type": "string",
-            "required": true
-        },
+        { "key": "username", "name": "Snowflake username", "type": "string", "required": true },
+        { "key": "password", "name": "Snowflake password", "type": "string", "required": false, "secret": true },
+        { "key": "database", "name": "Snowflake database name", "type": "string", "required": true },
         {
             "key": "dbschema",
             "name": "Snowflake database schema",
@@ -63,13 +47,7 @@
             "type": "string",
             "default": "10"
         },
-        {
-            "key": "stageToUse",
-            "name": "Stage type",
-            "type": "choice",
-            "required": true,
-            "choices": ["S3", "GCS"]
-        },
+        { "key": "stageToUse", "name": "Stage type", "type": "choice", "required": true, "choices": ["S3", "GCS"] },
         {
             "key": "stage",
             "name": "Name to use for external stage",
@@ -168,5 +146,6 @@
             "default": "No",
             "hint": "Advanced"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/snowflake-export-plugin/logo.png"
 }

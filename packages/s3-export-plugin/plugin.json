@@ -8,13 +8,7 @@
         {
             "markdown": "Read [the documentation](https://github.com/PostHog/s3-export-plugin) here for instructions in getting these keys."
         },
-        {
-            "key": "awsAccessKey",
-            "name": "AWS Access Key",
-            "type": "string",
-            "default": "",
-            "required": true
-        },
+        { "key": "awsAccessKey", "name": "AWS Access Key", "type": "string", "default": "", "required": true },
         {
             "key": "awsSecretAccessKey",
             "name": "AWS Secret Access Key",
@@ -23,13 +17,7 @@
             "default": "",
             "required": true
         },
-        {
-            "key": "s3BucketName",
-            "name": "S3 Bucket name",
-            "type": "string",
-            "default": "",
-            "required": true
-        },
+        { "key": "s3BucketName", "name": "S3 Bucket name", "type": "string", "default": "", "required": true },
         {
             "key": "awsRegion",
             "name": "AWS Region",
@@ -124,5 +112,6 @@
             "hint": "The customer-managed AWS Key Management Service (KMS) key ID that should be used to server-side encrypt the object in S3.",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/s3-export-plugin/logo.png"
 }

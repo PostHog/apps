@@ -5,9 +5,7 @@
     "main": "index.js",
     "posthogVersion": ">= 1.25.0",
     "config": [
-        {
-            "markdown": "posthog-zendesk-plugin"
-        },
+        { "markdown": "posthog-zendesk-plugin" },
         {
             "key": "hostName",
             "name": "Host name",
@@ -48,5 +46,6 @@
             "default": "",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-zendesk-plugin/logo.png"
 }

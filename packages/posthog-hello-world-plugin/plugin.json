@@ -11,5 +11,6 @@
             "default": "Hello world!",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-hello-world-plugin/logo.png"
 }

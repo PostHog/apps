@@ -12,5 +12,6 @@
             "required": true,
             "order": 1
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/schema-enforcer-plugin/logo.png"
 }

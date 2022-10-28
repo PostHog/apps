@@ -20,5 +20,6 @@
             "hint": "Comma-separated list of libraries ($lib) for which GeoIP should be ignored (e.g. `posthog-node,posthog-python`)",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-app-advanced-geoip/logo.png"
 }

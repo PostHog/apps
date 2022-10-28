@@ -23,13 +23,7 @@
             "hint": "Default: 5439",
             "required": true
         },
-        {
-            "key": "dbName",
-            "name": "Database name",
-            "type": "string",
-            "default": "dev",
-            "required": true
-        },
+        { "key": "dbName", "name": "Database name", "type": "string", "default": "dev", "required": true },
         {
             "key": "tableName",
             "name": "Table name",
@@ -85,5 +79,6 @@
             "default": "varchar",
             "hint": "ADVANCED"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/redshift-plugin/logo.png"
 }

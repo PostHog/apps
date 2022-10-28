@@ -5,9 +5,7 @@
     "main": "index.js",
     "posthogVersion": ">= 1.25.0",
     "config": [
-        {
-            "markdown": "posthog-twilio-plugin"
-        },
+        { "markdown": "posthog-twilio-plugin" },
         {
             "key": "accountSID",
             "name": "Account SID",
@@ -48,5 +46,6 @@
             "default": "60",
             "required": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-twilio-plugin/logo.png"
 }

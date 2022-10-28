@@ -38,5 +38,6 @@
             "choices": ["Yes", "No"],
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-intercom-plugin/logo.png"
 }

@@ -82,5 +82,6 @@
             "default": "$feature_flag_called",
             "hint": "Comma separated list of events to ignore"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/postgres-plugin/logo.png"
 }

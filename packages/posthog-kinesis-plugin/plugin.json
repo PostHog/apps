@@ -56,5 +56,6 @@
             "default": "",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-kinesis-plugin/logo.png"
 }

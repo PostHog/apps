@@ -5,12 +5,7 @@
     "main": "index.ts",
     "posthogVersion": ">= 1.25.0",
     "config": [
-        {
-            "key": "webhookUrl",
-            "name": "Patterns Webhook URL",
-            "type": "string",
-            "required": true
-        },
+        { "key": "webhookUrl", "name": "Patterns Webhook URL", "type": "string", "required": true },
         {
             "key": "allowedEventTypes",
             "name": "Event types to send to Patterns (comma-separated)",
@@ -18,5 +13,6 @@
             "type": "string",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-patterns-app/logo.png"
 }

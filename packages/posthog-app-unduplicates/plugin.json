@@ -12,5 +12,6 @@
             "required": true,
             "choices": ["Event and Timestamp", "All Properties"]
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-app-unduplicates/logo.png"
 }

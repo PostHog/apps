@@ -15,28 +15,17 @@
             "type": "string",
             "required": true
         },
-        {
-            "key": "threshold",
-            "name": "Threshold",
-            "type": "string",
-            "default": "0",
-            "required": true
-        },
+        { "key": "threshold", "name": "Threshold", "type": "string", "default": "0", "required": true },
         {
             "key": "operator",
             "name": "Comparison operation",
             "type": "choice",
             "default": "≤ Less than or equal",
             "hint": "If ≤ plugin alerts if $last_2_datapoints ≤ $threshold, otherwise if $last_2_datapoints ≥ $threshold",
-            "choices": [
-                "≤ Less than or equal",
-                "≥ Greater than or equal"
-            ],
+            "choices": ["≤ Less than or equal", "≥ Greater than or equal"],
             "required": true
         },
-        {
-            "markdown": "Posthog configuration"
-        },
+        { "markdown": "Posthog configuration" },
         {
             "key": "posthogApiKey",
             "hint": "Your Personal API Key is not the same as the Project API key",
@@ -55,9 +44,7 @@
             "default": "",
             "required": true
         },
-        {
-            "markdown": "PagerDuty & incident configuration"
-        },
+        { "markdown": "PagerDuty & incident configuration" },
         {
             "key": "pagerdutyIntegrationKey",
             "hint": "Integration Key for an integration on a service or on a global ruleset (Events API v2)",
@@ -82,5 +69,6 @@
             "default": "myposthog",
             "required": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-pagerduty-plugin/logo.png"
 }

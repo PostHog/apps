@@ -21,5 +21,6 @@
       "secret": true,
       "required": true
     }
-  ]
+  ],
+  "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-variance-plugin/logo.png"
 }

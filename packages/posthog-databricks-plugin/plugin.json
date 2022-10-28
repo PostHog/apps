@@ -64,5 +64,6 @@
             "description": "Events to ignore",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-databricks-plugin/logo.png"
 }

@@ -23,13 +23,7 @@
             "default": "5439",
             "required": true
         },
-        {
-            "key": "dbName",
-            "name": "Database name",
-            "type": "string",
-            "default": "dev",
-            "required": true
-        },
+        { "key": "dbName", "name": "Database name", "type": "string", "default": "dev", "required": true },
         {
             "key": "tableName",
             "hint": "This is the table the plugin will access in your warehouse. The user only needs access to this table.",
@@ -52,12 +46,7 @@
             "secret": true,
             "required": true
         },
-        {
-            "key": "orderByColumn",
-            "name": "'Order by' column",
-            "type": "string",
-            "default": "timestamp"
-        },
+        { "key": "orderByColumn", "name": "'Order by' column", "type": "string", "default": "timestamp" },
         {
             "key": "transformationName",
             "name": "Select a transformation to apply to your data:",
@@ -80,5 +69,6 @@
             "choices": ["Import continuously", "Only import historical data"],
             "default": "Import continuously"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-redshift-import-plugin/logo.png"
 }

@@ -55,5 +55,6 @@
             "required": false,
             "secret": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/github-release-tracking-plugin/logo.png"
 }

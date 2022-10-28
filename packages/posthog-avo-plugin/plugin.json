@@ -5,14 +5,7 @@
     "main": "index.ts",
     "posthogVersion": ">= 1.24.0",
     "config": [
-        {
-            "key": "avoApiKey",
-            "hint": "",
-            "name": "Avo API Key",
-            "type": "string",
-            "default": "",
-            "required": true
-        },
+        { "key": "avoApiKey", "hint": "", "name": "Avo API Key", "type": "string", "default": "", "required": true },
         {
             "key": "environment",
             "hint": "",
@@ -21,13 +14,7 @@
             "default": "dev",
             "required": false
         },
-        {
-            "key": "appName",
-            "hint": "",
-            "name": "App name",
-            "type": "string",
-            "default": "PostHog",
-            "required": false
-        }
-    ]
+        { "key": "appName", "hint": "", "name": "App name", "type": "string", "default": "PostHog", "required": false }
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-avo-plugin/logo.png"
 }

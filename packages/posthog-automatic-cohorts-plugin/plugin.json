@@ -39,5 +39,6 @@
             "required": true,
             "secret": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-automatic-cohorts-plugin/logo.png"
 }

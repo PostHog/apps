@@ -14,5 +14,6 @@
             "default": "",
             "required": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/semver-flattener-plugin/logo.png"
 }

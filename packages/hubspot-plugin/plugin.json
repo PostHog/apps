@@ -54,7 +54,6 @@
             "choices": ["production", "debug"]
         }
     ],
-    "publicJobs": {
-        "Clear storage": {}
-    }
+    "publicJobs": { "Clear storage": {} },
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/hubspot-plugin/logo.png"
 }

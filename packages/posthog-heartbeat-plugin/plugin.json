@@ -4,9 +4,7 @@
     "description": "Creates one event per minute to validate ingestion pipeline",
     "main": "index.ts",
     "config": [
-        {
-            "markdown": "Events are emitted once per minute."
-        },
+        { "markdown": "Events are emitted once per minute." },
         {
             "key": "events",
             "name": "Events to be emitted",
@@ -29,5 +27,6 @@
             "type": "string",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-heartbeat-plugin/logo.png"
 }

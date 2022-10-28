@@ -12,5 +12,6 @@
             "default": "",
             "required": false
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/twitter-followers-plugin/logo.png"
 }

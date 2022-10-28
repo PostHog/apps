@@ -37,7 +37,6 @@
             "required": false,
             "secret": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/gitlab-release-tracking-plugin/logo.png"
 }
-
-

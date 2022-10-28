@@ -4,12 +4,7 @@
     "url": "https://github.com/sreeo/posthog-shopify-sync-plugin",
     "main": "index.js",
     "config": [
-        {
-            "key": "shopifyStore",
-            "name": "Shopify Store",
-            "type": "string",
-            "required": true
-        },
+        { "key": "shopifyStore", "name": "Shopify Store", "type": "string", "required": true },
         {
             "key": "shopifyAccessToken",
             "name": "Shopify Access Token",
@@ -17,5 +12,6 @@
             "required": true,
             "secret": true
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-shopify-sync-plugin/logo.png"
 }

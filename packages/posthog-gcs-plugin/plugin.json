@@ -12,13 +12,7 @@
             "required": true,
             "secret": true
         },
-        {
-            "key": "bucketName",
-            "hint": "Bucket name",
-            "name": "Table ID",
-            "type": "string",
-            "required": true
-        },
+        { "key": "bucketName", "hint": "Bucket name", "name": "Table ID", "type": "string", "required": true },
         {
             "key": "exportEventsToIgnore",
             "name": "Events to ignore",
@@ -26,5 +20,6 @@
             "default": "$feature_flag_called",
             "hint": "Comma separated list of events to ignore"
         }
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-gcs-plugin/logo.png"
 }
