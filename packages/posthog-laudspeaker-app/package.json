@@ -1,6 +1,6 @@
 {
     "name": "laudspeaker-posthog-plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Export data from PostHog",
     "main": "index.js",
     "scripts": {

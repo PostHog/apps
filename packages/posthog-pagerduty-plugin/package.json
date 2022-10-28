@@ -1,7 +1,7 @@
 {
     "name": "@posthog/pagerduty-plugin",
     "displayName": "Posthog PagerDuty plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Create PagerDuty incidents when a posthog query crosses a threshold",
     "keywords": [
         "posthog",

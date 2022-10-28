@@ -3864,9 +3864,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@posthog/useragent-plugin@workspace:packages/useragentplugin":
+"@posthog/user-agent-plugin@workspace:packages/useragentplugin":
   version: 0.0.0-use.local
-  resolution: "@posthog/useragent-plugin@workspace:packages/useragentplugin"
+  resolution: "@posthog/user-agent-plugin@workspace:packages/useragentplugin"
   dependencies:
     "@posthog/plugin-scaffold": ^0.12.10
     "@types/jest": ^27.0.3

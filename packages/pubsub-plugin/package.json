@@ -1,6 +1,6 @@
 {
     "name": "@posthog/pubsub-plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Export PostHog events to Google Cloud Pub/Sub on ingestion.",
     "devDependencies": {
         "@google-cloud/pubsub": "^2.16.0",
