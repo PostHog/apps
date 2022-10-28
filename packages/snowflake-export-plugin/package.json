@@ -25,6 +25,5 @@
     },
     "scripts": {
         "test": "jest"
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/snowflake-export-plugin/logo.png"
+    }
 }

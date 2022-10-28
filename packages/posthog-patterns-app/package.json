@@ -17,6 +17,5 @@
     },
     "scripts": {
         "test": "jest ."
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-patterns-app/logo.png"
+    }
 }

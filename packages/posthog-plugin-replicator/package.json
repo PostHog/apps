@@ -2,11 +2,7 @@
     "name": "@posthog/replicator-plugin",
     "version": "0.0.5",
     "description": "Replicate PostHog event stream in another PostHog instance",
-    "keywords": [
-        "posthog",
-        "plugin",
-        "replication"
-    ],
+    "keywords": ["posthog", "plugin", "replication"],
     "main": "index.ts",
     "repository": "github:PostHog/posthog-plugin-replicator",
     "bugs": {
@@ -52,6 +48,5 @@
     "lint-staged": {
         "*.{js,ts}": "eslint --fix",
         "*.{ts,tsx,js,jsx,json,yaml,toml,css,scss,html,xml}": "prettier --write"
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-plugin-replicator/logo.png"
+    }
 }

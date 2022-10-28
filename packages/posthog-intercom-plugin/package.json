@@ -43,6 +43,5 @@
     "lint-staged": {
         "*.{js,ts}": "eslint --fix",
         "*.{ts,tsx,js,jsx,json,yaml,toml,css,scss,html,xml}": "prettier --write"
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-intercom-plugin/logo.png"
+    }
 }

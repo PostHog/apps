@@ -40,11 +40,5 @@
     "ts-jest": "29.0.3",
     "tslib": "2.4.0",
     "typescript": "4.8.3"
-  },
-  "standard-version": {
-    "scripts": {
-      "postbump": "yarn build && git add dist/index.js"
-    }
-  },
-  "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-variance-plugin/logo.png"
+  }
 }

@@ -11,6 +11,5 @@
     },
     "engines": {
         "node": ">= 14.0.0"
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-gcs-plugin/logo.png"
+    }
 }

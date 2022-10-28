@@ -27,6 +27,5 @@
     },
     "lint-staged": {
         "*.{js,ts,tsx,json,yml}": "prettier --write"
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/github-release-tracking-plugin/logo.png"
+    }
 }

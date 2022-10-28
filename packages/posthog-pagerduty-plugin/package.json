@@ -18,6 +18,5 @@
     "license": "MIT",
     "devDependencies": {
         "@posthog/plugin-scaffold": "0.2.8-alpha.2"
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-pagerduty-plugin/logo.png"
+    }
 }

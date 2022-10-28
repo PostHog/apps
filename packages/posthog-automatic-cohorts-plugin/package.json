@@ -37,6 +37,5 @@
         "node-fetch": "^2.6.1",
         "ts-jest": "^26.5.5",
         "typescript": "^4.2.4"
-    },
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-automatic-cohorts-plugin/logo.png"
+    }
 }

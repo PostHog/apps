@@ -1,6 +1,5 @@
 {
     "name": "@posthog/orbit-love-plugin",
     "version": "0.0.5",
-    "packageManager": "yarn@3.2.4",
-    "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-orbit-love-plugin/logo.png"
+    "packageManager": "yarn@3.2.4"
 }
