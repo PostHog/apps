@@ -407,7 +407,6 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "imageLink": "https://raw.githubusercontent.com/PostHog/salesforce-plugin/main/logo.png",
         "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/salesforce-plugin/logo.png"
     },
     {
@@ -418,7 +417,6 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "imageLink": "https://raw.githubusercontent.com/PostHog/posthog-schema-enforcer-plugin/main/logo.png",
         "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/schema-enforcer-plugin/logo.png"
     },
     {
@@ -523,13 +521,12 @@
     },
     {
         "name": "Useragent Enhancer",
-        "url": "https://www.npmjs.com/package/@posthog/useragent-plugin",
+        "url": "https://www.npmjs.com/package/@posthog/user-agent-plugin",
         "description": "Enhances events with browser details when the event has a \"$useragent\" property.",
         "verified": true,
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "imageLink": "https://raw.githubusercontent.com/weyert/useragentplugin/main/logo.png",
         "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/useragentplugin/logo.png"
     },
     {
