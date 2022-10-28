@@ -1,6 +1,6 @@
 {
     "name": "@posthog/patterns-app",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Export PostHog events to Patterns.",
     "devDependencies": {
         "@babel/preset-env": "^7.18.10",

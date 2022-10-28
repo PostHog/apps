@@ -1,6 +1,6 @@
 {
     "name": "@posthog/event-sequence-timer-plugin",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Time the time taken for a user to perform Event B after performing Event A.",
     "main": "index.js",
     "repository": {

@@ -1,6 +1,6 @@
 {
     "name": "@posthog/timestamp-parser-plugin",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Parse your event timestamps into useful date properties.",
     "main": "index.js",
     "repository": {
