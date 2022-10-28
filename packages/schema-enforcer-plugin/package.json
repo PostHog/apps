@@ -1,6 +1,6 @@
 {
     "name": "@posthog/schema-enforcer-plugin",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Enforce schema on events to ensure clean data.",
     "main": "dist/index.js",
     "scripts": {

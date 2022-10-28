@@ -1,6 +1,6 @@
 {
     "name": "@posthog/avo-plugin",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Export PostHog events to Avo inspector.",
     "devDependencies": {
         "@posthog/plugin-contrib": "^0.0.3",

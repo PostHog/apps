@@ -1,6 +1,6 @@
 {
     "name": "@posthog/rudderstack-plugin",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "export data from posthog",
     "main": "index.js",
     "scripts": {

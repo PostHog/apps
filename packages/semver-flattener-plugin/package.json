@@ -1,7 +1,10 @@
 {
     "name": "@posthog/semver-flattener-plugin",
-    "version": "0.0.5",
-    "keywords": ["posthog", "plugin"],
+    "version": "0.0.6",
+    "keywords": [
+        "posthog",
+        "plugin"
+    ],
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
     "scripts": {

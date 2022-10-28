@@ -1,6 +1,6 @@
 {
     "name": "@posthog/advanced-geoip-app",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Advanced GeoIP filtering app for PostHog",
     "main": "index.ts",
     "repository": "github:paolodamico/posthog-plugin-advanced-ip",
