@@ -1,12 +1,8 @@
 {
     "name": "@posthog/replicator-plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Replicate PostHog event stream in another PostHog instance",
-    "keywords": [
-        "posthog",
-        "plugin",
-        "replication"
-    ],
+    "keywords": ["posthog", "plugin", "replication"],
     "main": "index.ts",
     "repository": "github:PostHog/posthog-plugin-replicator",
     "bugs": {

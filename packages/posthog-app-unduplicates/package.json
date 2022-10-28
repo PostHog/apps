@@ -1,6 +1,6 @@
 {
     "name": "@posthog/plugin-unduplicates",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Prevent duplicates in your data by rejecting duplicate events at ingestion.",
     "main": "index.ts",
     "repository": "github:paolodamico/posthog-plugin-unduplicates",

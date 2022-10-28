@@ -1,6 +1,6 @@
 {
     "name": "@posthog/kinesis-plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Import events to Posthog from a Kinesis Stream.",
     "author": "Emanuele Capparelli (k@emkpp.com)",
     "license": "MIT",

@@ -1,6 +1,6 @@
 {
     "name": "@posthog/automatic-cohorts-plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Automatic cohort creation based on user properties.",
     "main": "index.ts",
     "scripts": {

@@ -1,6 +1,6 @@
 {
     "name": "@posthog/property-filter-plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Filter a list of properties from the event data.",
     "main": "index.js",
     "repository": {

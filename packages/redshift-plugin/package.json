@@ -1,6 +1,6 @@
 {
     "name": "@posthog/redshift-plugin",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Export PostHog events to Amazon Redshift on ingestion.",
     "scripts": {
         "test": "jest"
