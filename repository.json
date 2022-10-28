@@ -7,7 +7,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-app-advanced-geoip/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-app-advanced-geoip/logo.png"
     },
     {
         "name": "Automatic Cohort Creator",
@@ -17,7 +17,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-automatic-cohorts-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-automatic-cohorts-plugin/logo.png"
     },
     {
         "name": "Avo Inspector Plugin",
@@ -27,7 +27,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-avo-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-avo-plugin/logo.png"
     },
     {
         "name": "AWS Kinesis",
@@ -37,7 +37,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-kinesis-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-kinesis-plugin/logo.png"
     },
     {
         "name": "BigQuery Export",
@@ -47,7 +47,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/bigquery-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/bigquery-plugin/logo.png"
     },
     {
         "name": "Bitbucket Release Tracker",
@@ -57,7 +57,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/bitbucket-release-tracker/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/bitbucket-release-tracker/logo.png"
     },
     {
         "name": "Currency Normalization",
@@ -67,7 +67,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/currency-normalization-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/currency-normalization-plugin/logo.png"
     },
     {
         "name": "Customer.io",
@@ -77,7 +77,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/customerio-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/customerio-plugin/logo.png"
     },
     {
         "name": "DataBricks",
@@ -87,7 +87,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-databricks-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-databricks-plugin/logo.png"
     },
     {
         "name": "Downsampling",
@@ -97,7 +97,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/downsampling-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/downsampling-plugin/logo.png"
     },
     {
         "name": "Drop Events Based On Property",
@@ -107,7 +107,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/drop-events-on-property-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/drop-events-on-property-plugin/logo.png"
     },
     {
         "name": "Email Scoring",
@@ -117,7 +117,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/mailboxlayer-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/mailboxlayer-plugin/logo.png"
     },
     {
         "name": "Engage.so Connector",
@@ -127,7 +127,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-engage-so-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-engage-so-plugin/logo.png"
     },
     {
         "name": "Event Sequence Timer Plugin",
@@ -137,7 +137,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/event-sequence-timer-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/event-sequence-timer-plugin/logo.png"
     },
     {
         "name": "Filter Out",
@@ -147,7 +147,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-filter-out-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-filter-out-plugin/logo.png"
     },
     {
         "name": "First Time Event Tracker",
@@ -157,7 +157,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/first-time-event-tracker/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/first-time-event-tracker/logo.png"
     },
     {
         "name": "GCS Export",
@@ -167,7 +167,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-gcs-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-gcs-plugin/logo.png"
     },
     {
         "name": "GeoIP",
@@ -177,7 +177,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-plugin-geoip/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-plugin-geoip/logo.png"
     },
     {
         "name": "GitHub Release Tracker",
@@ -187,7 +187,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/github-release-tracking-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/github-release-tracking-plugin/logo.png"
     },
     {
         "name": "Github Star Sync",
@@ -197,7 +197,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/github-star-sync-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/github-star-sync-plugin/logo.png"
     },
     {
         "name": "GitLab Release Tracker",
@@ -207,7 +207,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/gitlab-release-tracking-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/gitlab-release-tracking-plugin/logo.png"
     },
     {
         "name": "Heartbeat",
@@ -217,7 +217,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-heartbeat-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-heartbeat-plugin/logo.png"
     },
     {
         "name": "Hello World",
@@ -227,7 +227,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": false,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-hello-world-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-hello-world-plugin/logo.png"
     },
     {
         "name": "Hubspot",
@@ -237,7 +237,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/hubspot-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/hubspot-plugin/logo.png"
     },
     {
         "name": "Ingestion Alert",
@@ -247,7 +247,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/ingestion-alert-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/ingestion-alert-plugin/logo.png"
     },
     {
         "name": "Intercom",
@@ -257,7 +257,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-intercom-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-intercom-plugin/logo.png"
     },
     {
         "name": "Migrator 3000 (Beta)",
@@ -267,7 +267,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-plugin-migrator3000/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-plugin-migrator3000/logo.png"
     },
     {
         "name": "Netdata event processing (ALPHA)",
@@ -277,7 +277,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-netdata-event-processing/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-netdata-event-processing/logo.png"
     },
     {
         "name": "Orbit Stats Sync",
@@ -287,7 +287,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-orbit-love-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-orbit-love-plugin/logo.png"
     },
     {
         "name": "Pagerduty (BETA)",
@@ -297,7 +297,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-pagerduty-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-pagerduty-plugin/logo.png"
     },
     {
         "name": "Patterns.app Connector",
@@ -307,7 +307,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-patterns-app/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-patterns-app/logo.png"
     },
     {
         "name": "PostgreSQL Export",
@@ -317,7 +317,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/postgres-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/postgres-plugin/logo.png"
     },
     {
         "name": "Property Filter",
@@ -327,7 +327,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-property-filter-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-property-filter-plugin/logo.png"
     },
     {
         "name": "Property Flattener",
@@ -337,7 +337,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/flatten-properties-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/flatten-properties-plugin/logo.png"
     },
     {
         "name": "Pub/Sub Export",
@@ -347,7 +347,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/pubsub-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/pubsub-plugin/logo.png"
     },
     {
         "name": "Redshift Export",
@@ -357,7 +357,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/redshift-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/redshift-plugin/logo.png"
     },
     {
         "name": "Redshift Import Plugin (BETA)",
@@ -367,7 +367,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-redshift-import-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-redshift-import-plugin/logo.png"
     },
     {
         "name": "Replicator",
@@ -377,7 +377,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-plugin-replicator/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-plugin-replicator/logo.png"
     },
     {
         "name": "RudderStack Export",
@@ -387,7 +387,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/rudderstack-posthog-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/rudderstack-posthog-plugin/logo.png"
     },
     {
         "name": "S3 Export",
@@ -397,7 +397,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/s3-export-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/s3-export-plugin/logo.png"
     },
     {
         "name": "Salesforce",
@@ -408,7 +408,7 @@
         "displayOnWebsiteLib": true,
         "type": "data_out",
         "imageLink": "https://raw.githubusercontent.com/PostHog/salesforce-plugin/main/logo.png",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/salesforce-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/salesforce-plugin/logo.png"
     },
     {
         "name": "Schema Enforcer",
@@ -419,7 +419,7 @@
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
         "imageLink": "https://raw.githubusercontent.com/PostHog/posthog-schema-enforcer-plugin/main/logo.png",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/schema-enforcer-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/schema-enforcer-plugin/logo.png"
     },
     {
         "name": "SemVer Flattener",
@@ -429,7 +429,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/semver-flattener-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/semver-flattener-plugin/logo.png"
     },
     {
         "name": "Sendgrid",
@@ -439,7 +439,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/sendgrid-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/sendgrid-plugin/logo.png"
     },
     {
         "name": "Shopify Connector",
@@ -449,7 +449,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-shopify-sync-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-shopify-sync-plugin/logo.png"
     },
     {
         "name": "Snowflake Export",
@@ -459,7 +459,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/snowflake-export-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/snowflake-export-plugin/logo.png"
     },
     {
         "name": "Taxonomy Standardizer",
@@ -469,7 +469,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/taxonomy-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/taxonomy-plugin/logo.png"
     },
     {
         "name": "Timestamp Parser",
@@ -479,7 +479,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/timestamp-parser-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/timestamp-parser-plugin/logo.png"
     },
     {
         "name": "Twilio",
@@ -489,7 +489,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-twilio-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-twilio-plugin/logo.png"
     },
     {
         "name": "Twitter Followers",
@@ -499,7 +499,7 @@
         "maintainer": "official",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/twitter-followers-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/twitter-followers-plugin/logo.png"
     },
     {
         "name": "Unduplicates",
@@ -509,7 +509,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-app-unduplicates/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-app-unduplicates/logo.png"
     },
     {
         "name": "URL normalizer",
@@ -519,7 +519,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "ingestion_filtering",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-url-normalizer-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-url-normalizer-plugin/logo.png"
     },
     {
         "name": "Useragent Enhancer",
@@ -530,7 +530,7 @@
         "displayOnWebsiteLib": true,
         "type": "data_in",
         "imageLink": "https://raw.githubusercontent.com/weyert/useragentplugin/main/logo.png",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/useragentplugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/useragentplugin/logo.png"
     },
     {
         "name": "Variance",
@@ -540,7 +540,7 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_out",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-variance-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-variance-plugin/logo.png"
     },
     {
         "name": "Zendesk",
@@ -550,6 +550,6 @@
         "maintainer": "community",
         "displayOnWebsiteLib": true,
         "type": "data_in",
-        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/src/packages/posthog-zendesk-plugin/logo.png"
+        "icon": "https://raw.githubusercontent.com/PostHog/apps/main/packages/posthog-zendesk-plugin/logo.png"
     }
 ]
