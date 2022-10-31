@@ -263,3 +263,4 @@ const executeQuery = async (query: string, values: any[], config: PostgresMeta['
 const sanitizeSqlIdentifier = (unquotedIdentifier: string): string => {
     return unquotedIdentifier.replace(/[^\w\d_]+/g, '')
 }
+
